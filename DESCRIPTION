@@ -1,0 +1,18 @@
+Package: samanapir
+Title: Samen Analyseren Tool API functies
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Elma",
+           family = "Tenner",
+           role = c("aut", "cre"),
+           email = "elma.tenner@rivm.nl",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Dit package bevat de functies om gegevens op te halen vanuit verschillende API's. In de samen analyseren tool worden deze functies gebruikt. Er is een functie om een url uit te lezen en om te zetten naar een dataframe. Deze functie wordt gebruikt om de sensordata van de SamenMeten API op te halen, de meetgegevens van Luchtmeetnet API en de meetgegevens van het KNMI. Deze functies zijn ontwikkeld voor de samen analysern tool, er staan dan ook wat prints in voor in shiny.
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    utils,
+    dplyr,
+    httr,
+    jsonlite
