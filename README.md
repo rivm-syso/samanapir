@@ -48,6 +48,6 @@ TEST <- GetSamenMetenAPI("project eq'Amersfoort'","20190909", "20190912")
 Dataverantwoording
 -------
 Voor het ophalen en downloaden van de gegevens wordt gebruik gemaakt van:
-*[Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
-*[Luchtmeetnet](https://www.luchtmeetnet.nl/)
-*[KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
+* [Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
+* [Luchtmeetnet](https://www.luchtmeetnet.nl/)
+* [KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
