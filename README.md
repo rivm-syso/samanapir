@@ -20,13 +20,15 @@ Installation
 You can install the released version of samanapir from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("samanapir")
+install.package("devtools")
+url <- "https://gitl01-int-p.rivm.nl/tennere/samanapir"
+devtools::install_git(url = url)
 ```
 
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
+Hier een voorbeeld hoe je gegevens van het KNMI kan downloaden:
 
 ``` r
 library(samanapir)
