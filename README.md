@@ -14,10 +14,8 @@ Deze functies worden gebruikt in de
 met een interface voor het gebruik van deze functies. Daarnaast zijn er 
 verschillende mogelijkheden voor datavisualisatie.
 
-Installation
+Installatie
 ------------
-
-You can install the released version of samanapir from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.package("devtools")
@@ -25,33 +23,31 @@ url <- "https://gitl01-int-p.rivm.nl/tennere/samanapir"
 devtools::install_git(url = url)
 ```
 
-Example
+Voorbeeld
 -------
 
 Hier een voorbeeld hoe je gegevens van het KNMI kan downloaden:
 
 ``` r
 library(samanapir)
-## basic example code
+TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Hier een voorbeeld hoe je gegevens van het Luchtmeetnet kan downloaden:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+library(samanapir)
+TEST <- GetLMLAPI("NL01908", "20190505", "20190510")
+```
+Hier een voorbeeld hoe je gegevens van het Samen Meten Dataportaal kan downloaden:
+
+``` r
+library(samanapir)
+TEST <- GetSamenMetenAPI("project eq'Amersfoort'","20190909", "20190912")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+Dataverantwoording
+-------
+Voor het ophalen en downloaden van de gegevens wordt gebruik gemaakt van:
+*[Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
+*[Luchtmeetnet](https://www.luchtmeetnet.nl/)
+*[KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
