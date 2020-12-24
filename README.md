@@ -7,7 +7,10 @@ samanapir
 Het doel van samanapir is om de gegevens voor Sensor-data analyse bij elkaar
 te brengen. De verschillende functies kunnen de gegevens ophalen van de samen meten
 database, luchtmeetnet en het KNMI. 
-Deze functies worden gebruikt in de Samen Analyseren Tool. Dat is een shiny-tool
+
+Deze functies worden gebruikt in de 
+[Samen Analyseren Tool](https://github.com/rivm-syso/Samen-analyseren-tool) 
+. Dat is een shiny-tool
 met een interface voor het gebruik van deze functies. Daarnaast zijn er 
 verschillende mogelijkheden voor datavisualisatie.
 
