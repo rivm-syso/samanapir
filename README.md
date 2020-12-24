@@ -1,11 +1,15 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 samanapir
 =========
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of samanapir is to ...
+Het doel van samanapir is om de gegevens voor Sensor-data analyse bij elkaar
+te brengen. De verschillende functies kunnen de gegevens ophalen van de samen meten
+database, luchtmeetnet en het KNMI. 
+Deze functies worden gebruikt in de Samen Analyseren Tool. Dat is een shiny-tool
+met een interface voor het gebruik van deze functies. Daarnaast zijn er 
+verschillende mogelijkheden voor datavisualisatie.
 
 Installation
 ------------
