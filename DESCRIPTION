@@ -16,3 +16,4 @@ Imports:
     dplyr,
     httr,
     jsonlite
+RoxygenNote: 7.0.2
