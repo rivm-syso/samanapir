@@ -30,24 +30,24 @@ Hier een voorbeeld hoe je gegevens van het KNMI kan downloaden:
 
 ``` r
 library(samanapir)
-TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
+TEST_API_KNMI <- samanapir::GetKNMIAPI('260','20191214','20191215')
 ```
 Hier een voorbeeld hoe je gegevens van het Luchtmeetnet kan downloaden:
 
 ``` r
 library(samanapir)
-TEST <- GetLMLAPI("NL01908", "20190505", "20190510")
+TEST <- samanapir::GetLMLAPI("NL01908", "20190505", "20190510")
 ```
 Hier een voorbeeld hoe je gegevens van het Samen Meten Dataportaal kan downloaden:
 
 ``` r
 library(samanapir)
-TEST <- GetSamenMetenAPI("project eq'Amersfoort'","20190909", "20190912")
+TEST <- samanapir::GetSamenMetenAPI("project eq'Amersfoort'","20190909", "20190912")
 ```
 
 Dataverantwoording
 -------
 Voor het ophalen en downloaden van de gegevens wordt gebruik gemaakt van:
-*[Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
-*[Luchtmeetnet](https://www.luchtmeetnet.nl/)
-*[KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
+* [Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
+* [Luchtmeetnet](https://www.luchtmeetnet.nl/)
+* [KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
