@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-samanapir
+samanapir: Samen Analyseren Tool API functies in R
 =========
 
 <!-- badges: start -->
