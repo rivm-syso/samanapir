@@ -19,7 +19,6 @@ Installatie
 ------------
 
 ``` r
-install.package("devtools")
 devtools::install_github("https://github.com/rivm-syso/samanapir")
 ```
 
