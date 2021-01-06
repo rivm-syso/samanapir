@@ -18,37 +18,48 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of samanapir is to ...
+Het doel van samanapir is om de gegevens voor Sensor-data analyse bij elkaar
+te brengen. De verschillende functies kunnen de gegevens ophalen van de samen meten
+database, luchtmeetnet en het KNMI. 
 
-## Installation
+Deze functies worden gebruikt in de 
+[Samen Analyseren Tool](https://github.com/rivm-syso/Samen-analyseren-tool) 
+. Dat is een shiny-tool
+met een interface voor het gebruik van deze functies. Daarnaast zijn er 
+verschillende mogelijkheden voor datavisualisatie.
 
-You can install the released version of samanapir from [CRAN](https://CRAN.R-project.org) with:
+## Installatie
 
-``` r
-install.packages("samanapir")
+``` {r}
+install.package("devtools")
+url <- "https://gitl01-int-p.rivm.nl/tennere/samanapir"
+devtools::install_git(url = url)
 ```
 
-## Example
+## Voorbeeld
 
-This is a basic example which shows you how to solve a common problem:
+Hier een voorbeeld hoe je gegevens van het KNMI kan downloaden:
 
-```{r example}
+``` {r}
 library(samanapir)
-## basic example code
+TEST_API_KNMI <- samanapir::GetKNMIAPI('260','20191214','20191215')
+```
+Hier een voorbeeld hoe je gegevens van het Luchtmeetnet kan downloaden:
+
+``` {r}
+library(samanapir)
+TEST <- samanapir::GetLMLAPI("NL01908", "20190505", "20190510")
+```
+Hier een voorbeeld hoe je gegevens van het Samen Meten Dataportaal kan downloaden:
+
+```{r}
+library(samanapir)
+TEST <- samanapir::GetSamenMetenAPI("project eq'Amersfoort'","20190909", "20190912")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+#Dataverantwoording
 
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+Voor het ophalen en downloaden van de gegevens wordt gebruik gemaakt van:
+* [Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
+* [Luchtmeetnet](https://www.luchtmeetnet.nl/)
+* [KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
