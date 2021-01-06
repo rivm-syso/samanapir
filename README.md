@@ -20,8 +20,7 @@ Installatie
 
 ``` r
 install.package("devtools")
-url <- "https://gitl01-int-p.rivm.nl/tennere/samanapir"
-devtools::install_git(url = url)
+devtools::install_github("https://github.com/rivm-syso/samanapir")
 ```
 
 Voorbeeld
