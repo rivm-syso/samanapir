@@ -16,6 +16,7 @@ dataframe met de content van de url
 Deze functie roept de API aan met input url
 haalt de inhoud op als text, dit is een JSON
 pakt de Json uit
+en returnd vervolgens de opgehaalde gegevens in een dataframe
 }
 \examples{
 TEST <- GetAPIDataframe("https://api-samenmeten.rivm.nl/v1.0/Things?")
