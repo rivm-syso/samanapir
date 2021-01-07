@@ -3,12 +3,11 @@
 #' Deze functie roept de API aan met input url
 #' haalt de inhoud op als text, dit is een JSON
 #' pakt de Json uit
-#'
+#' en returnd vervolgens de opgehaalde gegevens in een dataframe
 #'
 #' @param url_api : string met een url van een API
 #'
 #' @return dataframe met de content van de url
-#' @export
 #'
 #' @examples
 #' TEST <- GetAPIDataframe("https://api-samenmeten.rivm.nl/v1.0/Things?")
