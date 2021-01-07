@@ -49,6 +49,8 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   knmi_uur_wget_string <- paste("wget -O - --post-data='stns=", stns, "&start=",ymdh_vanaf,"&end=",ymdh_tot,
                                 "&vars=DD:FF:T:U' http://projects.knmi.nl/klimatologie/uurgegevens/getdata_uur.cgi", sep="")
   print(knmi_uur_wget_string)
+
+  # Ophalen van de gegevens van de URL
   knmi_uur_raw <- system(knmi_uur_wget_string,intern=T)
 
   print('KNMI: ruwe data opgehaald')
@@ -58,7 +60,7 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
 
   # Haal de kolomnamen op:
   # Dit gaat bijna goed: nog 2 schoonheidsfoutjes: '# STN' en 'TRUE' ( de T van temperatuur wordt vertaald naar TRUE)
-  header_names <- as.character(read.csv(textConnection(knmi_uur_raw[aantal_headers-1]),header=F, strip.white=T, stringsAsFactors=F))
+  header_names <- as.character(read.csv(textConnection(knmi_uur_raw[aantal_headers-1]), header=F, strip.white=T, stringsAsFactors=F))
   header_names[1] <- 'STNS'
   header_names[grep("TRUE",header_names)] <- 'TEMP'
 

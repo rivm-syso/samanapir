@@ -146,8 +146,8 @@ GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
     # print(url_week)
     # Haal de gegevens op
     content_measurements <- GetAPIDataframe(url_week)
-    print("URL week van Luchtmeetnet opgehaald")
-    if (length(content_measurements) == 1) {
+
+  if (length(content_measurements) == 1) {
       # Dan is er een error teruggekomen, bijvoorbeeld 502
       print(content_measurements)
       # stat_info_df$error <- "Error in gegevens ophalen. Check of alle gegevens er zijn."
@@ -166,7 +166,7 @@ GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
   # Filter de data dat alleen de gegevens van de gevraagde periode erbij zitten
   metingen_df <- dplyr::filter(metingen_df, timestamp_measured <= ymd_tot & timestamp_measured >= ymd_vanaf )
 
-  print("Alle data van Luchtmeetnet opgehaald")
+  print(paste0("Data van luchtmeetnet opgehaald van station: ", station))
   return(metingen_df)
 }
 
@@ -210,6 +210,6 @@ GetLMLAPI <- function(station, ymd_vanaf, ymd_tot){
   # Maak een named list voor de output
   lml_info_data <- list(info=stat_info_df, data=metingen_df)
 
-  print("Alle data van Luchtmeetnet opgehaald")
+  print(paste0("Meetgegevens en informatie van luchtmeetnet opgehaald van station: ", station))
   return(lml_info_data)
 }
