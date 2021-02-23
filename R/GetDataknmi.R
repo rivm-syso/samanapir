@@ -23,6 +23,8 @@
 #' TEMP     = Temperatuur (in graden Celsius) op 1.50 m hoogte tijdens de waarneming ( T in vars knmi);
 #' U        = Relatieve vochtigheid (in procenten) op 1.50 m hoogte tijdens de waarneming;
 #' tijd     = combinatie van YYYYMMDD en HH: as.POSIXct en UTC, eindtijd van uurgemiddelde
+#'LET OP: als er geen data beschikbaar was (of problemen met server) dan is de return:
+#' een string met daarin: "error"
 #'
 #'
 #' @export
@@ -46,12 +48,18 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   stns <- samengevoegd
 
   # Ophalen van de meetgegevens van de stations
-  knmi_uur_wget_string <- paste("wget -O - --post-data='stns=", stns, "&start=",ymdh_vanaf,"&end=",ymdh_tot,
+  knmi_uur_wget_string <- paste("wget --tries=2 --post-data='stns=", stns, "&start=",ymdh_vanaf,"&end=",ymdh_tot,
                                 "&vars=DD:FF:T:U' http://projects.knmi.nl/klimatologie/uurgegevens/getdata_uur.cgi", sep="")
   print(knmi_uur_wget_string)
 
   # Ophalen van de gegevens van de URL
   knmi_uur_raw <- system(knmi_uur_wget_string,intern=T)
+
+  # Check of er wel data is opgehaald
+  if(is.null(dim(knmi_uur_raw))){
+    print('KNMI: Geen data opgehaald. ERROR')
+    return( "error")
+  }
 
   print('KNMI: ruwe data opgehaald')
 
