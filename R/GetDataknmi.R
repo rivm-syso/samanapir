@@ -16,7 +16,7 @@
 #' Dataframe met de volgende kolommen
 #' STNS     = stationnummer
 #' YYYYMMDD = datum (YYYY=jaar,MM=maand,DD=dag)
-#' HH       = tijd (HH=uur, UT.12 UT=13 MET, 14 MEZT. Uurvak 05 loopt van 04.00 UT tot 5.00 UT;
+#' H        = tijd eindtijd van het uur (HH=uur, UT.12 UT=13 MET, 14 MEZT. Uurvak 05 loopt van 04.00 UT tot 5.00 UT;
 #' DD       = Windrichting (in graden) gemiddeld over de laatste 10 minuten van het afgelopen uur
 #'             (360=noord, 90=oost, 180=zuid, 270=west, 0=windstil 990=veranderlijk.
 #' FF       = Windsnelheid (in m/s) gemiddeld over de laatste 10 minuten van het afgelopen uur;
@@ -48,8 +48,8 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   stns <- samengevoegd
 
   # Ophalen van de meetgegevens van de stations
-  knmi_uur_wget_string <- paste("wget --tries=2 --post-data='stns=", stns, "&start=",ymdh_vanaf,"&end=",ymdh_tot,
-                                "&vars=DD:FF:T:U' http://projects.knmi.nl/klimatologie/uurgegevens/getdata_uur.cgi", sep="")
+  knmi_uur_wget_string <- paste("wget -O - --no-check-certificate --post-data='stns=", stns, "&start=",ymdh_vanaf,"&end=",ymdh_tot,
+                                "&vars=DD:FF:T:U' https://www.daggegevens.knmi.nl/klimatologie/uurgegevens", sep="")
   print(knmi_uur_wget_string)
 
   # Ophalen van de gegevens van de URL
@@ -58,6 +58,11 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   # Check of er wel data is opgehaald
   if(is.null(dim(knmi_uur_raw))){
     print('KNMI: Geen data opgehaald. ERROR')
+    return(knmi_uur_raw)
+    return( "error")
+  }else if(substring(knmi_uur_raw[[1]],1,1)!= "#"){
+    print('KNMI: Geen data opgehaald. ERROR')
+    return(knmi_uur_raw)
     return( "error")
   }
 
@@ -67,8 +72,8 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   aantal_headers <- length(grep("#",knmi_uur_raw))
 
   # Haal de kolomnamen op:
-  # Dit gaat bijna goed: nog 2 schoonheidsfoutjes: '# STN' en 'TRUE' ( de T van temperatuur wordt vertaald naar TRUE)
-  header_names <- as.character(read.csv(textConnection(knmi_uur_raw[aantal_headers-1]), header=F, strip.white=T, stringsAsFactors=F))
+  # Dit gaat bijna goed: nog 2 schoonheidsfoutjes: '# STN' en 'TRUE' (de T van temperatuur wordt vertaald naar TRUE)
+  header_names <- as.character(read.csv(textConnection(knmi_uur_raw[aantal_headers]), header=F, strip.white=T, stringsAsFactors=F))
   header_names[1] <- 'STNS'
   header_names[grep("TRUE",header_names)] <- 'TEMP'
 
@@ -85,29 +90,21 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
 
   # Combineer de datum en uur naar het tijdstip in POSIXct: nieuwe kolom 'tijd'
   knmi_uur_df['tijd'] <- as.POSIXct(as.character(knmi_uur_df$YYYYMMDD), tz='UTC', format='%Y%m%d')
-  knmi_uur_df['tijd'] <- knmi_uur_df['tijd'] + knmi_uur_df$HH*60*60
+  knmi_uur_df['tijd'] <- knmi_uur_df['tijd'] + knmi_uur_df$H*60*60
 
   # Haal de gegevens over de info van sensoren (naam en coordinaten)
-  # Nodig om te weten hoeveel stations, hoeveel regels voor de coordinaten
-  if (stations[1] == 'ALL'){
-    aantal_stns <- 47 # er zijn in totaal 47 stations...
-  }else{
-    aantal_stns <- length(stations)
-  }
-  regeleinde_stns <- 5 + aantal_stns
-
+  begin_info <- which(grepl("LON", knmi_uur_raw))+1
+  regeleinde_stns <- which(grepl("# DD", knmi_uur_raw))-1
   # Het gedeelte uit de API waar die sensor info instaat
-  stn_info_ruw <- knmi_uur_raw[6:regeleinde_stns]
+  stn_info_ruw <- knmi_uur_raw[begin_info:regeleinde_stns]
   # Zet wat waardes uit de tekst om
   stn_info_ruw <- sub(':','',stn_info_ruw)
   stn_info_ruw <- sub('#','',stn_info_ruw)
+  stn_info_ruw <- str_squish(stn_info_ruw) # Verwijder al de overige spaties
   # Van tekst naar dataframe
-  stn_info_df <- (utils::read.csv(textConnection(stn_info_ruw),header=F,sep=" " ,strip.white=T, stringsAsFactors = F))
+  stn_info_df <- (utils::read.csv(textConnection(stn_info_ruw),header=F ,sep = " ",strip.white=T, stringsAsFactors = F))
 
   print('KNMI: metadata omgezet naar dataframe')
-
-  # Helaas staan er nog veel spaties in de dataframe. Verwijder de kolommen met spaties
-  stn_info_df <- stn_info_df[,colSums(is.na(stn_info_df[,]))==0]
 
   # Voeg de naam kolommen samen, door de spaties zijn de DE BILT in 2 kolommen
   if(length(names(stn_info_df))==6){
@@ -128,3 +125,4 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
 
   return(knmi_info_data)
 }
+
