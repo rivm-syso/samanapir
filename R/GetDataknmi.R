@@ -56,11 +56,7 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   knmi_uur_raw <- system(knmi_uur_wget_string,intern=T)
 
   # Check of er wel data is opgehaald
-  if(is.null(dim(knmi_uur_raw))){
-    print('KNMI: Geen data opgehaald. ERROR')
-    return(knmi_uur_raw)
-    return( "error")
-  }else if(substring(knmi_uur_raw[[1]],1,1)!= "#"){
+  if(substring(knmi_uur_raw[[1]],1,1)!= "#"){
     print('KNMI: Geen data opgehaald. ERROR')
     return(knmi_uur_raw)
     return( "error")
@@ -100,7 +96,7 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   # Zet wat waardes uit de tekst om
   stn_info_ruw <- sub(':','',stn_info_ruw)
   stn_info_ruw <- sub('#','',stn_info_ruw)
-  stn_info_ruw <- str_squish(stn_info_ruw) # Verwijder al de overige spaties
+  stn_info_ruw <- stringr::str_squish(stn_info_ruw) # Verwijder al de overige spaties
   # Van tekst naar dataframe
   stn_info_df <- (utils::read.csv(textConnection(stn_info_ruw),header=F ,sep = " ",strip.white=T, stringsAsFactors = F))
 
@@ -125,4 +121,3 @@ GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
 
   return(knmi_info_data)
 }
-
