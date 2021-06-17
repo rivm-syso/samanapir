@@ -20,13 +20,16 @@ named list met daarin:
 Dataframe met de volgende kolommen
 STNS     = stationnummer
 YYYYMMDD = datum (YYYY=jaar,MM=maand,DD=dag)
-HH       = tijd (HH=uur, UT.12 UT=13 MET, 14 MEZT. Uurvak 05 loopt van 04.00 UT tot 5.00 UT;
+H        = tijd eindtijd van het uur (HH=uur, UT.12 UT=13 MET, 14 MEZT. Uurvak 05 loopt van 04.00 UT tot 5.00 UT;
 DD       = Windrichting (in graden) gemiddeld over de laatste 10 minuten van het afgelopen uur
             (360=noord, 90=oost, 180=zuid, 270=west, 0=windstil 990=veranderlijk.
 FF       = Windsnelheid (in m/s) gemiddeld over de laatste 10 minuten van het afgelopen uur;
 TEMP     = Temperatuur (in graden Celsius) op 1.50 m hoogte tijdens de waarneming ( T in vars knmi);
 U        = Relatieve vochtigheid (in procenten) op 1.50 m hoogte tijdens de waarneming;
 tijd     = combinatie van YYYYMMDD en HH: as.POSIXct en UTC, eindtijd van uurgemiddelde
+
+LET OP: als er geen data beschikbaar was (of problemen met server) dan is de return:
+een string met daarin: "error"
 }
 \description{
 Deze functie haalt de uurgemiddelde gegevens op van de KNMI stations:
