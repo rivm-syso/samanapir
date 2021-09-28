@@ -274,7 +274,10 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   # OPHALEN van de locaties ----
   ##################### ----
   # haal locatie op voor alle sensors tegelijk met apply
-  locaties <- lapply(ind, GetlocatieAPI)
+  # Met een trycatch komt er wel data door ookal heeft 1 sensor geen gegevens.
+  locaties <- lapply(ind, function(x) tryCatch(GetlocatieAPI(x),
+                                                error=function(e) NULL))
+
   # Zet de list op naar 1 grote dataframe
   locaties <- do.call("rbind", locaties)
 
@@ -294,7 +297,9 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   # Zoek alle urls bij elkaar waar meetgegevens inzitten
   # Deze neemt ook de types van de grootheid mee
   # De functie GeturlsmeetAPI doet dit
-  urls_meet <- lapply(ind, GeturlsmeetAPI)
+  # Met een trycatch komt er wel data door ookal heeft 1 sensor geen gegevens.
+  urls_meet <- lapply(ind, function(x) tryCatch(GeturlsmeetAPI(x),
+                                                error=function(e) NULL))
 
   # urls_meet <- lapply(ind, GeturlsmeetAPI)
   urls_meet <- do.call("rbind", urls_meet)
@@ -321,8 +326,10 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   # Ga alle urls af waar meeteggevens bevinden (met vorige stap opgehaald)
   # Haal de gegevens op en zet in dataframe met kit_id en grootheid.
   # Dit is wat de functie GetmeetgegevensAPI doet
+  # Met een trycatch komt er wel data door ookal heeft 1 sensor geen gegevens.
+  meetgegevens <- lapply(ind, function(x) tryCatch(GetmeetgegevensAPI(x),
+                                                error=function(e) NULL))
 
-  meetgegevens <- lapply(ind_meet, GetmeetgegevensAPI)
   meetgegevens <- do.call("rbind", meetgegevens)
 
   print('Meetgegevens opgehaald')
