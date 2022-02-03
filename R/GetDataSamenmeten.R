@@ -327,7 +327,7 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   # Haal de gegevens op en zet in dataframe met kit_id en grootheid.
   # Dit is wat de functie GetmeetgegevensAPI doet
   # Met een trycatch komt er wel data door ookal heeft 1 sensor geen gegevens.
-  meetgegevens <- lapply(ind, function(x) tryCatch(GetmeetgegevensAPI(x),
+  meetgegevens <- lapply(ind_meet, function(x) tryCatch(GetmeetgegevensAPI(x),
                                                 error=function(e) NULL))
 
   meetgegevens <- do.call("rbind", meetgegevens)
