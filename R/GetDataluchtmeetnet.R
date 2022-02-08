@@ -30,6 +30,12 @@ GetLMLallstatinfoAPI <- function(){
   content_stat_info <- GetAPIDataframe(url_stat_info)
   # print(paste0("url gebruikt: ", url_stat_info))
 
+  #  Als er iets mis is aan de serverkant, dan komt er een error string uit
+  if(purrr::is_character(content_stat_info)){
+    # Return dan de lege stat_info_compleet
+    return(stat_info_compleet)
+  }
+
   # Het werkt met pagina's.
   # Ga elke pagina af en haal de id en naam van de stations op
   verschillende_pages <- content_stat_info$pagination$page_list
