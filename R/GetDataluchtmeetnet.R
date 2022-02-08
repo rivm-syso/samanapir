@@ -99,7 +99,7 @@ GetLMLstatinfoAPI <- function(station){
     # Sla op in een dataframe
     stat_info_df <- data.frame(lon=stat_coords[1],lat=stat_coords[2], stattype=stat_type, naam=stat_naam, station_number=station, organisatie=stat_organ)
   }, error = function(e){
-    stop("Error in URL station. Check of stationscode juist is.")
+    stop("Error afkomstig van api luchtmeetnet.")
   })
 
   return(stat_info_df)
