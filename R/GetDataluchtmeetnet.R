@@ -147,9 +147,11 @@ GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
     # Haal de gegevens op
     content_measurements <- GetAPIDataframe(url_week)
 
-  if (length(content_measurements) == 1) {
-      # Dan is er een error teruggekomen, bijvoorbeeld 502
+    if (length(content_measurements) == 1 | ! is.data.frame(content_measurements$data)) {
+      # Dan is er een error teruggekomen, bijvoorbeeld 502 OF
+      # Het kan zijn dat een station voor de gekozen periode geen data levert.
       print(content_measurements)
+
       # stat_info_df$error <- "Error in gegevens ophalen. Check of alle gegevens er zijn."
       next
     } else{
@@ -161,6 +163,12 @@ GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
       # Voeg de data aan de dataframe
       metingen_df <- rbind(metingen_df, measurements_data)
     }
+  }
+
+  if(purrr::is_empty(metingen_df)){
+    # Er zijn helemaal geen metingen van dit station in deze periode beschikbaar
+    print(paste0("Er is geen data beschikbaar van station: ", station))
+    return(NULL)
   }
 
   # Filter de data dat alleen de gegevens van de gevraagde periode erbij zitten
@@ -213,3 +221,4 @@ GetLMLAPI <- function(station, ymd_vanaf, ymd_tot){
   print(paste0("Meetgegevens en informatie van luchtmeetnet opgehaald van station: ", station))
   return(lml_info_data)
 }
+
