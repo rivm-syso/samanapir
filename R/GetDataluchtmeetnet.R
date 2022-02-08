@@ -30,6 +30,12 @@ GetLMLallstatinfoAPI <- function(){
   content_stat_info <- GetAPIDataframe(url_stat_info)
   # print(paste0("url gebruikt: ", url_stat_info))
 
+  #  Als er iets mis is aan de serverkant, dan komt er een error string uit
+  if(purrr::is_character(content_stat_info)){
+    # Return dan de lege stat_info_compleet
+    return(stat_info_compleet)
+  }
+
   # Het werkt met pagina's.
   # Ga elke pagina af en haal de id en naam van de stations op
   verschillende_pages <- content_stat_info$pagination$page_list
@@ -93,8 +99,8 @@ GetLMLstatinfoAPI <- function(station){
     # Sla op in een dataframe
     stat_info_df <- data.frame(lon=stat_coords[1],lat=stat_coords[2], stattype=stat_type, naam=stat_naam, station_number=station, organisatie=stat_organ)
   }, error = function(e){
-    stop("Error in URL station. Check of stationscode juist is.")
-  })
+    stop("Error afkomstig van api luchtmeetnet.")
+    })
 
   return(stat_info_df)
 }
@@ -147,8 +153,9 @@ GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
     # Haal de gegevens op
     content_measurements <- GetAPIDataframe(url_week)
 
-  if (length(content_measurements) == 1) {
-      # Dan is er een error teruggekomen, bijvoorbeeld 502
+    if (length(content_measurements) == 1 | ! is.data.frame(content_measurements$data)) {
+      # Dan is er een error teruggekomen, bijvoorbeeld 502 OF
+      # Het kan zijn dat een station voor de gekozen periode geen data levert.
       print(content_measurements)
       # stat_info_df$error <- "Error in gegevens ophalen. Check of alle gegevens er zijn."
       next

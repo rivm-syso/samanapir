@@ -16,5 +16,6 @@ Imports:
     dplyr,
     httr,
     jsonlite,
-    stringr
+    stringr,
+    purrr
 RoxygenNote: 7.1.1
