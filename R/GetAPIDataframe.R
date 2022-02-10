@@ -27,7 +27,7 @@ GetAPIDataframe <- function(url_api){
     # Tenzij er iets met de data (bijv. je vraag een project op dat niet bestaat)
     # Daarvoor zit een counter dat je niet eeuwig in de while loop kunt blijven
     if (raw_result$status_code != 200){
-      if (counter < 100){
+      if (counter < 10){
         counter <- counter + 1
         nog_eens_opvragen <- TRUE}
       # Als er na 100 keer nog geen antwoord gevonden is, return de error
