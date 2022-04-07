@@ -390,8 +390,7 @@ extract_datastream<- function(x){
   if(is.null(x)){
     return(data.frame(kit_id_ext = "no data",
                       unit = "no data",
-                      url_properties = "no data",
-                      url_observations = "no data"
+                      datastream_id = "nodata"
     )
     )
   }
@@ -399,11 +398,11 @@ extract_datastream<- function(x){
   url_properties <- x |> dplyr::select("ObservedProperty@iot.navigationLink") |> dplyr::pull()
   url_observations <- x |> dplyr::select("Observations@iot.navigationLink") |> dplyr::pull()
   kit_id_ext <- x |> dplyr::select("name") |> dplyr::pull()
+  datastream_id <- x |> dplyr::select("@iot.id") |> dplyr::pull()
 
   return(data.frame(kit_id_ext = kit_id_ext,
                     unit = unit,
-                    url_properties = url_properties,
-                    url_observations = url_observations))
+                    datastream_id = datastream_id))
 }
 
 
@@ -564,3 +563,108 @@ GetSamenMetenAPIinfoProject <- function(project_name){
   return(data_out)
 }
 
+#' Get observations from Samen Meten API
+#'
+#' Get from the Samen Meten API the observations from a given sensor and
+#' measured parameter.
+#'
+#' @param datastream_id string, id from the datastream
+#' @param kit_id string, id/name from the sensor
+#' @param ymd_from string, date from which data will be obtained in format yyyymmdd
+#' @param ymd_to string, date to which data will be obtained in format yyyymmdd
+#'
+#' @return dataframe with the columns: kit_id (string), timestamp(posixct UTC),
+#' parameter (string), value(numeric)
+#'
+#' @export
+#'
+#' @examples TEST <- GetSamenMetenAPIobs("31508","LTD_55101","20220101","20220103")
+GetSamenMetenAPIobs <- function(datastream_id, kit_id, ymd_from, ymd_to){
+  # start from the function
+  start_time <- Sys.time()
+  # Create url for the measuered parameter
+  url_property <- paste("https://api-samenmeten.rivm.nl/v1.0/Datastreams(",
+                        datastream_id,")/ObservedProperty", sep='')
+
+  # Get the name of the datastream measured parameter
+  logger::log_info(paste0("Get data from url: ", url_property))
+  # Get from API
+  tryCatch({
+    content_prop <- GetAPIDataframe(url_property)
+  }, error = function(e){
+    # There could be a overload of the API server
+    # Try again after 30 seconds
+    Sys.sleep(30)
+    # Get from API
+    tryCatch({
+      content_prop <- GetAPIDataframe(url_property)
+    }, error = function(e){
+      logger::log_error("Error in URL property Check if input is correct.")
+      stop("Error in URL. Check if input is correct.")
+    })
+  })
+
+  logger::log_info(paste0("Data received from: ", url_property))
+
+  # Create a dataframe to store the observations
+  obs_data <- data.frame()
+
+  # Get the observations
+  url_obs <- paste("https://api-samenmeten.rivm.nl/v1.0/Datastreams(",
+                   datastream_id,")/Observations?$filter=phenomenonTime+gt+%27",
+                   ymd_from,"%27+and+phenomenonTime+lt+%27",ymd_to,
+                   "%27&$orderby=phenomenonTime",sep='')
+
+  # The API uses multiple pages, if there are, then get them all
+  multiple_pages_obs <- TRUE
+
+  # Get all sensors and there properties and further urls to the datastream properties and observations
+  while(multiple_pages_obs){
+
+    logger::log_info(paste0("Get data from url: ", url_obs))
+    # Get from API
+    tryCatch({
+      content_obs <- GetAPIDataframe(url_obs)
+      content_obs_df <- content_obs$value
+    }, error = function(e){
+      # There could be a overload of the API server
+      # Try again after 30 seconds
+      Sys.sleep(30)
+      # Get from API
+      tryCatch({
+        content_obs <- GetAPIDataframe(url_obs)
+        content_obs_df <- content_obs$value
+      }, error = function(e){
+        logger::log_error("Error in URL obs Check if input is correct.")
+        stop("Error in URL. Check if input is correct.")
+      })
+    })
+
+    logger::log_info(paste0("Data received from: ", url_obs))
+
+    # Store the observations, add kit_id and parameter
+    obs_data <- obs_data |>
+      dplyr::bind_rows(data.frame(
+        kit_id = kit_id,
+        parameter = content_prop$name,
+        timestamp = as.POSIXct(content_obs_df$phenomenonTime, format='%Y-%m-%dT%H:%M:%S', tz='UTC'),
+        value = content_obs_df$result
+      ))
+
+    # Check if there is another page to read
+    if (length(content_obs)>1){
+      url_obs <- content_obs[[1]]
+      logger::log_debug("New page")
+    } else{
+      multiple_pages_obs <- FALSE
+    }
+  }
+
+  # end from the function
+  end_time <- Sys.time()
+  logger::log_info(paste0("The download of the data took ",end_time - start_time, "s"))
+
+  # return the data
+  return(obs_data)
+
+}
