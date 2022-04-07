@@ -17,5 +17,10 @@ Imports:
     httr,
     jsonlite,
     stringr,
-    purrr
-RoxygenNote: 7.1.1
+    purrr,
+    logger
+RoxygenNote: 7.1.2
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
