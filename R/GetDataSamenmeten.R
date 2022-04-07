@@ -6,7 +6,7 @@
 #'                       sensoren opgehaald
 #' @param ymd_vanaf : string met datum van start van de periode Bijv:"20190909"
 #' @param ymd_tot : string met datum van eind van de periode Bijv:"20190912"
-#' @param data_opslag
+#' @param data_opslag : defualt empty list
 #' @param updateProgress : functie om de progress te tonen in bijv. shiny tool
 #' @param debug : boolean, om aan te geven of er prints moeten worden gemaakt die kunnen helpen bij debuggen.
 #'
@@ -348,3 +348,151 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   all_data_list <- list('sensordata' = sensor_data, 'metingen' = meetgegevens,  'dataopslag'= data_opslag)
   return(all_data_list)
 }
+
+#' Extract coordinates from API result
+#'
+#' Helper function (using lapply) of the function: GetSamenMetenAPIinfo
+#'
+#' In the return of the SamenMeten API the coordinates are nested in lists,
+#' this function extract the coordinates and checks if there are coordinates.
+#' If no coordinates are available 0,0 is returned as coordinates.
+#'
+#' @param x
+#'
+#' @return dataframe with lat and lon as columns
+#'
+extract_coord <- function(x){
+  if(is.null(x)){
+    return(data.frame(lat = 0, lon=0)
+    )
+  }
+  coordinates_list <- x |> dplyr::select("location") |> dplyr::pull() |> dplyr::select("coordinates")
+  coordinates_num <- coordinates_list[[1]] |> unlist()
+  return(data.frame(lon = coordinates_num[[1]],
+                    lat = coordinates_num[[2]]))
+}
+
+
+#' Extract datastream from API result
+#'
+#' Helper function (using lapply) of the function: GetSamenMetenAPIinfo
+#'
+#' In the return of the SamenMeten API the information of the dataastreams are
+#' nested in lists, this function extract the url to the observedproperties and
+#' the observations and checks if there is information at all. If no information
+#' is available, then "no data" is set.
+#'
+#' @param x
+#'
+#' @return dataframe with the kit_id_ext, unit, url_properties, url_observations
+#'
+extract_datastream<- function(x){
+  if(is.null(x)){
+    return(data.frame(kit_id_ext = "no data",
+                      unit = "no data",
+                      url_properties = "no data",
+                      url_observations = "no data"
+    )
+    )
+  }
+  unit <- x |> dplyr::select("unitOfMeasurement") |> dplyr::pull() |> dplyr::select("symbol") |> dplyr::pull()
+  url_properties <- x |> dplyr::select("ObservedProperty@iot.navigationLink") |> dplyr::pull()
+  url_observations <- x |> dplyr::select("Observations@iot.navigationLink") |> dplyr::pull()
+  kit_id_ext <- x |> dplyr::select("name") |> dplyr::pull()
+
+  return(data.frame(kit_id_ext = kit_id_ext,
+                    unit = unit,
+                    url_properties = url_properties,
+                    url_observations = url_observations))
+}
+
+
+#' GetSamenMetenAPIinfo
+#'
+#' This function will obtain the information of each sensor in a particular
+#' municipality or project. The name, location, closest reference stations,
+#' measured components and the urls to the observations of each datastream.
+#'
+#' @param projectnaam string with the name of the project or municipality where
+#'   you are interested in, in the format as the api can read.
+#'   For project: project eq'Amersfoort'
+#'   For municipality:  codegemeente eq '310'
+#'
+#' @return list with the info for each sensor in the projectnaam
+#' @export
+#'
+#' @examples
+#' TEST <- GetSamenMetenAPIinfo("project eq'Amersfoort'")
+GetSamenMetenAPIinfo <- function(projectnaam){
+  url_things <- paste("https://api-samenmeten.rivm.nl/v1.0/Things?$filter=(properties/",projectnaam,")&$expand=Locations,Datastreams", sep='')
+  url_things <- gsub(' ','%20', url_things)
+
+  # Create an empty dataframe to store sensordata
+  sensor_data <- data.frame()
+
+  # Create an empty dataframe to store the urls
+  datastream_data <- data.frame()
+
+  # The API uses multiple pages, if there are, then get them all
+  multiple_pages_things <- TRUE
+
+  # Get all sensors and there properties and further urls to the datastream properties and observations
+  while(multiple_pages_things){
+
+    logger::log_info(paste0("Get data from url: ", url_things))
+    # Get from API
+    tryCatch({
+      content_things <- GetAPIDataframe(url_things)
+      content_things_df <- content_things$value
+    }, error = function(e){
+      logger::log_error("Error in URL things. Check if input is correct.")
+      stop("Error in URL things. Check if input is correct.")
+    })
+
+    logger::log_info(paste0("Data received from: ", url_things))
+
+    # Extract the coordinates: The coordinates are listed in the dataframe
+    location_df <- content_things_df$Locations
+    coordinates <-   lapply(location_df, extract_coord) |> dplyr::bind_rows()
+
+    # Store the info about the sensor (meta-data)
+    sensor_data <- rbind(sensor_data, data.frame('things_id' = content_things_df[,'@iot.id'],
+                                                 'kit_id' = content_things_df[,'name'],
+                                                 'project' = content_things_df$properties['project'],
+                                                 'lat' = coordinates$lat,
+                                                 'lon' = coordinates$lon,
+                                                 'knmicode' = content_things_df$properties['knmicode'],
+                                                 'pm10closecode' = content_things_df$properties['pm10closecode'],
+                                                 'pm10regiocode' = content_things_df$properties['pm10regiocode'],
+                                                 'pm10stadcode' = content_things_df$properties['pm10stadcode'],
+                                                 'pm25closecode' = content_things_df$properties['pm25closecode'],
+                                                 'pm25regiocode' = content_things_df$properties['pm25regiocode'],
+                                                 'pm25stadcode' = content_things_df$properties['pm25stadcode']
+    ))
+
+    # Store the info about the parameters measured (datastreams)
+    # Extract the datastream
+    datastream_list <- content_things_df |> dplyr::select(Datastreams) |> dplyr::pull() |> lapply( extract_datastream)
+
+    # Add the kit_id to the datastream
+    kit_id_overview <- sensor_data$kit_id
+    names(datastream_list) <- kit_id_overview
+
+    # Convert to dataframe
+    datastream_df <- datastream_list |> dplyr::bind_rows( .id = "kit_id")
+
+    # Store the info about the datastreams (meta-data)
+    datastream_data <- rbind(datastream_data, datastream_df)
+
+    # Check if there is another page to read
+    if (length(content_things)>1){
+      url_things <- content_things[[1]]
+      logger::log_debug("New page")
+    } else{
+      multiple_pages_things <- FALSE
+    }
+  }
+
+  all_data_list <- list('sensor_data' = sensor_data, 'datastream_data'= datastream_data)
+  return(all_data_list)
+  }
