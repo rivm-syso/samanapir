@@ -413,18 +413,18 @@ extract_datastream<- function(x){
 #' municipality or project. The name, location, closest reference stations,
 #' measured components and the urls to the observations of each datastream.
 #'
-#' @param projectnaam string with the name of the project or municipality where
+#' @param url_part string with the name of the project or municipality where
 #'   you are interested in, in the format as the api can read.
 #'   For project: project eq'Amersfoort'
 #'   For municipality:  codegemeente eq '310'
 #'
-#' @return list with the info for each sensor in the projectnaam
+#' @return list with the info for each sensor in the url_part
 #' @export
 #'
 #' @examples
 #' TEST <- GetSamenMetenAPIinfo("project eq'Amersfoort'")
-GetSamenMetenAPIinfo <- function(projectnaam){
-  url_things <- paste("https://api-samenmeten.rivm.nl/v1.0/Things?$filter=(properties/",projectnaam,")&$expand=Locations,Datastreams", sep='')
+GetSamenMetenAPIinfo <- function(url_part){
+  url_things <- paste("https://api-samenmeten.rivm.nl/v1.0/Things?$filter=(properties/",url_part,")&$expand=Locations,Datastreams", sep='')
   url_things <- gsub(' ','%20', url_things)
 
   # Create an empty dataframe to store sensordata
@@ -445,8 +445,17 @@ GetSamenMetenAPIinfo <- function(projectnaam){
       content_things <- GetAPIDataframe(url_things)
       content_things_df <- content_things$value
     }, error = function(e){
-      logger::log_error("Error in URL things. Check if input is correct.")
-      stop("Error in URL things. Check if input is correct.")
+      # There could be a overload of the API server
+      # Try again after 30 seconds
+      Sys.sleep(30)
+      # Get from API
+      tryCatch({
+        content_things <- GetAPIDataframe(url_things)
+        content_things_df <- content_things$value
+      }, error = function(e){
+        logger::log_error("Error in URL things. Check if input is correct.")
+        stop("Error in URL things. Check if input is correct.")
+      })
     })
 
     logger::log_info(paste0("Data received from: ", url_things))
@@ -495,4 +504,63 @@ GetSamenMetenAPIinfo <- function(projectnaam){
 
   all_data_list <- list('sensor_data' = sensor_data, 'datastream_data'= datastream_data)
   return(all_data_list)
+}
+
+
+
+#' Get data Samen Meten API per Municipality
+#'
+#' This function will obtain the information of each sensor in a particular
+#' municipality from the Samen Meten API. The name, location, closest reference stations,
+#' measured components and the urls to the observations of each datastream.
+#'
+#' @param muni_number string with the code of the municipality, for example '310'
+#'
+#' @return list with the info for each sensor in the municipality
+#' @export
+#'
+#' @examples TEST <- GetSamenMetenAPIinfoMuni("330")
+GetSamenMetenAPIinfoMuni <- function(muni_code){
+  # check if input is character
+  if(!is.character(muni_code)){
+    logger::log_error("Input 'muni_code' should be a character")
+    return(NULL)
   }
+
+  # Create part for in the url of the API
+  url_part <- paste("codegemeente eq'",muni_code,"'", sep='')
+
+  # Get the data from the API
+  data_out <- GetSamenMetenAPIinfo(url_part)
+
+  return(data_out)
+}
+
+#' Get data Samen Meten API per Project
+#'
+#' This function will obtain the information of each sensor in a particular
+#' project from the Samen Meten API. The name, location, closest reference stations,
+#' measured components and the urls to the observations of each datastream.
+#'
+#' @param project_name string with name of the project for example "HEI"
+#'
+#' @return list with the info for each sensor in the project
+#' @export
+#'
+#' @examples TEST <- GetSamenMetenAPIinfoProject("HEI")
+GetSamenMetenAPIinfoProject <- function(project_name){
+  # check if input is character
+  if(!is.character(project_name)){
+    logger::log_error("Input 'project_name' should be a character")
+    return(NULL)
+  }
+
+  # Create part for in the url of the API
+  url_part <- paste("project eq'",project_name,"'", sep='')
+
+  # Get the data from the API
+  data_out <- GetSamenMetenAPIinfo(url_part)
+
+  return(data_out)
+}
+

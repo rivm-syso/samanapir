@@ -4,16 +4,16 @@
 \alias{GetSamenMetenAPIinfo}
 \title{GetSamenMetenAPIinfo}
 \usage{
-GetSamenMetenAPIinfo(projectnaam)
+GetSamenMetenAPIinfo(url_part)
 }
 \arguments{
-\item{projectnaam}{string with the name of the project or municipality where
+\item{url_part}{string with the name of the project or municipality where
 you are interested in, in the format as the api can read.
 For project: project eq'Amersfoort'
 For municipality:  codegemeente eq '310'}
 }
 \value{
-list with the info for each sensor in the projectnaam
+list with the info for each sensor in the url_part
 }
 \description{
 This function will obtain the information of each sensor in a particular

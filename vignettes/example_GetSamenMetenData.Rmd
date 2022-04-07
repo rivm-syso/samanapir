@@ -1,0 +1,70 @@
+---
+title: "example_GetSamenMetenData"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{example_GetSamenMetenData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(samanapir)
+```
+
+# Get the sensors of a municipality
+You can use the function 'GetSamenMetenAPIinfoMuni' to obtain for a particular
+municipality, all the sensors and their meta information. The meta
+information contains the name (kit_id), the location(lat, lon), some names of
+the reference stations. A second dataframe is returned including information
+about which parameters are measured, their units and the url to the
+observations.
+
+NOTE: the input for the function is the code of the municipality, as a string.
+
+```{r municipality}
+# Example 1: municipality
+muni_code <- "200"
+muni_data_example_1 <- GetSamenMetenAPIinfoMuni(muni_code)
+
+# Example 2: error in input
+muni_code <- 200
+muni_data_example_2 <- GetSamenMetenAPIinfoMuni(muni_code)
+
+# # Example 3: error in unknown municipality
+# muni_code <- "908354" 
+# muni_data_example_3 <- GetSamenMetenAPIinfoMuni(muni_code)
+
+```
+# Get the sensors of a project
+You can use the function 'GetSamenMetenAPIinfoProject' to obtain for a particular
+project, all the sensors and their meta information. The meta
+information contains the name (kit_id), the location(lat, lon), some names of
+the reference stations. A second dataframe is returned including information
+about which parameters are measured, their units and the url to the
+observations.
+
+NOTE: the input for the function is the name of the project, as a string.
+
+An overview of all the projectnames can be found in the github for Samen Analyseren Tool
+
+```{r project}
+# Example 1: project
+project_name <- "HEI"
+project_data_example_1 <- GetSamenMetenAPIinfoProject(project_name)
+
+# Example 2: error input
+project_name <- 200
+project_data_example_2 <- GetSamenMetenAPIinfoProject(project_name)
+
+# # Example 2: error unknown project
+# project_name <- "hei"
+# project_data_example_2 <- GetSamenMetenAPIinfoProject(project_name)
+
+```
