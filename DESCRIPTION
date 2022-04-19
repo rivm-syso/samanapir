@@ -18,4 +18,5 @@ Imports:
     jsonlite,
     stringr,
     purrr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
+Depends: R (>= 4.1)
