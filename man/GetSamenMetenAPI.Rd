@@ -21,6 +21,8 @@ sensoren opgehaald}
 
 \item{ymd_tot}{: string met datum van eind van de periode Bijv:"20190912"}
 
+\item{data_opslag}{: defualt empty list}
+
 \item{updateProgress}{: functie om de progress te tonen in bijv. shiny tool}
 
 \item{debug}{: boolean, om aan te geven of er prints moeten worden gemaakt die kunnen helpen bij debuggen.}
