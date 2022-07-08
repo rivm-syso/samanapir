@@ -438,7 +438,7 @@ GetSamenMetenAPIinfo <- function(url_part){
   # Get all sensors and there properties and further urls to the datastream properties and observations
   while(multiple_pages_things){
 
-    logger::log_info(paste0("Get data from url: ", url_things))
+    logger::log_info(paste0("GetSamenMetenAPIinfo: Get data from url: ", url_things))
     # Get from API
     tryCatch({
       content_things <- GetAPIDataframe(url_things)
@@ -446,18 +446,20 @@ GetSamenMetenAPIinfo <- function(url_part){
     }, error = function(e){
       # There could be a overload of the API server
       # Try again after 30 seconds
-      Sys.sleep(30)
+    logger::log_trace("GetSamenMetenAPIinfo: GetAPIDataframe returned error, trying again ...")
+      Sys.sleep(3)
       # Get from API
       tryCatch({
         content_things <- GetAPIDataframe(url_things)
         content_things_df <- content_things$value
       }, error = function(e){
-        logger::log_error("Error in URL things. Check if input is correct.")
-        stop("Error in URL things. Check if input is correct.")
+          logger::log_error("GetSamenMetenAPIinfo: GetAPIDataframe returned error")
+        stop("GetSamenMetenAPIinfo ERROR in URL things")
       })
     })
 
-    logger::log_info(paste0("Data received from: ", url_things))
+          
+    logger::log_debug("GetSamenMetenAPIinfo: Data received from {url_things}")
 
     # Extract the coordinates: The coordinates are listed in the dataframe
     location_df <- content_things_df$Locations
@@ -495,8 +497,9 @@ GetSamenMetenAPIinfo <- function(url_part){
     # Check if there is another page to read
     if (length(content_things)>1){
       url_things <- content_things[[1]]
-      logger::log_debug("New page")
+    logger::log_trace("GetSamenMetenAPIinfo: getting next page ...")
     } else{
+    logger::log_trace("GetSamenMetenAPIinfo: got final page")
       multiple_pages_things <- FALSE
     }
   }
@@ -587,24 +590,24 @@ GetSamenMetenAPIobs <- function(datastream_id, kit_id, ymd_from, ymd_to){
                         datastream_id,")/ObservedProperty", sep='')
 
   # Get the name of the datastream measured parameter
-  logger::log_info(paste0("Get data from url: ", url_property))
+  logger::log_trace("GetSamenMetenAPIobs: requesting property data from url {url_property}")
   # Get from API
   tryCatch({
     content_prop <- GetAPIDataframe(url_property)
   }, error = function(e){
     # There could be a overload of the API server
     # Try again after 30 seconds
-    Sys.sleep(30)
+    Sys.sleep(3)
     # Get from API
     tryCatch({
       content_prop <- GetAPIDataframe(url_property)
     }, error = function(e){
-      logger::log_error("Error in URL property Check if input is correct.")
-      stop("Error in URL. Check if input is correct.")
+      logger::log_error("GetSamenMetenAPIobs ERROR: GetAPIDataFrame returned error.")
+      stop("GetSamenMetenAPIobs ERROR in URL")
     })
   })
 
-  logger::log_info(paste0("Data received from: ", url_property))
+  logger::log_debug(paste0("Data received from: ", url_property))
 
   # Create a dataframe to store the observations
   obs_data <- data.frame()
@@ -629,18 +632,18 @@ GetSamenMetenAPIobs <- function(datastream_id, kit_id, ymd_from, ymd_to){
     }, error = function(e){
       # There could be a overload of the API server
       # Try again after 30 seconds
-      Sys.sleep(30)
+      Sys.sleep(3)
       # Get from API
       tryCatch({
         content_obs <- GetAPIDataframe(url_obs)
         content_obs_df <- content_obs$value
       }, error = function(e){
-        logger::log_error("Error in URL obs Check if input is correct.")
-        stop("Error in URL. Check if input is correct.")
+        logger::log_error("GetSamenMetenAPIobs ERROR: GetAPIDAtaframe returned error")
+        stop("GetSamenMetenAPIobs ERROR")
       })
     })
 
-    logger::log_info(paste0("Data received from: ", url_obs))
+    logger::log_debug("GetAPIDatframe: data received from: {url_obs}, {nrow(content_obs_df)} records")
 
     # Store the observations, add kit_id and parameter
     obs_data <- obs_data |>
@@ -654,15 +657,16 @@ GetSamenMetenAPIobs <- function(datastream_id, kit_id, ymd_from, ymd_to){
     # Check if there is another page to read
     if (length(content_obs)>1){
       url_obs <- content_obs[[1]]
-      logger::log_debug("New page")
+      logger::log_trace("GetAPIDataframe, get next page")
     } else{
       multiple_pages_obs <- FALSE
+      logger::log_trace("GetAPIDataframe, got last page")
     }
   }
 
   # end from the function
   end_time <- Sys.time()
-  logger::log_info(paste0("The download of the data took ",end_time - start_time, "s"))
+  logger::log_info("The download of the data took {end_time - start_time} seconds")
 
   # return the data
   return(obs_data)
