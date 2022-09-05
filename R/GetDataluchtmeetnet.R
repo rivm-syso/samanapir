@@ -167,11 +167,12 @@ GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
 
       # Voeg de data aan de dataframe
       metingen_df <- rbind(metingen_df, measurements_data)
+
+      # Filter de data dat alleen de gegevens van de gevraagde periode erbij zitten
+      metingen_df <- dplyr::filter(metingen_df, timestamp_measured <= ymd_tot & timestamp_measured >= ymd_vanaf )
+
     }
   }
-
-  # Filter de data dat alleen de gegevens van de gevraagde periode erbij zitten
-  metingen_df <- dplyr::filter(metingen_df, timestamp_measured <= ymd_tot & timestamp_measured >= ymd_vanaf )
 
   print(paste0("Data van luchtmeetnet opgehaald van station: ", station))
   return(metingen_df)
