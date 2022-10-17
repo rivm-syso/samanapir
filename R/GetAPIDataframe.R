@@ -20,22 +20,22 @@ GetAPIDataframe <- function(url_api){
   # dat de data er niet is. Dan gewoon nog eens aan server vragen
   while (nog_eens_opvragen){
     # Vraag de URL op via API
-      log_trace("GetAPIDataframe: Getting url {url_api}")
+      # log_trace("GetAPIDataframe: Getting url {url_api}")
     raw_result <- httr::GET(url=url_api)
-      log_trace("GetAPIDataframe: Getting url, got result {raw_result$status_code}")
+      # log_trace("GetAPIDataframe: Getting url, got result {raw_result$status_code}")
 
     # Check de status: is de api correct?
     # Er is iets met de server, gewoon nog eens proberen
     # Tenzij er iets met de data (bijv. je vraag een project op dat niet bestaat)
     # Daarvoor zit een counter dat je niet eeuwig in de while loop kunt blijven
     if (raw_result$status_code != 200){
-      log_trace("GetAPIDataframe: got error status code {raw_result$status_code}")
+      # log_trace("GetAPIDataframe: got error status code {raw_result$status_code}")
       if (counter < 10){
         counter <- counter + 1
         nog_eens_opvragen <- TRUE}
       # Als er na 100 keer nog geen antwoord gevonden is, return de error
       else{
-          log_error("GetApiDataframe ERROR: server responded with error code {raw_result$stats_code}")
+          # log_error("GetApiDataframe ERROR: server responded with error code {raw_result$stats_code}")
           return(paste('Error', raw_result$status_code, sep=":"))
       }
     }
@@ -47,7 +47,7 @@ GetAPIDataframe <- function(url_api){
 
       # Check of er wel content is:
       if(length(content[[1]])<1){
-        log_error("GetApiDataframe ERROR: JSON content is empty")
+        # log_error("GetApiDataframe ERROR: JSON content is empty")
         return('Error: Er is geen content gevonden.')
       }
       else{return(content)}

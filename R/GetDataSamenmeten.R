@@ -458,7 +458,7 @@ GetSamenMetenAPIinfo <- function(url_part){
       })
     })
 
-          
+
     logger::log_debug("GetSamenMetenAPIinfo: Data received from {url_things}")
 
     # Extract the coordinates: The coordinates are listed in the dataframe
@@ -485,7 +485,7 @@ GetSamenMetenAPIinfo <- function(url_part){
     datastream_list <- content_things_df |> dplyr::select(Datastreams) |> dplyr::pull() |> lapply( extract_datastream)
 
     # Add the kit_id to the datastream
-    kit_id_overview <- sensor_data$kit_id
+    kit_id_overview <- content_things_df[,'name']
     names(datastream_list) <- kit_id_overview
 
     # Convert to dataframe
