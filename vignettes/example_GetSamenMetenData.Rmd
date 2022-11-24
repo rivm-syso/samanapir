@@ -1,0 +1,109 @@
+---
+title: "example_GetSamenMetenData"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{example_GetSamenMetenData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(samanapir)
+```
+
+# Introduction
+
+The sensor data from [Samen Meten][https://samenmeten.rivm.nl/dataportaal/] can
+be obtained using an API. This package contains functions to use this API. First
+part is to get the sensors in a particular project or municipality and thir
+meta-data. Second get the observations of 1 parameter of the sensor for a
+particular time period.
+
+For more information about the API see: [API Samen Meten][https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface]
+
+## Get the sensors of a municipality
+You can use the function 'GetSamenMetenAPIinfoMuni' to obtain for a particular
+municipality, all the sensors and their meta information. The meta
+information contains the name (kit_id), the location(lat, lon), some names of
+the reference stations. A second dataframe is returned including information
+about which parameters are measured, their units and the url to the
+observations.
+
+NOTE: the input for the function is the code of the municipality, as a string.
+
+```{r municipality}
+# Example 1: municipality
+muni_code <- "200"
+muni_data_example_1 <- GetSamenMetenAPIinfoMuni(muni_code)
+
+# Example 2: error in input
+muni_code <- 200
+muni_data_example_2 <- GetSamenMetenAPIinfoMuni(muni_code)
+
+# # Example 3: error in unknown municipality
+# muni_code <- "908354" 
+# muni_data_example_3 <- GetSamenMetenAPIinfoMuni(muni_code)
+
+```
+## Get the sensors of a project
+You can use the function 'GetSamenMetenAPIinfoProject' to obtain for a particular
+project, all the sensors and their meta information. The meta
+information contains the name (kit_id), the location(lat, lon), some names of
+the reference stations. A second dataframe is returned including information
+about which parameters are measured, their units and the url to the
+observations.
+
+NOTE: the input for the function is the name of the project, as a string.
+
+An overview of all the projectnames can be found in the github for Samen Analyseren Tool
+
+```{r project}
+# Example 1: project
+project_name <- "HEI"
+project_data_example_1 <- GetSamenMetenAPIinfoProject(project_name)
+
+# Example 2: error input
+project_name <- 200
+project_data_example_2 <- GetSamenMetenAPIinfoProject(project_name)
+
+# # Example 2: error unknown project
+# project_name <- "hei"
+# project_data_example_2 <- GetSamenMetenAPIinfoProject(project_name)
+
+```
+## Get the data (observations) of a sensor
+
+Each sensor (kit_id) can contain multiple sensors, each measuring a parameter
+such as PM2.5, Temperature. For each parameter a datastream is stored in the
+Samen Meten API. To obtain the data from 1 parameter the function below can be
+used. The datastream_id is given in the GetSamenMetenAPIinfo-functions.
+
+NOTE: to get the observations from the API can take some time. Consider to split
+the time period in shorter periods
+
+
+```{r Obtain data observations}
+datastream_id <- "31508"
+kit_id <- "LTD_55101"
+ymd_from <- "20220101"
+ymd_to <- "20220110"
+
+observations_1 <- GetSamenMetenAPIobs(datastream_id, kit_id ,ymd_from, ymd_to)
+``` 
+
+```{r Obtain data observations after info}
+# You can use the info from 'project_data_example_1' 
+datastream_id <- project_data_example_1$datastream_data$datastream_id[[1]]
+kit_id <- project_data_example_1$datastream_data$kit_id[[1]]
+ymd_from <- "20220101"
+ymd_to <- "20220110"
+
+observations_2 <- GetSamenMetenAPIobs(datastream_id, kit_id ,ymd_from, ymd_to)
+``` 
