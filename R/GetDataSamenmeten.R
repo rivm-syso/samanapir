@@ -390,7 +390,7 @@ extract_datastream<- function(x){
   if(is.null(x)){
     return(data.frame(kit_id_ext = "no data",
                       unit = "no data",
-                      datastream_id = "nodata"
+                      datastream_id = -999
     )
     )
   }
