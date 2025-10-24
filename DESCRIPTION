@@ -15,11 +15,12 @@ Imports:
     utils,
     dplyr,
     httr,
+    httr2,
     jsonlite,
     stringr,
     purrr,
     logger
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.2
 Depends: R (>= 4.1)
 Suggests: 
     rmarkdown,

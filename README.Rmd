@@ -44,6 +44,20 @@ Hier een voorbeeld hoe je gegevens van het KNMI kan downloaden:
 library(samanapir)
 TEST_API_KNMI <- samanapir::GetKNMIAPI('260','20191214','20191215')
 ```
+
+Een nieuwere manier om de gegevens van het KNMI te downloaden is via hun EDR 
+api. Deze geeft de 10-minuten ongevalideerde gegevens. Let op: dat is dus net
+andere data dan de GetKNMIAPI-functie hierboven geeft.
+
+Voor het gebruik van deze api heb je een token nodig, deze kun je aanvragen
+bij het KNMI: [Vraag token aan]{https://developer.dataplatform.knmi.nl/register/}
+
+```{r}
+library(samanapir)
+token <- "USE YOUR OWN TOKEN"
+TEST_EDR_KNMI <- samanapir::GetKNMIAPIEDR(token)
+```
+
 Hier een voorbeeld hoe je gegevens van het Luchtmeetnet kan downloaden:
 
 ``` {r}
@@ -63,3 +77,4 @@ Voor het ophalen en downloaden van de gegevens wordt gebruik gemaakt van:
 * [Samen Meten Dataportaal](https://www.samenmetenaanluchtkwaliteit.nl/dataportaal/api-application-programming-interface)
 * [Luchtmeetnet](https://www.luchtmeetnet.nl/)
 * [KNMI](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)
+* [KNMI EDR](https://dataplatform.knmi.nl/dataset/10-minute-in-situ-meteorological-observations-1-0)
