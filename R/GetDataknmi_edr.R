@@ -101,19 +101,28 @@ getKNMIparameters <- function(token) {
 #' Get the 10-minute unvalidated data from KNMI dataplatform.
 #' More information visit: https://dataplatform.knmi.nl/
 #'
-#' @param date_start start date of the returned data, string in the format %Y-%m-%d
+#' @param date_start start date of the returned data, string in the
+#' format %Y-%m-%d
 #' @param date_end end date of the returned data, string in the format %Y-%m-%d
-#' @param parameter_name string, in the format c("dd", ...)
+#' @param parameter string, options:
+#' "wind" for the wind speed and direction at sensor height (default)
+#' "temp" for the temperature (not yet implemented)
+#' "rain" for the precipitation of last hour (not yet implemented)
 #' @param token string, token to get acces to the KNMI API EDR
-#' @param location_id string, in format c("356", ...), one or more location ids
+#' @param location_id string, in format c("356"), one location ids
 #' from location you want the knmi data of.
+#' @param data_result string, default == "raw", the data is as given by the api,
+#' "hourly", the data is average per hour using the TimeAverage funtion form
+#' openAir.
 #'
 #' @returns dataframe with the KNMI data in columns c(values (numeric),
 #' date_time (posixct), id_nr(character)). If not succesful call then an error
 #' is returned.
 #' @export
 #'
-GetKNMIAPIEDR <- function(date_start, date_end, parameter_name, token, location_id)
+GetKNMIAPIEDR <- function(date_start, date_end, token,
+                          location_id, parameter = "wind",
+                          data_result = "raw")
 {
 
   # Set the correct variables for the API
@@ -128,10 +137,15 @@ GetKNMIAPIEDR <- function(date_start, date_end, parameter_name, token, location_
 
   # Change location id to correct format
   location_id_new <- paste0("0-20000-0-06", location_id)
-  location_id_new <- paste(location_id_new, collapse = ",")
 
   # Change parameters to correct format
-  parameter_name_new <- paste(parameter_name, collapse = ",")
+  if(parameter == "wind"){
+    parameter_name_new <- "dd,ffs"
+    parameter_name <- c("dd", "ffs")
+  }else{
+    #TODO: add  temp and rain options
+    stop()
+  }
 
   # Set the request with the API key
   req <- request(paste0(base_url, "/locations/", location_id_new)) |>
@@ -150,30 +164,31 @@ GetKNMIAPIEDR <- function(date_start, date_end, parameter_name, token, location_
     # Set empty dataframe
     result <- data.frame()
 
-    # Get the results for each location id
-    for (i in 1:length(location_id)) {
 
       # Get the results for each parameter
       for (j in parameter_name) {
+        print(j)
 
-        # Check if there is data available for this paramater at this station
+        # Check if there is data available for this parameter at this station
         skip_to_next <- FALSE
-        tryCatch(resp_json$coverages[[i]]$ranges[[j]]$values,
+        tryCatch(resp_json$coverages[[1]]$ranges[[j]]$values,
                  error = function(e) {
                    skip_to_next <<- TRUE
                  })
         if(skip_to_next) {
-          print(paste0("There is no data for parameter ", j, " at station ", location_id[[i]]))
+          print(paste0("There is no data for parameter ", j, " at station ",
+                       location_id))
           next
         }
 
         # Extract the measurement values from the response
-        values <- resp_json$coverages[[i]]$ranges[[j]]$values
+        values <- resp_json$coverages[[1]]$ranges[[j]]$values
 
         # Check if values is empty
         if (is.null(values))
         {
-          print(paste0("There is no data for parameter ", j, " at station ", location_id[[i]]))
+          print(paste0("There is no data for parameter ", j, " at station ",
+                       location_id))
           next
         }
 
@@ -181,13 +196,13 @@ GetKNMIAPIEDR <- function(date_start, date_end, parameter_name, token, location_
         values <- replace_NULL(values)
 
         # Extract the measurement times
-        times <- resp_json$coverages[[i]]$domain$axes$t$values
+        times <- resp_json$coverages[[1]]$domain$axes$t$values
         # Check if list contains NULLs
         times <- replace_NULL(times)
 
         # Extract id number
-        id_nr <- resp_json$coverages[[i]]$`eumetnet:locationId`
-        id_nr <- unlist(id_nr) |> str_replace("0-20000-0-06", "")
+        id_nr <- resp_json$coverages[[1]]$`eumetnet:locationId`
+        id_nr <- unlist(id_nr) |> stringr::str_replace("0-20000-0-06", "")
 
         # Combine the measurement values and times in a dataframe
         df <- data.frame(values = unlist(values),
@@ -197,13 +212,41 @@ GetKNMIAPIEDR <- function(date_start, date_end, parameter_name, token, location_
 
         result <- rbind(result, df)
 
-      }
-
-    }
+        } # parameters
 
     # Set correct datetime format
     result <- result |>
-      dplyr::mutate(date_time = as.POSIXct(date_time, format = "%Y-%m-%dT%TZ"))
+      dplyr::mutate(date_time = as.POSIXct(date_time,
+                                           format = "%Y-%m-%dT%TZ"))
+
+    # If hourly average is requested
+    if(data_result == "hourly"){
+      if(parameter == "wind"){
+        #Add columns for openair function
+        result_prep <- result |> dplyr::mutate(
+          date = date_time
+        ) |> tidyr::pivot_wider(names_from = parameter_name,
+                                values_from = values) |>
+          dplyr::mutate(ws = ffs,
+                        wd = dd)
+
+        # Calculate the hourly windspeed and direction
+        average_wind <- openair::timeAverage(result_prep,
+                                             avg.time = "hour",
+                                             type = "id_nr")
+
+        result <- average_wind |>
+          dplyr::mutate(dd = wd,
+                        ffs = ws,
+                        date_time = date) |>
+          dplyr::select(c(date_time, dd, ffs, id_nr))
+      }
+      #TODO: add average temp and rain
+    }
+
+    # Set data_result as type
+    result <- result |>
+      dplyr::mutate(result_type = data_result)
 
     return(result)
 

@@ -55,6 +55,11 @@ bij het KNMI: [Vraag token aan]{https://developer.dataplatform.knmi.nl/register/
 ```{r}
 library(samanapir)
 token <- "USE YOUR OWN TOKEN"
+location_id <- c("356")
+date_start <- "2022-07-19 06:00:00"
+date_end <- "2022-07-30 19:00:00"
+parameter <- "wind" #wind direction and wind speed at sensor height
+data_result <- "hourly" # For hourly average
 TEST_EDR_KNMI <- samanapir::GetKNMIAPIEDR(token)
 ```
 

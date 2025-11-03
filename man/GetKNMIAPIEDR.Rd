@@ -4,19 +4,34 @@
 \alias{GetKNMIAPIEDR}
 \title{Get KNMI data via EDR api}
 \usage{
-GetKNMIAPIEDR(date_start, date_end, parameter_name, token, location_id)
+GetKNMIAPIEDR(
+  date_start,
+  date_end,
+  token,
+  location_id,
+  parameter = "wind",
+  data_result = "raw"
+)
 }
 \arguments{
-\item{date_start}{start date of the returned data, string in the format %Y-%m-%d}
+\item{date_start}{start date of the returned data, string in the
+format %Y-%m-%d}
 
 \item{date_end}{end date of the returned data, string in the format %Y-%m-%d}
 
-\item{parameter_name}{string, in the format c("dd", ...)}
-
 \item{token}{string, token to get acces to the KNMI API EDR}
 
-\item{location_id}{string, in format c("356", ...), one or more location ids
+\item{location_id}{string, in format c("356"), one location ids
 from location you want the knmi data of.}
+
+\item{parameter}{string, options:
+"wind" for the wind speed and direction at sensor height (default)
+"temp" for the temperature (not yet implemented)
+"rain" for the precipitation of last hour (not yet implemented)}
+
+\item{data_result}{string, default == "raw", the data is as given by the api,
+"hourly", the data is average per hour using the TimeAverage funtion form
+openAir.}
 }
 \value{
 dataframe with the KNMI data in columns c(values (numeric),
