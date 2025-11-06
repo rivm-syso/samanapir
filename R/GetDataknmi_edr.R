@@ -116,7 +116,8 @@ getKNMIparameters <- function(token) {
 #' openAir.
 #'
 #' @returns dataframe with the KNMI data in columns c(values (numeric),
-#' date_time (posixct), id_nr(character)). If not succesful call then an error
+#' date_time (posixct), id_nr(character), parameter_name (character),
+#' result_type (character). If not succesful call then an error
 #' is returned.
 #' @export
 #'
@@ -238,8 +239,12 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
         result <- average_wind |>
           dplyr::mutate(dd = wd,
                         ffs = ws,
-                        date_time = date) |>
-          dplyr::select(c(date_time, dd, ffs, id_nr))
+                        date_time = date,
+                        id_nr = as.character(id_nr)) |>
+          dplyr::select(c(date_time, dd, ffs, id_nr)) |>
+          tidyr::pivot_longer(cols = c(ffs, dd),
+                              names_to = "parameter_name",
+                              values_to = "values")
       }
       #TODO: add average temp and rain
     }
