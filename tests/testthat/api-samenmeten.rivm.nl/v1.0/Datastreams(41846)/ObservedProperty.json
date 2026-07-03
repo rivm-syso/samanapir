@@ -1,0 +1,8 @@
+{
+    "@iot.id": 2,
+    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(2)",
+    "name": "pm25",
+    "description": "fijnstof < 2.5microm",
+    "definition": "https://www.eea.europa.eu/help/glossary/eea-glossary/pm2.5",
+    "Datastreams@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(2)/Datastreams"
+}

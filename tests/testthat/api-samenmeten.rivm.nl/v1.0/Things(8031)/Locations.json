@@ -1,0 +1,20 @@
+{
+    "value": [
+        {
+            "@iot.id": 25623,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(25623)",
+            "name": "loc-name-OHN_dv-2111",
+            "description": "loc-desc-OHN_dv-2111",
+            "encodingType": "application/vnd.geo+json",
+            "location": {
+                "coordinates": [
+                    6.213,
+                    52.254
+                ],
+                "type": "Point"
+            },
+            "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(25623)/Things",
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(25623)/HistoricalLocations"
+        }
+    ]
+}

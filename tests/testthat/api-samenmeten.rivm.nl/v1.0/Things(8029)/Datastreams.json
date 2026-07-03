@@ -1,0 +1,49 @@
+{
+    "value": [
+        {
+            "@iot.id": 41845,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41845)",
+            "name": "OHN_dv-2109-6-temp",
+            "description": "OHN_dv-2109-6-temp",
+            "unitOfMeasurement": {
+                "definition": "https://qudt.org/vocab/unit/DEG_C",
+                "symbol": "C"
+            },
+            "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+            "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41845)/Thing",
+            "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41845)/Sensor",
+            "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41845)/Observations",
+            "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41845)/ObservedProperty"
+        },
+        {
+            "@iot.id": 41844,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41844)",
+            "name": "OHN_dv-2109-12-pm25_kal",
+            "description": "OHN_dv-2109-12-pm25_kal",
+            "unitOfMeasurement": {
+                "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                "symbol": "ug/m3"
+            },
+            "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+            "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41844)/Thing",
+            "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41844)/Sensor",
+            "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41844)/Observations",
+            "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41844)/ObservedProperty"
+        },
+        {
+            "@iot.id": 41843,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41843)",
+            "name": "OHN_dv-2109-12-pm25",
+            "description": "OHN_dv-2109-12-pm25",
+            "unitOfMeasurement": {
+                "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                "symbol": "ug/m3"
+            },
+            "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+            "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41843)/Thing",
+            "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41843)/Sensor",
+            "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41843)/Observations",
+            "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(41843)/ObservedProperty"
+        }
+    ]
+}

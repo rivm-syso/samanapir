@@ -1,0 +1,8 @@
+{
+    "@iot.id": 7,
+    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(7)",
+    "name": "temp",
+    "description": "temperatuur",
+    "definition": "http://vocabs.lter-europe.net/EnvThes/22035",
+    "Datastreams@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(7)/Datastreams"
+}
