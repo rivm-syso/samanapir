@@ -22,6 +22,8 @@ Imports:
 RoxygenNote: 7.1.2
 Depends: R (>= 4.1)
 Suggests: 
-    rmarkdown,
-    knitr
+    httptest,
+    httptest2,
+    knitr,
+    rmarkdown
 VignetteBuilder: knitr
