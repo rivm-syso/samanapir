@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.3202367,
+                51.393289
+            ]
+        },
+        "municipality": "Woensdrecht",
+        "url": "",
+        "province": null,
+        "organisation": "OMWB (Midden en West Brabant)",
+        "location": "Ossendrecht-Burgemeester Voetenstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Ossendrecht-Burgemeester Voetenstraat",
+            "EN": "Ossendrecht-Burgemeester Voetenstraat"
+        }
+    }
+}

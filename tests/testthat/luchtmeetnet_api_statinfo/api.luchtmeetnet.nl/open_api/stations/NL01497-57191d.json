@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "LKI",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                3.99972,
+                51.933517
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": null,
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Rotterdam-Maasvlakte",
+        "year_start": "2020",
+        "description": {
+            "NL": "Rotterdam - Maasvlakte",
+            "EN": "Measuring site Maasvlakte"
+        }
+    }
+}

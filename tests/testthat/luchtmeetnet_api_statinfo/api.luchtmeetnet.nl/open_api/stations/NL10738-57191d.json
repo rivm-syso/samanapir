@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "NH3",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.708419,
+                52.111621
+            ]
+        },
+        "municipality": "Ede",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Wekerom-Riemterdijk",
+        "year_start": "",
+        "description": {
+            "NL": "Wekerom-Riemterdijk",
+            "EN": "Wekerom-Riemterdijk"
+        }
+    }
+}

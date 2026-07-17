@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.120507,
+                52.067748
+            ]
+        },
+        "municipality": "Utrecht",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Utrecht-Constant Erzeijstraat",
+        "year_start": "1987",
+        "description": {
+            "NL": "Utrecht-Constant Erzeijstraat",
+            "EN": "Utrecht-Constant Erzeijstraat"
+        }
+    }
+}

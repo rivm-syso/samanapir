@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.728581,
+                52.398437
+            ]
+        },
+        "municipality": "Haarlemmermeer",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Spaarnwoude-Machineweg",
+        "year_start": "",
+        "description": {
+            "NL": "Spaarnwoude-Machineweg",
+            "EN": "Spaarnwoude-Machineweg"
+        }
+    }
+}

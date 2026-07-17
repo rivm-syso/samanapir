@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.856938,
+                51.838221
+            ]
+        },
+        "municipality": "Nijmegen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Nijmegen-Ruyterstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Nijmegen-Ruyterstraat",
+            "EN": "Nijmegen-Ruyterstraat"
+        }
+    }
+}

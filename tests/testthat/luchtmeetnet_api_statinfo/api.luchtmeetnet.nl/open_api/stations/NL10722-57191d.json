@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "SO2",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.605367,
+                52.091801
+            ]
+        },
+        "municipality": "Berkelland",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Eibergen-Lintveldseweg",
+        "year_start": "",
+        "description": {
+            "NL": "Eibergen-Lintveldseweg",
+            "EN": "Eibergen-Lintveldseweg"
+        }
+    }
+}

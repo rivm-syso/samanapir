@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "PS",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                3.83859,
+                51.27938
+            ]
+        },
+        "municipality": "Terneuzen",
+        "url": null,
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Sluiskil-Stroodorpestraat",
+        "year_start": "2020",
+        "description": {
+            "NL": "Sluiskil",
+            "EN": "Sluiskil"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "NO",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.9044,
+                52.372056
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Oude Schans",
+        "year_start": "2007",
+        "description": {
+            "NL": "Amsterdam-Oude Schans",
+            "EN": "Amsterdam-Oude Schans"
+        }
+    }
+}

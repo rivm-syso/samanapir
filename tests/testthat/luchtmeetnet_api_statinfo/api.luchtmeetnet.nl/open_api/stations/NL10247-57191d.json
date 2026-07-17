@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.393328,
+                51.407365
+            ]
+        },
+        "municipality": "Veldhoven",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Veldhoven-Europalaan",
+        "year_start": "",
+        "description": {
+            "NL": "Veldhoven-Europalaan",
+            "EN": "Veldhoven-Europalaan"
+        }
+    }
+}

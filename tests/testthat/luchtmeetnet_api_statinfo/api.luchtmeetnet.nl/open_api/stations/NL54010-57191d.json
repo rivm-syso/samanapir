@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PM25",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.897657,
+                51.962296
+            ]
+        },
+        "municipality": "Arnhem",
+        "url": "",
+        "province": null,
+        "organisation": "ODGM (Groene Metropool)",
+        "location": "Arnhem GelreDome",
+        "year_start": "2016",
+        "description": {
+            "NL": "Arnhem GelreDome",
+            "EN": "Arnhem GelreDome"
+        }
+    }
+}

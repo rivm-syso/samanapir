@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.4307,
+                51.93858
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Overschie-A13",
+        "year_start": "",
+        "description": {
+            "NL": "Overschie-A13",
+            "EN": "Overschie-A13"
+        }
+    }
+}

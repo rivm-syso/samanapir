@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.608937,
+                53.246535
+            ]
+        },
+        "municipality": "Groningen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Groningen-Nijensteinheerd",
+        "year_start": "",
+        "description": {
+            "NL": "Groningen-Nijensteinheerd",
+            "EN": "Groningen-Nijensteinheerd"
+        }
+    }
+}

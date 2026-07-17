@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.563812,
+                51.861729
+            ]
+        },
+        "municipality": "Ridderkerk",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Ridderkerk-Voorweg",
+        "year_start": "2018",
+        "description": {
+            "NL": "Ridderkerk-Voorweg",
+            "EN": "Ridderkerk-Voorweg"
+        }
+    }
+}

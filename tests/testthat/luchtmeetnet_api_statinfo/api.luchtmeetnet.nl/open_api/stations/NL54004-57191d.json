@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.969485,
+                51.978328
+            ]
+        },
+        "municipality": "Arnhem",
+        "url": "",
+        "province": null,
+        "organisation": "ODGM (Groene Metropool)",
+        "location": "Arnhem Velperbroek",
+        "year_start": "2010",
+        "description": {
+            "EN": "Arnhem Velperbroek",
+            "NL": "Arnhem Velperbroek"
+        }
+    }
+}

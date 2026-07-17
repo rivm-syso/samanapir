@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.128183,
+                52.101308
+            ]
+        },
+        "municipality": "Utrecht",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Utrecht-Griftpark",
+        "year_start": "",
+        "description": {
+            "NL": "Utrecht-Griftpark",
+            "EN": "Utrecht-Griftpark"
+        }
+    }
+}

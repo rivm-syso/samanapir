@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "SO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.3125,
+                51.889
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Rotterdam-Geulhaven",
+        "year_start": "",
+        "description": {
+            "NL": "Rotterdam-Geulhaven",
+            "EN": "Rotterdam-Geulhaven"
+        }
+    }
+}

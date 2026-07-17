@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.583248,
+                51.713396
+            ]
+        },
+        "municipality": "Moerdijk",
+        "url": "",
+        "province": null,
+        "organisation": "OMWB (Midden en West Brabant)",
+        "location": "Strijensas Buitendijk",
+        "year_start": "2016",
+        "description": {
+            "NL": "Strijensas Buitendijk",
+            "EN": "Strijensas Buitendijk"
+        }
+    }
+}

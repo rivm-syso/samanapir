@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "PM25",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.6288,
+                52.4744
+            ]
+        },
+        "municipality": "Velsen",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Velsen-Staalstraat",
+        "year_start": "2011",
+        "description": {
+            "NL": "Velsen-Staalstraat",
+            "EN": "Velsen-Staalstraat"
+        }
+    }
+}

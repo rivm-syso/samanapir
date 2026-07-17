@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.515271,
+                51.653729
+            ]
+        },
+        "municipality": "Moerdijk",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Fijnaart-Zwingelspaansedijk",
+        "year_start": "",
+        "description": {
+            "NL": "Fijnaart-Zwingelspaansedijk",
+            "EN": "Fijnaart-Zwingelspaansedijk"
+        }
+    }
+}

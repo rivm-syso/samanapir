@@ -1,0 +1,33 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "SO2",
+            "NO",
+            "Hg",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.923301,
+                51.974489
+            ]
+        },
+        "municipality": "Lopik",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Cabauw-Wielsekade",
+        "year_start": "",
+        "description": {
+            "NL": "Cabauw-Wielsekade",
+            "EN": "Cabauw-Wielsekade"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "NH3",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.048975,
+                52.80342
+            ]
+        },
+        "municipality": "Hollands Kroon",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Wieringerwerf-Medemblikkerweg",
+        "year_start": "",
+        "description": {
+            "NL": "Wieringerwerf-Medemblikkerweg",
+            "EN": "Wieringerwerf-Medemblikkerweg"
+        }
+    }
+}

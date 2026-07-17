@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "NO",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.793344,
+                52.366811
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Ookmeer",
+        "year_start": "2007",
+        "description": {
+            "NL": "Amsterdam-Ookmeer",
+            "EN": "Amsterdam-Ookmeer"
+        }
+    }
+}

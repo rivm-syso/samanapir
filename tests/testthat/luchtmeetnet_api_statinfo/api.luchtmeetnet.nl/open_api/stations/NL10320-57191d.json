@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NH3",
+            "LKI"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                3.7145,
+                51.70644
+            ]
+        },
+        "municipality": "Schouwen-Duiveland",
+        "url": null,
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Burgh-Haamstede",
+        "year_start": "2023",
+        "description": {
+            "NL": "Burgh-Haamstede",
+            "EN": "nieuw station"
+        }
+    }
+}

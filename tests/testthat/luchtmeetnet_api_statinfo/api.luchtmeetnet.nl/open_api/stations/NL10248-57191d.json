@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "NH3",
+            "LKI",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.5433281,
+                51.69818779
+            ]
+        },
+        "municipality": "Bernheze",
+        "url": null,
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Nistelrode-Gagelstraat",
+        "year_start": "2022",
+        "description": {
+            "NL": "Nistelrode-Gagelstraat",
+            "EN": "Nistelrode"
+        }
+    }
+}

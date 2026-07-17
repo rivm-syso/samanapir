@@ -1,0 +1,25 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PS"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.773652,
+                50.905079
+            ]
+        },
+        "municipality": "Meerssen",
+        "url": null,
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Meerssen- Beekerweg",
+        "year_start": "2024",
+        "description": {
+            "NL": "Meerssen- Beekerweg",
+            "EN": "Meerssen- Beekerweg"
+        }
+    }
+}

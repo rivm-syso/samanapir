@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                3.916623,
+                51.634706
+            ]
+        },
+        "municipality": "Schouwen-Duiveland",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Zierikzee-Lange Slikweg",
+        "year_start": "",
+        "description": {
+            "NL": "Zierikzee-Lange Slikweg",
+            "EN": "Zierikzee-Lange Slikweg"
+        }
+    }
+}

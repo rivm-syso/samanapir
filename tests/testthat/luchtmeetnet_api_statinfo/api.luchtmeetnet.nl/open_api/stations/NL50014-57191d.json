@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "PS",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.916794379061132,
+                50.75998070408913
+            ]
+        },
+        "municipality": "Gulpen-Wittem",
+        "url": null,
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Gulpen-Kuttingerweg",
+        "year_start": "2025",
+        "description": {
+            "NL": "Gulpen-Kuttingerweg",
+            "EN": "Gulpen-Kuttingerweg"
+        }
+    }
+}

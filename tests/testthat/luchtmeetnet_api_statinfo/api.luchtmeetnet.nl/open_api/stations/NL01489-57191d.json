@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.58007,
+                51.86942
+            ]
+        },
+        "municipality": "Ridderkerk",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Ridderkerk-A16",
+        "year_start": "",
+        "description": {
+            "NL": "Ridderkerk-A16",
+            "EN": "Ridderkerk-A16"
+        }
+    }
+}

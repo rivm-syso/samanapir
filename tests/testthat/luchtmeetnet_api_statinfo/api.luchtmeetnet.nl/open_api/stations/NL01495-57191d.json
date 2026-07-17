@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "PM25",
+            "SO2",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.22799,
+                51.93207
+            ]
+        },
+        "municipality": "Maassluis",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Maassluis-Kwartellaan",
+        "year_start": "",
+        "description": {
+            "NL": "Maassluis-Kwartellaan",
+            "EN": "Maassluis-Kwartellaan"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.87575,
+                52.385422
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Haarlemmerweg",
+        "year_start": "1998",
+        "description": {
+            "NL": "Amsterdam-Haarlemmerweg",
+            "EN": "Amsterdam-Haarlemmerweg"
+        }
+    }
+}

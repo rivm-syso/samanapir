@@ -1,0 +1,34 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "PM25",
+            "SO2",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.121944,
+                51.977802999084986
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Rotterdam-HvHolland",
+        "year_start": "",
+        "description": {
+            "NL": "Rotterdam Hoek van Holland",
+            "EN": "Rotterdam Hoek van Holland"
+        }
+    }
+}

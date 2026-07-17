@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "NH3",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.83819,
+                52.13795
+            ]
+        },
+        "municipality": "Woerden",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Zegveld-Oude Meije",
+        "year_start": "",
+        "description": {
+            "NL": "Zegveld-Oude Meije",
+            "EN": "Zegveld-Oude Meije"
+        }
+    }
+}

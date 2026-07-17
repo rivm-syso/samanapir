@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.359835,
+                51.43444
+            ]
+        },
+        "municipality": "Woensdrecht",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Huijbergen-Vennekenstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Huijbergen-Vennekenstraat",
+            "EN": "Huijbergen-Vennekenstraat"
+        }
+    }
+}

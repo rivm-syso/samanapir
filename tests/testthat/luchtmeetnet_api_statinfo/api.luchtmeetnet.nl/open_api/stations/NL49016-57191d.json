@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "SO2",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.870157,
+                52.393972
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Westerpark",
+        "year_start": "1998",
+        "description": {
+            "NL": "Amsterdam-Westerpark",
+            "EN": "Amsterdam-Westerpark"
+        }
+    }
+}

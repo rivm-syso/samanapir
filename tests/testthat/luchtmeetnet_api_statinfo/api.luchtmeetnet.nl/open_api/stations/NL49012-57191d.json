@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "CO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.887811,
+                52.389983
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Van Diemenstraat",
+        "year_start": "1998",
+        "description": {
+            "NL": "Amsterdam-Van Diemenstraat",
+            "EN": "Amsterdam-Van Diemenstraat"
+        }
+    }
+}

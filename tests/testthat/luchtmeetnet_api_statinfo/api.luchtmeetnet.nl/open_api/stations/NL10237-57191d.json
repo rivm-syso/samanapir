@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.444833,
+                51.44416
+            ]
+        },
+        "municipality": "Eindhoven",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Eindhoven-Noordbrabantlaan",
+        "year_start": "",
+        "description": {
+            "NL": "Eindhoven-Noordbrabantlaan",
+            "EN": "Eindhoven-Noordbrabantlaan"
+        }
+    }
+}

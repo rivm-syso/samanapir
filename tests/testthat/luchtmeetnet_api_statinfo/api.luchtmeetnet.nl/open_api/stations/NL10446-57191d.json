@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.359376,
+                52.039023
+            ]
+        },
+        "municipality": "'s-Gravenhage",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Den Haag-Bleriotlaan",
+        "year_start": "",
+        "description": {
+            "NL": "Den Haag-Bleriotlaan",
+            "EN": "Den Haag-Bleriotlaan"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.479923,
+                51.914233
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Rotterdam-Schiedamsevest",
+        "year_start": "",
+        "description": {
+            "NL": "Rotterdam-Schiedamsevest",
+            "EN": "Rotterdam-Schiedamsevest"
+        }
+    }
+}

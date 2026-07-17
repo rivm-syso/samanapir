@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.816706,
+                52.448011
+            ]
+        },
+        "municipality": "Zaanstad",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Zaandam-Wagenschotpad",
+        "year_start": "2006",
+        "description": {
+            "NL": "Zaandam-Wagenschotpad",
+            "EN": "Zaandam-Wagenschotpad"
+        }
+    }
+}

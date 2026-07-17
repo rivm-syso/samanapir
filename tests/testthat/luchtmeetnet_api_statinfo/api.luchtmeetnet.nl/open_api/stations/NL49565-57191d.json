@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.77082,
+                52.28013
+            ]
+        },
+        "municipality": "Haarlemmermeer",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Oude Meer-Aalsmeerderdijk",
+        "year_start": "2010",
+        "description": {
+            "NL": "Oude Meer-Aalsmeerderdijk",
+            "EN": "Oude Meer-Aalsmeerderdijk"
+        }
+    }
+}

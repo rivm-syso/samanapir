@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "PM25",
+            "SO2",
+            "NO",
+            "CO",
+            "H2S",
+            "FN",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.601986,
+                52.493992
+            ]
+        },
+        "municipality": "Velsen",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Wijk aan Zee-De Banjaert",
+        "year_start": "1998",
+        "description": {
+            "NL": "Wijk aan Zee-De Banjaert",
+            "EN": "Wijk aan Zee-De Banjaert"
+        }
+    }
+}

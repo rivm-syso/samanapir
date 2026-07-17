@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.017571,
+                52.654144
+            ]
+        },
+        "municipality": "Steenwijkerland",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Barsbeek-De Veenen",
+        "year_start": "",
+        "description": {
+            "NL": "Barsbeek-De Veenen",
+            "EN": "Barsbeek-De Veenen"
+        }
+    }
+}

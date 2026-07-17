@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PM25",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.640531,
+                52.489303
+            ]
+        },
+        "municipality": "Velsen",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Beverwijk-Creutzberglaan",
+        "year_start": "2007",
+        "description": {
+            "NL": "Beverwijk-Creutzberglaan",
+            "EN": "Beverwijk-Creutzberglaan"
+        }
+    }
+}
