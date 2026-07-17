@@ -58,6 +58,7 @@ GetAPIDataframe <- function(url_api){
 #' GetAPIDataframe2
 #'
 #'Obtain the data from the url (API) using httr2. returns the data in a list.
+#'NB expect body as json
 #'
 #' @param req_url_api httr2::request() element, this element will be get the
 #' data from
@@ -76,6 +77,7 @@ GetAPIDataframe2 <- function(req_url_api){
   resp <- httr2::req_retry(req, max_tries = 4) |>
     httr2::req_perform() |> try()
 
+  browser()
   # Check if succesful, if not return NULL
   if(class(resp) == "try-error" ){
     # logging
