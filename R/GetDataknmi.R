@@ -175,6 +175,7 @@ GetKNMIAPI2 <- function(stations, ymd_vanaf, ymd_tot){
 #' TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
 #'
 GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
+  .Deprecated("GetKNMIAPI2")
   # Zet de tijd bij de datum
   ymdh_vanaf <- paste(ymd_vanaf,'01',sep='')
   ymdh_tot <- paste(ymd_tot,'24',sep='')
