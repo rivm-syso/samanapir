@@ -77,7 +77,6 @@ GetAPIDataframe2 <- function(req_url_api){
   resp <- httr2::req_retry(req, max_tries = 4) |>
     httr2::req_perform() |> try()
 
-  browser()
   # Check if succesful, if not return NULL
   if(class(resp) == "try-error" ){
     # logging
@@ -87,11 +86,11 @@ GetAPIDataframe2 <- function(req_url_api){
 
   # unpack results return (if no data available return empty list)
   resp_json_list <- resp |> httr2::resp_body_json()
-  if(length(resp_json_list)>0){
+  if(length(resp_json_list$value)>0){
     logger::log_info(paste0("Succesful: ", req_url_api$url))
     return(resp_json_list)
   }else{
     logger::log_debug(paste0("No data available: ", req_url_api$url))
-    return(list())
+    return(NULL)
   }
 }

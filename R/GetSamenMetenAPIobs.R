@@ -22,7 +22,8 @@ GetSamenMetenAPIobs2 <- function(datastream_id, kit_id, ymd_from, ymd_to){
                         datastream_id,")/ObservedProperty", sep='')
 
   # Get the name of the datastream measured parameter
-  logger::log_debug("GetSamenMetenAPIobs: requesting property data from url {url_property}")
+  logger::log_debug(paste0("GetSamenMetenAPIobs: requesting property data from url: ",
+                           url_property))
 
   # Get observations (info) from API
   content_prop <- GetAPIDataframe2(httr2::request(url_property))
@@ -56,7 +57,15 @@ GetSamenMetenAPIobs2 <- function(datastream_id, kit_id, ymd_from, ymd_to){
   # Ga elke pagina af en haal observaties op
   obs_data <- GetDataPaginationSamenMeten(content_obs)
 
-  logger::log_debug("GetAPIDatframe: data received from: {url_obs}, {nrow(obs_data)} records")
+  # Check if there are observations
+  if(length(obs_data)<1){
+    logger::log_info(paste0("GetDataPaginationSamenMeten, no data from: ",
+                     url_obs))
+    return(NULL)
+  }
+
+  logger::log_debug(paste0("GetAPIDatframe: data received from: ",
+                           url_obs))
 
   # Store the observations in dataframe
   obs_data <- do.call(
