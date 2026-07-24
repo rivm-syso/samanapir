@@ -86,7 +86,7 @@ GetAPIDataframe2 <- function(req_url_api){
 
   # unpack results return (if no data available return empty list)
   resp_json_list <- resp |> httr2::resp_body_json()
-  if(length(resp_json_list$value)>0){
+  if(length(resp_json_list)>0){
     logger::log_info(paste0("Succesful: ", req_url_api$url))
     return(resp_json_list)
   }else{
