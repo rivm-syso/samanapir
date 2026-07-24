@@ -9,7 +9,7 @@
 #' @return list with the info for each sensor in the project
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIinfoProject("HEI")
+#' @examples TEST <- GetSamenMetenAPIinfoProject2("HEI")
 GetSamenMetenAPIinfoProject2 <- function(project_name){
   # check if input is character
   if(!is.character(project_name)){

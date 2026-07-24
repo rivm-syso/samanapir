@@ -21,7 +21,7 @@ GetSamenMetenAPIinfoMuni2 <- function(muni_code){
   url_part <- paste("codegemeente eq'",muni_code,"'", sep='')
 
   # Get the data from the API
-  data_out <- GetSamenMetenAPIinfo(url_part)
+  data_out <- GetSamenMetenAPIinfo2(url_part)
 
   return(data_out)
 }
