@@ -10,7 +10,9 @@
 #'
 #' @return named list met:
 #'       sensordata: dataframe met de informatie over de sensor
-#'              (sensor_id, kit_id, project, locatie_lat, locatie_lon, url)
+#'              c("things_id", "kit_id", "project", "lat", "lon", "knmicode",
+#'              "pm10closecode", "pm10regiocode", "pm10stadcode", "pm25closecode",
+#'              "pm25regiocode", "pm25stadcode")
 #'       metingen: dataframe met de meetgegevens
 #'               waarde = meet waarde
 #'               tijd =  tijd van de meting in UTC
