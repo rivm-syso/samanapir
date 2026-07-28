@@ -59,7 +59,14 @@ GetKNMIAPI2 <- function(stations, ymd_vanaf, ymd_tot){
         req_options(ssl_verifypeer = FALSE) # equivalent van --no-check-certificate
 
   # Haal de data op
-  knmi_data_raw <- httr2::req_perform(req) |> resp_body_string()
+  # Get the response from the request
+  resp <- GetAPIRespKNMI(req)
+
+  # Check if the response is correct
+  if(is.null(resp)){
+    return(NULL)}
+
+  knmi_data_raw <- resp |> resp_body_string()
 
   # Check of er wel data is opgehaald
   # Correcte datafile begint met een #

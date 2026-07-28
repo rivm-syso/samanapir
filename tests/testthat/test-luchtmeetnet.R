@@ -66,7 +66,7 @@ httptest2::with_mock_dir("luchtmeetnet_api_data", {
   })
 })
 
-# test API call returns NULL
+# test API call returns NULL----
 local_mocked_bindings(GetAPIDataframe2 = function(req_url_api) {
   return(NULL)
 })
@@ -92,7 +92,7 @@ test_that("For all LML-functions NULL is returned",{
   expect_named(all_lml, c("info", "data"))
 })
 
-# test API call returns empty list
+# test API call returns empty list ----
 local_mocked_bindings(GetAPIDataframe2 = function(req_url_api) {
   return(list())
 })

@@ -52,18 +52,18 @@ getKNMIparameters <- function(token) {
   datetime <- "2022-07-19T06:00:00Z/2022-07-19T18:00:00Z"
 
   # Set the request with the API key
-  req <- request(paste0(base_url, "/locations/", location_id)) |>
-    req_headers("Authorization" = token) |>
-    req_url_query("datetime" = datetime)
+  req <- httr2::request(paste0(base_url, "/locations/", location_id)) |>
+    httr2::req_headers("Authorization" = token) |>
+    httr2::req_url_query("datetime" = datetime)
 
   # Get the response from the request
-  resp <- req_perform(req)
+  resp <- httr2::req_perform(req)
 
   # Check if the response is correct (200)
   if(resp$status_code == 200){
 
     # Extract the data as a json
-    resp <- resp %>% resp_body_json()
+    resp <- resp |> httr2::resp_body_json()
 
     # Select the parameter names
     parameters <- resp$parameters
@@ -117,8 +117,7 @@ getKNMIparameters <- function(token) {
 #'
 #' @returns dataframe with the KNMI data in columns c(values (numeric),
 #' date_time (posixct), id_nr(character), parameter_name (character),
-#' result_type (character). If not succesful call then an error
-#' is returned.
+#' result_type (character). If not succesful call then NULL is returned
 #' @export
 #'
 GetKNMIAPIEDR <- function(date_start, date_end, token,
@@ -149,22 +148,24 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
   }
 
   # Set the request with the API key
-  req <- request(paste0(base_url, "/locations/", location_id_new)) |>
-    req_headers("Authorization" = token) |>
-    req_url_query("datetime" = sprintf("%s/%s", date_start_new, date_end_new),
+  req <- httr2::request(paste0(base_url, "/locations/", location_id_new)) |>
+    httr2::req_headers("Authorization" = token) |>
+    httr2::req_url_query("datetime" = sprintf("%s/%s", date_start_new, date_end_new),
                   "parameter-name" = parameter_name_new)
 
   # Get the response from the request
-  resp <- req_perform(req)
+  resp <- GetAPIRespKNMI(req)
+  browser()
 
-  # Check if the response is correct (200)
-  if(resp$status_code == 200){
+  # Check if the response is correct
+  if(is.null(resp)){
+    return(NULL)
+  }else{
     # Extract the data as a json
-    resp_json <- resp %>% resp_body_json()
+    resp_json <- resp %>% httr2::resp_body_json()
 
     # Set empty dataframe
     result <- data.frame()
-
 
       # Get the results for each parameter
       for (j in parameter_name) {
@@ -254,10 +255,6 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
       dplyr::mutate(result_type = data_result)
 
     return(result)
-
-  }else{
-
-    stop()
 
   }
 }

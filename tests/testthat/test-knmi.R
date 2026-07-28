@@ -1,3 +1,4 @@
+# Test expected data columns ----
 httptest2::with_mock_dir("knmi", {
 
   test_that("Data knmi has data and expected columns",{
@@ -25,4 +26,17 @@ httptest2::with_mock_dir("knmi", {
                ignore.order = TRUE,
                ignore.case = TRUE)
   })
+})
+
+# Test no knmi api data ----
+local_mocked_bindings(GetAPIRespKNMI = function(req_url_api) {
+  return(NULL)
+})
+
+test_that("No connection KNMI API",{
+  # Get the data
+  knmi_data <- GetKNMIAPI2(stations, ymd_vanaf, ymd_tot )
+
+  expect_true(is.null(knmi_data))
+
 })
