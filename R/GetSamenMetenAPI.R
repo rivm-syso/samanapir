@@ -20,6 +20,8 @@
 #'               kit_id = naam van de sensor zoals in database samenmeten
 #' LET OP: wanneer er geen complete 'sensordata' is, staat de sensor
 #'  niet in de return
+#'  Let op: als er geen data is door geen connetie dan return NULL
+#'  Let op: als er geen data is door geen data dan return lege df
 #' @export
 #'
 #' @examples
@@ -43,6 +45,12 @@ GetSamenMetenAPI2 <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = lis
     return(NULL)
   }
 
+  # Check if there is any data
+  if(length(things_data) == 0){
+    logger::log_info(paste0("No data received from: ", projectnaam))
+    return(data.frame())
+  }
+
   # Dataframe om alle metingen van de sensoren op te halen
   # Dit wordt een longformat
   metingen_df <- setNames(data.frame(matrix(ncol = 4, nrow = 0)),
@@ -59,8 +67,17 @@ GetSamenMetenAPI2 <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = lis
       datastream_id, kit_id, ymd_vanaf, ymd_tot)
 
     if(is.null(datastream_obs)){
-      logger::log_info(paste0("No data from datastream: ", datastream_id))
+      logger::log_info(paste0("No connection, No data from datastream: ", datastream_id))
       next()
+    }
+
+    # Check if there is any data
+    if(length(datastream_obs) == 0){
+      logger::log_info(paste0("No data received from: ", projectnaam))
+      datastream_obs <- setNames(data.frame(matrix(ncol = 4, nrow = 0)),
+                                 c("timestamp", "kit_id", "value", "parameter"))
+      #TODO dit nog netjes leeg dataframe van maken, met wel kit_id erin en parameter
+
     }
 
     # Store observations in 1 df

@@ -17,6 +17,8 @@
 #'  "datastream_data" =
 #'  c("kit_id_ext", "unit", "datastream_id", "kit_id", "url_prop", "url_obs"))
 #'
+#'  NB When no data from API but connection: return empty df
+#'  NB When no data from API becuase no connection: return NULL
 #' @export
 #'
 #' @examples
@@ -32,8 +34,14 @@ GetSamenMetenAPIinfo2 <- function(url_part){
 
   # Check if succesfull
   if(is.null(content_things)){
-    logger::log_info(paste0("No data received from: ", url_things))
+    logger::log_info(paste0("No connectio; no data received from: ", url_things))
     return(NULL)
+  }
+
+  # Check if there is any data
+  if(length(content_things) == 0){
+    logger::log_info(paste0("No data received from: ", url_things))
+    return(data.frame())
   }
 
   # Het werkt vaak met pagina's.

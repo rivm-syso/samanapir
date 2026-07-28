@@ -7,6 +7,8 @@
 #' @param muni_number string with the code of the municipality, for example '310'
 #'
 #' @return list with the info for each sensor in the municipality
+#'  When no data from API but connection: return empty df
+#'  When no data from API becuase no connection: return NULL
 #' @export
 #'
 #' @examples TEST <- GetSamenMetenAPIinfoMuni2("330")

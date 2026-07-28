@@ -73,8 +73,17 @@ GetDataPagination <- function(content, url_page){
 #'
 #' @param content resp of first data request using GetAPIDataframe
 #'
-#' @returns list with all the data from the different pages, depending on return api
+#' @returns list with all the data from the different pages,
+#'  depending on return api
+#'  NB When no data in content, return empty list
 GetDataPaginationSamenMeten <- function(content){
+
+  # Check if there is any content
+  if(length(content) == 0){
+    # return the empty content (=result of no data in api)
+    return(content)
+  }
+
   data_totaal <- content$value
 
   # Check if there is a new page

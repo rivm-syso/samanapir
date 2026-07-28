@@ -45,17 +45,37 @@ GetSamenMetenAPIobs2 <- function(datastream_id, kit_id, ymd_from, ymd_to){
   # Ophalen van de informatie in API
   content_obs <- GetAPIDataframe2(httr2::request(url_obs))
 
-  #  Check of er daat is, als er geen info is komt er een NULL terug
+  #  Check of API call succesvol was, als er geen info is komt er een NULL terug
   if(is.null(content_obs)){
     # logging
-    logger::log_info(paste0("Geen data van url_obs: ", url_obs))
+    logger::log_info(paste0("No connection: Geen data van url_obs: ", url_obs))
     # Return dan NULL
     return(NULL)
+  }
+
+  # Check if there is any data
+  if(length(content_obs) == 0){
+    logger::log_info(paste0("No data received from: ", url_obs))
+    return(data.frame())
   }
 
   # Het werkt vaak met pagina's.
   # Ga elke pagina af en haal observaties op
   obs_data <- GetDataPaginationSamenMeten(content_obs)
+
+  #  Check of API call succesvol was, als er geen info is komt er een NULL terug
+  if(is.null(obs_data)){
+    # logging
+    logger::log_info(paste0("No connection: Geen data van pagination"))
+    # Return dan NULL
+    return(NULL)
+  }
+
+  # Check if there is any data
+  if(length(obs_data) == 0){
+    logger::log_info(paste0("No data received from pagination"))
+    return(data.frame())
+  }
 
   # Check if there are observations
   if(length(obs_data)<1){

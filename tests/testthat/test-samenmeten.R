@@ -171,3 +171,71 @@ httptest2::with_mock_dir("SamenMeten_all_data",{
     expect_equal(dim(all_data$metingen), dim_metingen)
   })
 })
+
+# test API call returns NULL
+local_mocked_bindings(GetAPIDataframe2 = function(req_url_api) {
+  return(NULL)
+})
+
+test_that("For all SamenMeten-functions NULL is returned",{
+  # Expect NULL : GetSamenMetenAPIinfoMuni2
+  data_station <- GetSamenMetenAPIinfoMuni2("60")
+  expect_true(is.null(data_station))
+
+  # Expect NULL : GetSamenMetenAPIinfoProject2
+  data_station <- GetSamenMetenAPIinfoProject2("Amersfoort")
+  expect_true(is.null(data_station))
+
+  # Expect NULL : GetLMLallstatinfoAPI2 - muni
+  muni_info <- GetSamenMetenAPIinfo2("codegemeente eq'60'")
+  expect_true(is.null(muni_info))
+
+  # Expect NULL : GetLMLallstatinfoAPI2 - project
+  project_info <- GetSamenMetenAPIinfo2("project eq'Amersfoort'")
+  expect_true(is.null(project_info))
+
+  # Expect NULL : GetSamenMetenAPIobs2
+  obs_data <- GetSamenMetenAPIobs2("31508","LTD_55101","20220101","20220103")
+  expect_true(is.null(obs_data))
+
+  # Expect NULL : GetSamenMetenAPI2
+  all_data <- GetSamenMetenAPI2("project eq'Amersfoort'","20190909", "20190912")
+  expect_true(is.null(all_data))
+})
+
+# test API call returns NULL
+local_mocked_bindings(GetAPIDataframe2 = function(req_url_api) {
+  return(list())
+})
+
+test_that("For all SamenMeten-functions empty df is returned",{
+  # Expect empty df : GetSamenMetenAPIinfoMuni2
+  muni_info <- GetSamenMetenAPIinfoMuni2("60")
+  expect_equal(class(muni_info), "data.frame")
+  expect_equal(nrow(muni_info), 0)
+
+  # Expect empty df : GetSamenMetenAPIinfoProject2
+  proj_info <- GetSamenMetenAPIinfoProject2("Amersfoort")
+  expect_equal(class(proj_info), "data.frame")
+  expect_equal(nrow(proj_info), 0)
+
+  # Expect empty df : GetLMLallstatinfoAPI2 - muni
+  muni_info <- GetSamenMetenAPIinfo2("codegemeente eq'60'")
+  expect_equal(class(muni_info), "data.frame")
+  expect_equal(nrow(muni_info), 0)
+
+  # Expect empty df : GetLMLallstatinfoAPI2 - project
+  project_info <- GetSamenMetenAPIinfo2("project eq'Amersfoort'")
+  expect_equal(class(project_info), "data.frame")
+  expect_equal(nrow(project_info), 0)
+
+  # Expect empty df : GetSamenMetenAPIobs2
+  obs_data <- GetSamenMetenAPIobs2("31508","LTD_55101","20220101","20220103")
+  expect_equal(class(obs_data), "data.frame")
+  expect_equal(nrow(obs_data), 0)
+
+  # Expect empty df : GetSamenMetenAPI2
+  all_data <- GetSamenMetenAPI2("project eq'Amersfoort'","20190909", "20190912")
+  expect_equal(class(all_data), "data.frame")
+  expect_equal(nrow(all_data), 0)
+})
