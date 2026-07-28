@@ -65,3 +65,60 @@ httptest2::with_mock_dir("luchtmeetnet_api_data", {
     expect_length(data_station, 0)
   })
 })
+
+# test API call returns NULL
+local_mocked_bindings(GetAPIDataframe2 = function(req_url_api) {
+  return(NULL)
+})
+
+test_that("For all LML-functions NULL is returned",{
+  # Expect NULL : GetLMLstatinfoAPI2
+  data_station <- GetLMLstatinfoAPI2("NL49012")
+  expect_true(is.null(data_station))
+
+  # Expect NULL : GetLMLallstatinfoAPI2
+  data_all_stations <- GetLMLallstatinfoAPI2()
+  expect_true(is.null(data_all_stations))
+
+  # Expect NULL : GetLMLstatdataAPI2
+  data_lml <- GetLMLstatdataAPI2("NL01495", "20260505", "20260510")
+  expect_true(is.null(data_lml))
+
+  # Expect NULL : GetLMLAPI2
+  all_lml <- GetLMLAPI2("NL01908", "20260505", "20260510")
+  expect_true(is.null(all_lml$info))
+  expect_true(is.null(all_lml$data))
+  expect_true(is.list(all_lml))
+  expect_named(all_lml, c("info", "data"))
+})
+
+# test API call returns empty list
+local_mocked_bindings(GetAPIDataframe2 = function(req_url_api) {
+  return(list())
+})
+
+test_that("For all LML-functions empty dataframe is returned",{
+    # Expect empty dataframe : GetLMLstatinfoAPI2
+    data_station <- GetLMLstatinfoAPI2("NL49012")
+    expect_equal(class(data_station), "data.frame")
+    expect_equal(nrow(data_station), 0)
+
+    # Expect empty dataframe :GetLMLallstatinfoAPI2
+    data_all_stations <- GetLMLallstatinfoAPI2()
+    expect_equal(class(data_all_stations), "data.frame")
+    expect_equal(nrow(data_all_stations), 0)
+
+    # Expect empty dataframe : GetLMLstatdataAPI2
+    data_lml <- GetLMLstatdataAPI2("NL01495", "20260505", "20260510")
+    expect_equal(class(data_lml), "data.frame")
+    expect_equal(nrow(data_lml), 0)
+
+    # Expect empty dataframe : GetLMLAPI2
+    all_lml <- GetLMLAPI2("NL01908", "20260505", "20260510")
+    expect_equal(class(all_lml$info), "data.frame")
+    expect_equal(nrow(all_lml$info), 0)
+    expect_equal(class(all_lml$data), "data.frame")
+    expect_equal(nrow(all_lml$data), 0)
+    expect_true(is.list(all_lml))
+    expect_named(all_lml, c("info", "data"))
+})

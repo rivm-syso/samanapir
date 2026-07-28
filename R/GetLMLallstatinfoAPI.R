@@ -11,6 +11,9 @@
 #' lon
 #' stattype: stationstype
 #' organisatie: de organisatie van wie het station is
+#'
+#' When no data from API, but there was connection an empty dataframe will be returned
+#' If there was no api connection NULL will be returned
 #' @export
 #'
 #' @examples
@@ -21,8 +24,6 @@ GetLMLallstatinfoAPI2 <- function(){
   stat_info_compleet <- setNames(data.frame(matrix(ncol = 6, nrow = 0)),
                            c("station_number", "naam", "lat", "lon", "stattype",
                              "organisatie"))
-  stat_info <- setNames(data.frame(matrix(ncol = 2, nrow = 0)),
-                        c("id", "naam"))
 
   # Zet uit dat strings als factor worden opgeslagen
   # Dat is nl heel onhandig bij het doorgeven van strings naar de API
@@ -42,13 +43,19 @@ GetLMLallstatinfoAPI2 <- function(){
   if(is.null(content_stat_info)){
     # logging
     logger::log_info(paste0("Geen data van url_stat_info: ", url_stat_info))
-    # Return dan de lege stat_info_compleet
-    return(stat_info_compleet)
+    # Return dan NULL
+    return(NULL)
   }
 
   # Het werkt met pagina's.
   # Ga elke pagina af en haal de id en naam van de stations op
   stat_info <- GetDataPagination(content_stat_info, url_stat_info)
+
+  # Als er geen data is opgehaald, maar wel connectie was met de api
+  if(length(stat_info) == 0){
+    # return empty dataframe
+    return(stat_info_compleet)
+  }
 
   # Ga voor elk station ook de coordinaten ophalen
   for(station in stat_info$number){

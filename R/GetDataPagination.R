@@ -9,6 +9,12 @@
 #' @returns df with all the data from the different pages, columns
 #' depending on data itself
 GetDataPagination <- function(content, url_page){
+  # Check if there is any content
+  if(length(content) == 0){
+    # return the empty content (=result of no data in api)
+    return(content)
+  }
+
   # Haalt van alle pagina's de gegevens op en returned 1 df
   # Neemt van de eerste pagina de data
   data_totaal <- do.call(rbind,lapply(content$data, as.data.frame))

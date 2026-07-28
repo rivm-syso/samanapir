@@ -15,8 +15,8 @@
 #'       value: de gemeten concentratie microgram per kubieke meter
 #'       timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
 #'       station_number: het nummer/id van het station bijv. NL01908
-#'       NB geeft geheel leeg df terug wanneer geen connectie of geen data
-#'       dim(metingen_df) == c(0,0)
+#'       NB wanneer geen data en connectie met API -> return NULL
+#'       wanneer er geen data is, maar wel conenctie met API -> return empty df
 #' @export
 #'
 #' @examples
@@ -26,6 +26,9 @@ GetLMLstatdataAPI2 <- function(station, ymd_vanaf, ymd_tot){
   # Maak een dataframe om de meetgegevens in op te slaan
   # Dit is een longformat
   metingen_df <- data.frame()
+
+  # parameter to log if data is not there but API connection is succesfull
+  connection_api <- FALSE
 
   # Zet uit dat strings als factor worden opgeslagen
   # Dat is nl heel onhandig bij het doorgeven van strings naar de API
@@ -65,12 +68,17 @@ GetLMLstatdataAPI2 <- function(station, ymd_vanaf, ymd_tot){
     }
 
     if (is.null(content_measurements)) {
-      # Dan is er een error teruggekomen, bijvoorbeeld 502 OF
-      # Het kan zijn dat een station voor de gekozen periode geen data levert.
+      # Dan is er een error teruggekomen, bijvoorbeeld 502
       # logging voor als er geen data is
-      logger::log_info(paste0("Geen data beschikbaar: ", url_week))
+      logger::log_info(paste0("Geen connectie, geen data beschikbaar: ", url_week))
       next
     } else{
+      # An empty list is returned if there is no data, but api connection
+      if(length(content_measurements) == 0){
+        logger::log_info(paste0("Geen data beschikbaar: ", url_week))
+        connection_api <- TRUE
+        next
+      }
       # substract het stuk data
       measurements_data <- content_measurements
       # Zet de tijd om naar POSTXct in de UTC tijdszone
@@ -87,6 +95,20 @@ GetLMLstatdataAPI2 <- function(station, ymd_vanaf, ymd_tot){
 
       # logging voor debugging
       logger::log_debug(paste0("Data opgehaald van url_week: ", url_week))
+    }
+  }
+
+  # Last check if there is any data to return, otherwise return NULL
+  if(length(metingen_df) == 0){
+    # check if there was a connection with the API
+    if(connection_api){
+      logger::log_info(paste0("NO connection: van luchtmeetnet opgehaald van station: ",
+                              station))
+      return(metingen_df)
+    }else{
+      logger::log_info(paste0("NO Data van luchtmeetnet opgehaald van station: ",
+                              station))
+      return(NULL)
     }
   }
 
