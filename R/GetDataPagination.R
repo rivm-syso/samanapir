@@ -20,7 +20,7 @@ GetDataPagination <- function(content, url_page){
   data_totaal <- do.call(rbind,lapply(content$data, as.data.frame))
 
   #logging
-  logger::log_formatter(formatter_pander)
+  logger::log_formatter(logger::formatter_pander)
   logger::log_debug("Pagination, column names start df: ")
   logger::log_debug(names(data_totaal))
 
