@@ -156,7 +156,6 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
 
   # Get the response from the request
   resp <- GetAPIRespKNMI(req)
-  browser()
 
   # Check if the response is correct
   if(is.null(resp)){

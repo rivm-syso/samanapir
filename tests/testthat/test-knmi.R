@@ -34,6 +34,10 @@ local_mocked_bindings(GetAPIRespKNMI = function(req_url_api) {
 })
 
 test_that("No connection KNMI API",{
+  # initialisatie
+  stations <- c('260', '248')
+  ymd_vanaf = 20191214
+  ymd_tot =20191215
   # Get the data
   knmi_data <- GetKNMIAPI2(stations, ymd_vanaf, ymd_tot )
 

@@ -1,5 +1,4 @@
 GetAPIRespKNMI <- function(req){
-  browser()
   # check if valid input
   if(class(req) != "httr2_request"){
     logger::log_info("KNMI request not a httr2_request")
@@ -7,7 +6,7 @@ GetAPIRespKNMI <- function(req){
   }
 
   # Excecute the API request
-  resp <- try(httr2::req_perform(req))
+  resp <- try(httr2::req_perform(req), silent = TRUE)
 
   # Check if the request was succesful
   if(class(resp) == "try-error"){

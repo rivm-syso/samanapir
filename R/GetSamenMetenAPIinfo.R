@@ -73,7 +73,7 @@ GetSamenMetenAPIinfo2 <- function(url_part){
     # Check if all the needed info is there
     info_checked <- try(chk::check_names(data_deel[[1]], names = c("@iot.id", "@iot.selfLink", "name", "description", "properties",
       "HistoricalLocations@iot.navigationLink", "Locations", "Datastreams"
-    ), order = FALSE))
+    ), order = FALSE), silent = TRUE)
 
     if(class(info_checked) == "try-error"){
       logger::log_info(paste0("No complete data avalaible for: ",
