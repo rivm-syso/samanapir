@@ -15,9 +15,10 @@ GetKNMIAPIEDR(
 }
 \arguments{
 \item{date_start}{start date of the returned data, string in the
-format %Y-%m-%d}
+format "\%Y-\%m-\%d"}
 
-\item{date_end}{end date of the returned data, string in the format %Y-%m-%d}
+\item{date_end}{end date of the returned data, string in the format
+"\%Y-\%m-\%d"}
 
 \item{token}{string, token to get acces to the KNMI API EDR}
 
@@ -35,8 +36,8 @@ openAir.}
 }
 \value{
 dataframe with the KNMI data in columns c(values (numeric),
-date_time (posixct), id_nr(character)). If not succesful call then an error
-is returned.
+date_time (posixct), id_nr(character), parameter_name (character),
+result_type (character). If not succesful call then NULL is returned
 }
 \description{
 Get the 10-minute unvalidated data from KNMI dataplatform.

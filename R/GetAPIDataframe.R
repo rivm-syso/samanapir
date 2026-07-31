@@ -8,7 +8,7 @@
 #' @param url_api : string met een url van een API
 #'
 #' @return dataframe met de content van de url
-#'
+#' @export
 #' @examples
 #' TEST <- GetAPIDataframe("https://api-samenmeten.rivm.nl/v1.0/Things?")
 GetAPIDataframe <- function(url_api){
@@ -68,7 +68,6 @@ GetAPIDataframe <- function(url_api){
 #' list with the data from the URL
 #' @export
 #'
-#' @examples
 GetAPIDataframe2 <- function(req_url_api){
   # Create request
   req <- req_url_api
