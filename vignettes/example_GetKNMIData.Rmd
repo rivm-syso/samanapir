@@ -1,0 +1,75 @@
+---
+title: "example_GetKNMIData"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{example_GetKNMIData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(samanapir)
+```
+
+# Introduction
+
+The meteo data from [KNMI][https://www.knmi.nl/] can
+be obtained using an API. This package contains two functions to use their data.
+We used two different ways to obtain the data, one with and without an API-key. 
+This API-key can be get on: [register for KNMI][https://developer.dataplatform.knmi.nl/register/]
+
+You can also use the anonymous key: [get anonymous key][https://developer.dataplatform.knmi.nl/open-data-api#token]
+
+We store the key in the system:
+```{r}
+Sys.setenv(KNMI_API_TOKEN = "Put_your_key_here"
+)
+```
+
+For more information about the API and information about the data see: [API KNMI][https://dataplatform.knmi.nl/dataset/10-minute-in-situ-meteorological-observations-1-0]
+
+The other method we use this: [KNMI daggegevens][https://www.knmi.nl/kennis-en-datacentrum/achtergrond/data-ophalen-vanuit-een-script]
+
+## Information about the parameters measured
+```{r parameter information}
+all_parameters <- getKNMIparameters(token = Sys.getenv("KNMI_API_TOKEN"))
+
+```
+
+## Get wind data
+For the Analyse Together tool we are only interested in the wind data. So this function
+will only retrieve those measurements.
+
+Furthermore there is the options for the hourly mean. Use 'data_result = "hourly"'.
+
+The wind direction is parameter "dd",  wind speed is parameter "ffs"
+```{r wind data}
+winddata <- GetKNMIAPIEDR(date_start = "2026-05-01",
+                                 date_end  = "2026-05-02",
+                                 token = Sys.getenv("KNMI_API_TOKEN"),
+                                 location_id = c("356"),
+                                 parameter = "wind",
+                                 data_result = "hourly")
+```
+## Using other API: hourly values
+This is another access to the same data, without key. In this function you can 
+also get the data from multiple stations in the same call.
+
+NB: this are the average hourly values
+```{r}
+  # initialisatie
+  stations <- c('260', '248')
+  ymd_vanaf = 20191214
+  ymd_tot = 20191215
+
+  # Get the data
+  knmi_data <- GetKNMIAPI2(stations, ymd_vanaf, ymd_tot )
+
+```
