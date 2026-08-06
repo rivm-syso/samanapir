@@ -250,6 +250,15 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
       #TODO: add average temp and rain
     }
 
+    # Extract coordinations
+    coord_lon <- resp_json$coverages[[1]]$domain$axes$x$values |> unlist()
+    coord_lat <- resp_json$coverages[[1]]$domain$axes$y$values |> unlist()
+    # add coordinates to measurements
+    result <- result |> dplyr::mutate(
+      lat = coord_lat,
+      lon = coord_lon
+    )
+
     # Set data_result as type
     result <- result |>
       dplyr::mutate(result_type = data_result)
