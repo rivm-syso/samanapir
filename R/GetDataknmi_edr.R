@@ -118,7 +118,7 @@ getKNMIparameters <- function(token) {
 #'
 #' @returns dataframe with the KNMI data in columns c(values (numeric),
 #' date_time (posixct), id_nr(character), parameter_name (character),
-#' result_type (character). If not succesful call then NULL is returned
+#' result_type (character), lat (numeric), lon(numeric). If not succesful call then NULL is returned
 #' @export
 #'
 GetKNMIAPIEDR <- function(date_start, date_end, token,
