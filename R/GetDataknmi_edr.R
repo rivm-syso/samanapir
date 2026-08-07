@@ -132,7 +132,6 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
   base_url <- paste0("https://api.dataplatform.knmi.nl/edr/", api_version,
                      "/collections/", collection)
 
-  browser()
   # Get the dates and transform to the right format
   date_start_new <- as.Date(date_start, format("%Y%m%d")) |> format("%Y-%m-%dT%TZ")
   date_end_new <- as.Date(date_end, format("%Y%m%d")) |> format("%Y-%m-%dT%TZ")
