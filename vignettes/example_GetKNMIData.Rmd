@@ -51,8 +51,8 @@ Furthermore there is the options for the hourly mean. Use 'data_result = "hourly
 
 The wind direction is parameter "dd",  wind speed is parameter "ffs"
 ```{r wind data}
-winddata <- GetKNMIAPIEDR(date_start = "2026-05-01",
-                                 date_end  = "2026-05-02",
+winddata <- GetKNMIAPIEDR(date_start = "20260501",
+                                 date_end  = "20260502",
                                  token = Sys.getenv("KNMI_API_TOKEN"),
                                  location_id = c("356"),
                                  parameter = "wind",

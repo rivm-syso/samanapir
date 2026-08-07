@@ -102,9 +102,9 @@ getKNMIparameters <- function(token) {
 #' More information visit: https://dataplatform.knmi.nl/
 #'
 #' @param date_start start date of the returned data, string in the
-#' format "\%Y-\%m-\%d"
+#' format "\%Y\%m\%d"
 #' @param date_end end date of the returned data, string in the format
-#' "\%Y-\%m-\%d"
+#' "\%Y\%m\%d"
 #' @param parameter string, options:
 #' "wind" for the wind speed and direction at sensor height (default)
 #' "temp" for the temperature (not yet implemented)
@@ -132,9 +132,11 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
   base_url <- paste0("https://api.dataplatform.knmi.nl/edr/", api_version,
                      "/collections/", collection)
 
+  browser()
   # Get the dates and transform to the right format
-  date_start_new <- as.Date(date_start) |> format("%Y-%m-%dT%TZ")
-  date_end_new <- as.Date(date_end) |> format("%Y-%m-%dT%TZ")
+  date_start_new <- as.Date(date_start, format("%Y%m%d")) |> format("%Y-%m-%dT%TZ")
+  date_end_new <- as.Date(date_end, format("%Y%m%d")) |> format("%Y-%m-%dT%TZ")
+
 
   # Change location id to correct format
   location_id_new <- paste0("0-20000-0-06", location_id)
