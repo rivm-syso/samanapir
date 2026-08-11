@@ -60,7 +60,7 @@ extract_datastream2 <- function(x){
 #' the observations and checks if there is information at all. If no information
 #' is available, then "no data" is set.
 #'
-#' @param x
+#' @param x list including observedproperties
 #'
 #' @return dataframe with the kit_id_ext, unit, url_properties, url_observations
 #'

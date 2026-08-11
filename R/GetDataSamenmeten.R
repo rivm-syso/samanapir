@@ -357,7 +357,7 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
 #' this function extract the coordinates and checks if there are coordinates.
 #' If no coordinates are available 0,0 is returned as coordinates.
 #'
-#' @param x
+#' @param x input list including coordinates
 #'
 #' @return dataframe with lat and lon as columns
 #'
@@ -382,7 +382,7 @@ extract_coord <- function(x){
 #' the observations and checks if there is information at all. If no information
 #' is available, then "no data" is set.
 #'
-#' @param x
+#' @param x list including the observedproperties
 #'
 #' @return dataframe with the kit_id_ext, unit, url_properties, url_observations
 #'

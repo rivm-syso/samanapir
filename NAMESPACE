@@ -24,3 +24,9 @@ export(GetSamenMetenAPIinfoProject2)
 export(GetSamenMetenAPIobs)
 export(GetSamenMetenAPIobs2)
 export(getKNMIparameters)
+importFrom(httr2,
+  req_body_form,
+  req_options,
+  request,
+  resp_body_string
+)

@@ -6,7 +6,7 @@
 #' this function extract the coordinates and checks if there are coordinates.
 #' If no coordinates are available 0,0 is returned as coordinates.
 #'
-#' @param x
+#' @param x list including coordinates
 #'
 #' @return dataframe with lat and lon as columns
 #'

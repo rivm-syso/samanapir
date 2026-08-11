@@ -9,7 +9,7 @@ extract_datastream(x)
 extract_datastream(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{list including observedproperties}
 }
 \value{
 dataframe with the kit_id_ext, unit, url_properties, url_observations

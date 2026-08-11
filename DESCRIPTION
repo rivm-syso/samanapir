@@ -19,6 +19,7 @@ Imports:
     jsonlite,
     stringr,
     purrr,
+    lubridate,
     logger
 RoxygenNote: 7.3.3
 Depends: R (>= 4.1)
@@ -26,5 +27,6 @@ Suggests:
     httptest,
     httptest2,
     knitr,
-    rmarkdown
+    rmarkdown,
+    pander
 VignetteBuilder: knitr

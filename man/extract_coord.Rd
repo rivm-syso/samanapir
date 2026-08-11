@@ -9,7 +9,7 @@ extract_coord(x)
 extract_coord(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{list including coordinates}
 }
 \value{
 dataframe with lat and lon as columns
