@@ -11,8 +11,8 @@ GetSamenMetenAPIinfoMuni2(muni_code)
 }
 \value{
 list with the info for each sensor in the municipality
- When no data from API but connection: return empty df
- When no data from API becuase no connection: return NULL
+When no data from API but connection: return empty df
+When no data from API becuase no connection: return NULL
 }
 \description{
 This function will obtain the information of each sensor in a particular

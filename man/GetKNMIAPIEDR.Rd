@@ -15,10 +15,10 @@ GetKNMIAPIEDR(
 }
 \arguments{
 \item{date_start}{start date of the returned data, string in the
-format "\%Y\%m\%d"}
+format "\\%Y\\%m\\%d"}
 
 \item{date_end}{end date of the returned data, string in the format
-"\%Y\%m\%d"}
+"\\%Y\\%m\\%d"}
 
 \item{token}{string, token to get acces to the KNMI API EDR}
 

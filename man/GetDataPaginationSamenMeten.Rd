@@ -11,8 +11,8 @@ GetDataPaginationSamenMeten(content)
 }
 \value{
 list with all the data from the different pages,
- depending on return api
- NB When no data in content, return empty list
+depending on return api
+NB When no data in content, return empty list
 }
 \description{
 Get the data from the API from all the pages, see GetAPIDataframe

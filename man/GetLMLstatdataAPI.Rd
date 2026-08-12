@@ -15,10 +15,10 @@ GetLMLstatdataAPI(station, ymd_vanaf, ymd_tot)
 }
 \value{
 metingen_df: dataframe met de kolommen:
-      formula: het gemeten component, bijv. NO2
-      value: de gemeten concentratie microgram per kubieke meter
-      timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
-      station_number: het nummer/id van het station bijv. NL01908
+formula: het gemeten component, bijv. NO2
+value: de gemeten concentratie microgram per kubieke meter
+timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
+station_number: het nummer/id van het station bijv. NL01908
 }
 \description{
 Functie om de meetwaardes van een luchtmeetstation op te halen voor een bepaalde periode

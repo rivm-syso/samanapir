@@ -25,19 +25,19 @@ sensoren opgehaald}
 }
 \value{
 named list met:
-      sensordata: dataframe met de informatie over de sensor
-             c("things_id", "kit_id", "project", "lat", "lon", "knmicode",
-             "pm10closecode", "pm10regiocode", "pm10stadcode", "pm25closecode",
-             "pm25regiocode", "pm25stadcode")
-      metingen: dataframe met de meetgegevens
-              waarde = meet waarde
-              tijd =  tijd van de meting in UTC
-              name = naam van de grootheid (bijv. pm10)
-              kit_id = naam van de sensor zoals in database samenmeten
+sensordata: dataframe met de informatie over de sensor
+c("things_id", "kit_id", "project", "lat", "lon", "knmicode",
+"pm10closecode", "pm10regiocode", "pm10stadcode", "pm25closecode",
+"pm25regiocode", "pm25stadcode")
+metingen: dataframe met de meetgegevens
+waarde = meet waarde
+tijd =  tijd van de meting in UTC
+name = naam van de grootheid (bijv. pm10)
+kit_id = naam van de sensor zoals in database samenmeten
 LET OP: wanneer er geen complete 'sensordata' is, staat de sensor
- niet in de return
- Let op: als er geen data is door geen connetie dan return NULL
- Let op: als er geen data is door geen data dan return lege df
+niet in de return
+Let op: als er geen data is door geen connetie dan return NULL
+Let op: als er geen data is door geen data dan return lege df
 }
 \description{
 Functie die de sensordata van het samenmeten api ophaalt.

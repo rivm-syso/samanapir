@@ -38,26 +38,26 @@ sensoren opgehaald}
 }
 \value{
 named list met:
-      sensordata: dataframe met de informatie over de sensor
-             (sensor_id, kit_id, project, locatie_lat, locatie_lon, url)
-      metingen: dataframe met de meetgegevens
-              waarde = meet waarde
-              tijd =  tijd van de meting in UTC
-              name = naam van de grootheid (bijv. pm10)
-              kit_id = naam van de sensor zoals in database samenmeten
-              error = wanneer er geen metingen konden worden opgehaald staat hier de url die geprobeed is
+sensordata: dataframe met de informatie over de sensor
+(sensor_id, kit_id, project, locatie_lat, locatie_lon, url)
+metingen: dataframe met de meetgegevens
+waarde = meet waarde
+tijd =  tijd van de meting in UTC
+name = naam van de grootheid (bijv. pm10)
+kit_id = naam van de sensor zoals in database samenmeten
+error = wanneer er geen metingen konden worden opgehaald staat hier de url die geprobeed is
 LET OP: wanneer er geen metingen van een sensor zijn in de meegegeven periode
 staat de sensor wel in de sensordata, maar heeft geen gegevens in metingen!
 
 named list met:
-      sensordata: dataframe met de informatie over de sensor
-             (sensor_id, kit_id, project, locatie_lat, locatie_lon, url)
-      metingen: dataframe met de meetgegevens
-              waarde = meet waarde
-              tijd =  tijd van de meting in UTC
-              name = naam van de grootheid (bijv. pm10)
-              kit_id = naam van de sensor zoals in database samenmeten
-              error = wanneer er geen metingen konden worden opgehaald staat hier de url die geprobeed is
+sensordata: dataframe met de informatie over de sensor
+(sensor_id, kit_id, project, locatie_lat, locatie_lon, url)
+metingen: dataframe met de meetgegevens
+waarde = meet waarde
+tijd =  tijd van de meting in UTC
+name = naam van de grootheid (bijv. pm10)
+kit_id = naam van de sensor zoals in database samenmeten
+error = wanneer er geen metingen konden worden opgehaald staat hier de url die geprobeed is
 LET OP: wanneer er geen metingen van een sensor zijn in de meegegeven periode
 staat de sensor wel in de sensordata, maar heeft geen gegevens in metingen!
 }

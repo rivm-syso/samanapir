@@ -17,12 +17,12 @@ bijv. "20260510"}
 }
 \value{
 metingen_df: dataframe met de kolommen:
-      formula: het gemeten component, bijv. NO2
-      value: de gemeten concentratie microgram per kubieke meter
-      timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
-      station_number: het nummer/id van het station bijv. NL01908
-      NB wanneer geen data en connectie met API -> return NULL
-      wanneer er geen data is, maar wel conenctie met API -> return empty df
+formula: het gemeten component, bijv. NO2
+value: de gemeten concentratie microgram per kubieke meter
+timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
+station_number: het nummer/id van het station bijv. NL01908
+NB wanneer geen data en connectie met API -> return NULL
+wanneer er geen data is, maar wel conenctie met API -> return empty df
 }
 \description{
 Functie om de meetwaardes van een luchtmeetstation op te halen voor een

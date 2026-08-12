@@ -20,20 +20,20 @@ GetLMLAPI(station, ymd_vanaf, ymd_tot)
 }
 \value{
 named list met:
-  info: dataframe met de kolommen lon, lat, type, naam, id, error
-  data: dataframe met de kolommen :
-      formula: het gemeten component, bijv. NO2
-      value: de gemeten concentratie microgram per kubieke meter
-      timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
-      station_number: het nummer/id van het station bijv. NL01908
+info: dataframe met de kolommen lon, lat, type, naam, id, error
+data: dataframe met de kolommen :
+formula: het gemeten component, bijv. NO2
+value: de gemeten concentratie microgram per kubieke meter
+timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
+station_number: het nummer/id van het station bijv. NL01908
 
 named list met:
-  info: dataframe met de kolommen lon, lat, type, naam, id, error
-  data: dataframe met de kolommen :
-      formula: het gemeten component, bijv. NO2
-      value: de gemeten concentratie microgram per kubieke meter
-      timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
-      station_number: het nummer/id van het station bijv. NL01908
+info: dataframe met de kolommen lon, lat, type, naam, id, error
+data: dataframe met de kolommen :
+formula: het gemeten component, bijv. NO2
+value: de gemeten concentratie microgram per kubieke meter
+timestamp_measured: tijd in UTC (Eindtijd van het uurgemiddelde)
+station_number: het nummer/id van het station bijv. NL01908
 }
 \description{
 GetLMLAPI

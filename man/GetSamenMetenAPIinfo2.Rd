@@ -15,14 +15,14 @@ For municipality:  codegemeente eq '310'}
 \value{
 named list:
 "sensor_data" =
- c("things_id", "kit_id", "project", "lat", "lon","knmicode","pm10closecode",
-  "pm10regiocode", "pm10stadcode","pm25closecode","pm25regiocode",
-  "pm25stadcode")
- "datastream_data" =
- c("kit_id_ext", "unit", "datastream_id", "kit_id", "url_prop", "url_obs"))
+c("things_id", "kit_id", "project", "lat", "lon","knmicode","pm10closecode",
+"pm10regiocode", "pm10stadcode","pm25closecode","pm25regiocode",
+"pm25stadcode")
+"datastream_data" =
+c("kit_id_ext", "unit", "datastream_id", "kit_id", "url_prop", "url_obs"))
 
- NB When no data from API but connection: return empty df
- NB When no data from API becuase no connection: return NULL
+NB When no data from API but connection: return empty df
+NB When no data from API becuase no connection: return NULL
 }
 \description{
 This function will obtain the information of each sensor in a particular

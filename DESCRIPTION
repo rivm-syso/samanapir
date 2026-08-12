@@ -20,8 +20,8 @@ Imports:
     stringr,
     purrr,
     lubridate,
-    logger
-RoxygenNote: 7.3.3
+    logger,
+    openair
 Depends: R (>= 4.1)
 Suggests: 
     httptest,
@@ -30,3 +30,5 @@ Suggests:
     rmarkdown,
     pander
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.1.0
+Roxygen: list(markdown = TRUE)

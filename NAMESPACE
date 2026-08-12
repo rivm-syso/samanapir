@@ -30,3 +30,4 @@ importFrom(httr2,
   request,
   resp_body_string
 )
+importFrom(openair,timeAverage)

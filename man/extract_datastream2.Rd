@@ -7,8 +7,8 @@
 extract_datastream2(x)
 }
 \arguments{
-\item{x, }{list with lists with the data (`@iot_id`, unitOfMeasurement,
-`ObservedProperty@iot.navigationLink`, `Observations@iot.navigationLink`,
+\item{x, }{list with lists with the data (\verb{@iot_id}, unitOfMeasurement,
+\code{ObservedProperty@iot.navigationLink}, \code{Observations@iot.navigationLink},
 name)}
 }
 \value{
