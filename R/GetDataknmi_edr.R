@@ -163,7 +163,7 @@ GetKNMIAPIEDR <- function(date_start, date_end, token,
     return(NULL)
   }else{
     # Extract the data as a json
-    resp_json <- resp %>% httr2::resp_body_json()
+    resp_json <- resp |>  httr2::resp_body_json()
 
     # Set empty dataframe
     result <- data.frame()
