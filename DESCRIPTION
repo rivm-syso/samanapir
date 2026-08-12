@@ -21,7 +21,7 @@ Imports:
     purrr,
     lubridate,
     logger,
-    openair
+    pander
 Depends: R (>= 4.1)
 Suggests: 
     httptest,
