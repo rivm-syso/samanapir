@@ -33,4 +33,3 @@ Suggests:
 VignetteBuilder: knitr
 Config/roxygen2/version: 8.1.0
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 8.1.0
