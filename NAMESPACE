@@ -24,6 +24,7 @@ export(GetSamenMetenAPIinfoProject2)
 export(GetSamenMetenAPIobs)
 export(GetSamenMetenAPIobs2)
 export(getKNMIparameters)
+importFrom(chk,check_names)
 importFrom(dplyr,pull)
 importFrom(httr2,
   req_body_form,
@@ -32,4 +33,20 @@ importFrom(httr2,
   resp_body_string
 )
 importFrom(logger,formatter_pander)
+importFrom(lubridate,
+  as_date,
+  as_datetime,
+  ceiling_date,
+  days,
+  floor_date
+)
 importFrom(openair,timeAverage)
+importFrom(stats,setNames)
+importFrom(tidyr,
+  pivot_longer,
+  pivot_wider
+)
+importFrom(utils,
+  read.csv,
+  read.table
+)

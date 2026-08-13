@@ -4,14 +4,7 @@
 \alias{GetSamenMetenAPI2}
 \title{GetSamenMetenAPI2}
 \usage{
-GetSamenMetenAPI2(
-  projectnaam,
-  ymd_vanaf,
-  ymd_tot,
-  data_opslag = list(),
-  updateProgress = NULL,
-  debug = F
-)
+GetSamenMetenAPI2(projectnaam, ymd_vanaf, ymd_tot, updateProgress = NULL)
 }
 \arguments{
 \item{projectnaam}{: string met projectnaam erin. Van dit project worden alle

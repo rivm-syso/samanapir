@@ -24,5 +24,7 @@ Get from the Samen Meten API the observations from a given sensor and
 measured parameter.
 }
 \examples{
+\dontrun{
 TEST <- GetSamenMetenAPIobs2("31508","LTD_55101","20220101","20220103")
+}
 }

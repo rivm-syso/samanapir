@@ -30,5 +30,7 @@ municipality or project. The name, location, closest reference stations,
 measured components and the urls to the observations of each datastream.
 }
 \examples{
+\dontrun{
 TEST <- GetSamenMetenAPIinfo2("project eq'Amersfoort'")
+}
 }

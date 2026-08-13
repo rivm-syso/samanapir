@@ -31,7 +31,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
+#'}
 #'
 GetKNMIAPI2 <- function(stations, ymd_vanaf, ymd_tot){
   # Zet de tijd bij de datum
@@ -179,7 +181,9 @@ GetKNMIAPI2 <- function(stations, ymd_vanaf, ymd_tot){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
+#'}
 #'
 GetKNMIAPI <- function(stations, ymd_vanaf, ymd_tot){
   .Deprecated("GetKNMIAPI2")

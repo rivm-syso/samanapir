@@ -25,5 +25,7 @@ Functie om de meetwaardes van een luchtmeetstation op te halen voor een bepaalde
 van de Luchtmeetnet API. Meer info op: https://api-docs.luchtmeetnet.nl/?version=latest
 }
 \examples{
+\dontrun{
 TEST <- GetLMLstatdataAPI("NL01908", "20190505", "20190510")
+}
 }

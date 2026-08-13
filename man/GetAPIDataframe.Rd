@@ -19,5 +19,7 @@ pakt de Json uit
 en returnd vervolgens de opgehaalde gegevens in een dataframe
 }
 \examples{
+\dontrun{
 TEST <- GetAPIDataframe("https://api-samenmeten.rivm.nl/v1.0/Things?")
+}
 }

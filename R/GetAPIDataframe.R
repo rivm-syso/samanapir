@@ -10,7 +10,9 @@
 #' @return dataframe met de content van de url
 #' @export
 #' @examples
+#' \dontrun{
 #' TEST <- GetAPIDataframe("https://api-samenmeten.rivm.nl/v1.0/Things?")
+#' }
 GetAPIDataframe <- function(url_api){
   # Parameters voor de check op errors
   nog_eens_opvragen <- TRUE
@@ -77,7 +79,7 @@ GetAPIDataframe2 <- function(req_url_api){
     httr2::req_perform() |> try()
 
   # Check if succesful, if not return NULL
-  if(class(resp) == "try-error" ){
+  if(inherits(resp, "try-error")){
     # logging
     logger::log_info(paste0("Not succesful: ", req_url_api$url))
     return(NULL)

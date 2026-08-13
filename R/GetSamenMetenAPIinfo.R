@@ -22,7 +22,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetSamenMetenAPIinfo2("project eq'Amersfoort'")
+#' }
 GetSamenMetenAPIinfo2 <- function(url_part){
   # Create url
   url_things <- paste("https://api-samenmeten.rivm.nl/v1.0/Things?$filter=(properties/",
@@ -75,7 +77,7 @@ GetSamenMetenAPIinfo2 <- function(url_part){
       "HistoricalLocations@iot.navigationLink", "Locations", "Datastreams"
     ), order = FALSE), silent = TRUE)
 
-    if(class(info_checked) == "try-error"){
+    if(inherits(info_checked, "try-error")){
       logger::log_info(paste0("No complete data avalaible for: ",
                               data_deel[[1]]$name))
       next()
@@ -129,7 +131,9 @@ GetSamenMetenAPIinfo2 <- function(url_part){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetSamenMetenAPIinfo("project eq'Amersfoort'")
+#' }
 GetSamenMetenAPIinfo <- function(url_part){
   .Deprecated("GetSamenMetenAPIinfo2")
 

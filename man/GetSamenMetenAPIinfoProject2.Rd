@@ -18,5 +18,7 @@ project from the Samen Meten API. The name, location, closest reference stations
 measured components and the urls to the observations of each datastream.
 }
 \examples{
+\dontrun{
 TEST <- GetSamenMetenAPIinfoProject2("HEI")
+}
 }

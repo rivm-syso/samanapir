@@ -20,7 +20,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLstatdataAPI2("NL01495", "20260505", "20260510")
+#' }
 GetLMLstatdataAPI2 <- function(station, ymd_vanaf, ymd_tot){
   # Initialisatie
   # Maak een dataframe om de meetgegevens in op te slaan
@@ -137,7 +139,9 @@ GetLMLstatdataAPI2 <- function(station, ymd_vanaf, ymd_tot){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLstatdataAPI("NL01908", "20190505", "20190510")
+#' }
 GetLMLstatdataAPI <- function(station, ymd_vanaf, ymd_tot){
   .Deprecated("GetLMLstatdataAPI2")
   # Initialisatie

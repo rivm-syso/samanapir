@@ -7,7 +7,7 @@
 GetSamenMetenAPIinfoMuni2(muni_code)
 }
 \arguments{
-\item{muni_number}{string with the code of the municipality, for example '310'}
+\item{muni_code}{string with the code of the municipality, for example '310'}
 }
 \value{
 list with the info for each sensor in the municipality
@@ -20,5 +20,7 @@ municipality from the Samen Meten API. The name, location, closest reference sta
 measured components and the urls to the observations of each datastream.
 }
 \examples{
+\dontrun{
 TEST <- GetSamenMetenAPIinfoMuni2("330")
+}
 }

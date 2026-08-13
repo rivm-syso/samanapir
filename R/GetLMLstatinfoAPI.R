@@ -11,7 +11,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLstatinfoAPI2("NL01908")
+#' }
 GetLMLstatinfoAPI2 <- function(station){
   # Initialisatie
   # Dataframe waar alles mag worden opgeslagen
@@ -68,7 +70,9 @@ GetLMLstatinfoAPI2 <- function(station){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLstatinfoAPI("NL01908")
+#' }
 GetLMLstatinfoAPI <- function(station){
   .Deprecated("GetLMLstatinfoAPI2")
 

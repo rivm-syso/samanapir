@@ -26,7 +26,8 @@
 #'
 #' @examples
 #' TEST <- GetSamenMetenAPI2("project eq'Amersfoort'","20190909", "20190912")
-GetSamenMetenAPI2 <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list(), updateProgress=NULL, debug=F){
+GetSamenMetenAPI2 <- function(projectnaam, ymd_vanaf, ymd_tot,
+                              updateProgress=NULL){
   # Initialisatie ----
   # Zet uit dat strings als factor worden opgeslagen
   # Dat is nl heel onhandig bij het doorgeven van strings naar de API

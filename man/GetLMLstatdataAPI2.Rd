@@ -30,5 +30,7 @@ bepaalde periode van de Luchtmeetnet API.
 Meer info op: https://api-docs.luchtmeetnet.nl/?version=latest
 }
 \examples{
+\dontrun{
 TEST <- GetLMLstatdataAPI2("NL01495", "20260505", "20260510")
+}
 }

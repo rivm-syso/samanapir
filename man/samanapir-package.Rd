@@ -9,11 +9,11 @@
 Dit package bevat de functies om gegevens op te halen vanuit verschillende API's. In de samen analyseren tool worden deze functies gebruikt. Er is een functie om een url uit te lezen en om te zetten naar een dataframe. Deze functie wordt gebruikt om de sensordata van de SamenMeten API op te halen, de meetgegevens van Luchtmeetnet API en de meetgegevens van het KNMI. Deze functies zijn ontwikkeld voor de samen analysern tool, er staan dan ook wat prints in voor in shiny.
 }
 \author{
-\strong{Maintainer}: Elma Tenner \email{elma.tenner@rivm.nl} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Elma Tenner \email{elma.tenner@rivm.nl}
 
 Authors:
 \itemize{
-  \item Elma Tenner \email{elma.tenner@rivm.nl} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+  \item Elma Tenner \email{elma.tenner@rivm.nl}
 }
 
 }

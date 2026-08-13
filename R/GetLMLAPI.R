@@ -17,7 +17,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLAPI2("NL01908", "20260505", "20260510")
+#' }
+#'
 GetLMLAPI2 <- function(station, ymd_vanaf, ymd_tot){
   # Initialisatie
   # Maak een dataframe om de meetgegevens in op te slaan
@@ -65,7 +68,10 @@ GetLMLAPI2 <- function(station, ymd_vanaf, ymd_tot){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLAPI("NL01908", "20190505", "20190510")
+#' }
+#'
 GetLMLAPI <- function(station, ymd_vanaf, ymd_tot){
   .Deprecated("GetLMLAPI2")
   # Initialisatie

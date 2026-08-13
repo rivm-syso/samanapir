@@ -12,7 +12,10 @@
 #' @export
 #'
 #' @examples
-#' TEST <-GetLMLallstatinfoAPI()
+#' \dontrun{
+#' TEST <- GetLMLallstatinfoAPI()
+#' }
+#'
 GetLMLallstatinfoAPI <- function(){
   # Initialisatie
   # Dataframe waar alles mag worden opgeslagen
@@ -74,7 +77,9 @@ GetLMLallstatinfoAPI <- function(){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLstatinfoAPI("NL01908")
+#' }
 GetLMLstatinfoAPI <- function(station){
   # Initialisatie
 
@@ -126,7 +131,10 @@ GetLMLstatinfoAPI <- function(station){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <- GetLMLAPI("NL01908", "20190505", "20190510")
+#' }
+#'
 GetLMLAPI <- function(station, ymd_vanaf, ymd_tot){
   # Initialisatie
   # Maak een dataframe om de meetgegevens in op te slaan

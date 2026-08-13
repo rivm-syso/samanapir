@@ -9,7 +9,10 @@
 #' @return list with the info for each sensor in the project
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIinfoProject2("HEI")
+#' @examples
+#' \dontrun{
+#' TEST <- GetSamenMetenAPIinfoProject2("HEI")
+#' }
 GetSamenMetenAPIinfoProject2 <- function(project_name){
   # check if input is character
   if(!is.character(project_name)){
@@ -37,7 +40,10 @@ GetSamenMetenAPIinfoProject2 <- function(project_name){
 #' @return list with the info for each sensor in the project
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIinfoProject("HEI")
+#' @examples
+#' \dontrun{
+#'  TEST <- GetSamenMetenAPIinfoProject("HEI")
+#'  }
 GetSamenMetenAPIinfoProject <- function(project_name){
   .Deprecated("GetSamenMetenAPIinfo2")
   # check if input is character

@@ -4,14 +4,17 @@
 #' municipality from the Samen Meten API. The name, location, closest reference stations,
 #' measured components and the urls to the observations of each datastream.
 #'
-#' @param muni_number string with the code of the municipality, for example '310'
+#' @param muni_code string with the code of the municipality, for example '310'
 #'
 #' @return list with the info for each sensor in the municipality
 #'  When no data from API but connection: return empty df
 #'  When no data from API becuase no connection: return NULL
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIinfoMuni2("330")
+#' @examples
+#' \dontrun{
+#' TEST <- GetSamenMetenAPIinfoMuni2("330")
+#' }
 GetSamenMetenAPIinfoMuni2 <- function(muni_code){
   # check if input is character
   if(!is.character(muni_code)){
@@ -34,12 +37,15 @@ GetSamenMetenAPIinfoMuni2 <- function(muni_code){
 #' municipality from the Samen Meten API. The name, location, closest reference stations,
 #' measured components and the urls to the observations of each datastream.
 #'
-#' @param muni_number string with the code of the municipality, for example '310'
+#' @param muni_code string with the code of the municipality, for example '310'
 #'
 #' @return list with the info for each sensor in the municipality
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIinfoMuni("330")
+#' @examples
+#' \dontrun{
+#' TEST <- GetSamenMetenAPIinfoMuni("330")
+#' }
 GetSamenMetenAPIinfoMuni <- function(muni_code){
   .Deprecated("GetSamenMetenAPIinfoMuni2")
   # check if input is character

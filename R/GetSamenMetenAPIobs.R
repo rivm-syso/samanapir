@@ -13,7 +13,10 @@
 #'
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIobs2("31508","LTD_55101","20220101","20220103")
+#' @examples
+#' \dontrun{
+#' TEST <- GetSamenMetenAPIobs2("31508","LTD_55101","20220101","20220103")
+#' }
 GetSamenMetenAPIobs2 <- function(datastream_id, kit_id, ymd_from, ymd_to){
   # start from the function
   start_time <- Sys.time()
@@ -132,7 +135,10 @@ GetSamenMetenAPIobs2 <- function(datastream_id, kit_id, ymd_from, ymd_to){
 #'
 #' @export
 #'
-#' @examples TEST <- GetSamenMetenAPIobs("31508","LTD_55101","20220101","20220103")
+#' @examples
+#' \dontrun{
+#' TEST <- GetSamenMetenAPIobs("31508","LTD_55101","20220101","20220103")
+#' }
 GetSamenMetenAPIobs <- function(datastream_id, kit_id, ymd_from, ymd_to){
   .Deprecated("GetSamenMetenAPIobs2")
   # start from the function

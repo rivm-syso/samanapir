@@ -10,7 +10,8 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = FALSE
 )
 ```
 
@@ -29,8 +30,8 @@ You can also use the anonymous key: [get anonymous key][https://developer.datapl
 
 We store the key in the system:
 ```{r}
-Sys.setenv(KNMI_API_TOKEN = "Put_your_key_here"
-)
+Sys.setenv(KNMI_API_TOKEN = "PUT YOUR KEY HERE")
+
 ```
 
 For more information about the API and information about the data see: [API KNMI][https://dataplatform.knmi.nl/dataset/10-minute-in-situ-meteorological-observations-1-0]
@@ -57,6 +58,8 @@ winddata <- GetKNMIAPIEDR(date_start = "20260501",
                                  location_id = c("356"),
                                  parameter = "wind",
                                  data_result = "hourly")
+
+head(winddata)
 ```
 ## Using other API: hourly values
 This is another access to the same data, without key. In this function you can 
@@ -72,4 +75,5 @@ NB: this are the average hourly values
   # Get the data
   knmi_data <- GetKNMIAPI2(stations, ymd_vanaf, ymd_tot )
 
+  head(knmi_data)
 ```

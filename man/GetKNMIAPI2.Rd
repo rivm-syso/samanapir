@@ -39,6 +39,8 @@ windrichting, windsnelheid, temperatuur en relatieve luchtvochtigheid
 Gebruikmakend van httr2
 }
 \examples{
+\dontrun{
 TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
+}
 
 }

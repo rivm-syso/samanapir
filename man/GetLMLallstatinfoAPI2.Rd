@@ -24,5 +24,8 @@ van de Luchtmeetnet API.
 Meer info op: https://api-docs.luchtmeetnet.nl/?version=latest
 }
 \examples{
+\dontrun{
 TEST <-GetLMLallstatinfoAPI2()
+}
+
 }

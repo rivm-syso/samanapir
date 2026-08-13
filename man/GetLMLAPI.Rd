@@ -47,6 +47,12 @@ voor een bepaalde periode op te halen van de Luchtmeetnet API.
 Meer info op: https://api-docs.luchtmeetnet.nl/?version=latest
 }
 \examples{
+\dontrun{
 TEST <- GetLMLAPI("NL01908", "20190505", "20190510")
+}
+
+\dontrun{
 TEST <- GetLMLAPI("NL01908", "20190505", "20190510")
+}
+
 }

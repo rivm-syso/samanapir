@@ -36,6 +36,8 @@ Deze functie haalt de uurgemiddelde gegevens op van de KNMI stations:
 windrichting, windsnelheid, temperatuur en relatieve luchtvochtigheid
 }
 \examples{
+\dontrun{
 TEST_API_KNMI <- GetKNMIAPI('260','20191214','20191215')
+}
 
 }

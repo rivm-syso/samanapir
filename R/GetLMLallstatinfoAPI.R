@@ -17,7 +17,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <-GetLMLallstatinfoAPI2()
+#' }
+#'
 GetLMLallstatinfoAPI2 <- function(){
   # Initialisatie
   # Dataframe waar alles mag worden opgeslagen
@@ -92,7 +95,9 @@ GetLMLallstatinfoAPI2 <- function(){
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' TEST <-GetLMLallstatinfoAPI()
+#' }
 GetLMLallstatinfoAPI <- function(){
   .Deprecated("GetLMLallstatinfoAPI2")
 

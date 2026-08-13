@@ -24,6 +24,10 @@ Functie om van een bepaald luchtmeetnetstation de stationsinformatie op te halen
 van de Luchtmeetnet API. Meer info op: https://api-docs.luchtmeetnet.nl/?version=latest
 }
 \examples{
+\dontrun{
 TEST <- GetLMLstatinfoAPI("NL01908")
+}
+\dontrun{
 TEST <- GetLMLstatinfoAPI("NL01908")
+}
 }

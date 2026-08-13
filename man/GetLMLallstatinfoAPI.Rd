@@ -34,6 +34,11 @@ Functie om van alle stations hun stationsinformatie op te halen
 van de Luchtmeetnet API. Meer info op: https://api-docs.luchtmeetnet.nl/?version=latest
 }
 \examples{
+\dontrun{
+TEST <- GetLMLallstatinfoAPI()
+}
+
+\dontrun{
 TEST <-GetLMLallstatinfoAPI()
-TEST <-GetLMLallstatinfoAPI()
+}
 }
