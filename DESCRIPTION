@@ -1,6 +1,6 @@
 Package: samanapir
 Title: Samen Analyseren Tool API functies
-Version: 0.0.1.2
+Version: 1.0.0
 Authors@R: 
     person(given = "Elma",
            family = "Tenner",
