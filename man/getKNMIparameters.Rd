@@ -12,7 +12,7 @@ getKNMIparameters(token)
 \value{
 dataframe with the names and information of the parameters
 which are available from the knmi stations;
-returns Error if something is wrong in apu connection
+returns Error if something is wrong in api connection
 }
 \description{
 Get a dataframe with the parameters which could be available for the
