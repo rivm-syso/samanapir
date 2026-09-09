@@ -26,7 +26,6 @@ Imports:
     chk
 Depends: R (>= 4.1)
 Suggests: 
-    httptest,
     httptest2,
     knitr,
     rmarkdown,
