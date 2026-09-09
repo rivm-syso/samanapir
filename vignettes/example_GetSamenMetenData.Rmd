@@ -39,7 +39,7 @@ observations.
 
 NOTE: the input for the function is the code of the municipality, as a string.
 NOTE: If connection with API was succesful, but no data available, then an empty
-df are returned. If there was nog connection with the API an NULL is returned
+df are returned. If there was no connection with the API an NULL is returned
 
 ```{r municipality}
 # Example 1: municipality
@@ -65,7 +65,7 @@ observations.
 
 NOTE: the input for the function is the name of the project, as a string.
 NOTE: If connection with API was succesful, but no data available, then an empty
-df are returned. If there was nog connection with the API an NULL is returned
+df are returned. If there was no connection with the API an NULL is returned
 
 An overview of all the projectnames can be found in the github for Samen Analyseren Tool
 
