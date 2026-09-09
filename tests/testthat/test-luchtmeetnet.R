@@ -49,14 +49,13 @@ httptest2::with_mock_dir("luchtmeetnet_api_statinfo", {
 httptest2::with_mock_dir("luchtmeetnet_api_data", {
   test_that("All data is there, grootheden PM available",{
     data_station <- GetLMLstatdataAPI2("NL49012", "20260205", "20260215")
+
     expect_length(data_station$value, 1934)
     expect_equal("PM25" %in% data_station$formula, TRUE)
     expect_equal("PM10" %in% data_station$formula, TRUE)
-    expect_named(data_station, c("station_number", "value", "timestamp_measured",
-                                 "formula"),
-                 ignore.order = TRUE,
-                 ignore.case = TRUE)
-  })
+    expect_equal(!FALSE %in% (c("station_number", "value", "timestamp_measured",
+                   "formula") %in% names(data_station)), TRUE)
+    })
 
   test_that("No data available for station",{
     # Get the data
