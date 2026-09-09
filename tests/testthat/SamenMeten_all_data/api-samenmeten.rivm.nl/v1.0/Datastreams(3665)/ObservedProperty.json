@@ -1,0 +1,8 @@
+{
+    "@iot.id": 1,
+    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(1)",
+    "name": "pm10",
+    "description": "fijnstof < 10microm",
+    "definition": "https://www.eea.europa.eu/help/glossary/eea-glossary/pm10",
+    "Datastreams@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(1)/Datastreams"
+}
