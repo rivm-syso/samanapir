@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "NO",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.81071,
+                50.96309
+            ]
+        },
+        "municipality": "Sittard-Geleen",
+        "url": "",
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Geleen-Vouershof ",
+        "year_start": "1986",
+        "description": {
+            "NL": "Geleen-Vouershof ",
+            "EN": "Geleen-Vouershof "
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "CO",
+            "FN",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.845233,
+                52.381331
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Einsteinweg",
+        "year_start": "1998",
+        "description": {
+            "NL": "Amsterdam-Einsteinweg",
+            "EN": "Amsterdam-Einsteinweg"
+        }
+    }
+}

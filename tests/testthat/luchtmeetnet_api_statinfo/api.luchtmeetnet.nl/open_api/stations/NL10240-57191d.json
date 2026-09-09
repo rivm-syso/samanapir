@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.824944,
+                51.59353
+            ]
+        },
+        "municipality": "Breda",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Breda-Tilburgseweg",
+        "year_start": "",
+        "description": {
+            "NL": "Breda-Tilburgseweg",
+            "EN": "Breda-Tilburgseweg"
+        }
+    }
+}

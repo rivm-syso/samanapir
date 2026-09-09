@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.623713,
+                51.699409
+            ]
+        },
+        "municipality": "Moerdijk",
+        "url": "",
+        "province": null,
+        "organisation": "OMWB (Midden en West Brabant)",
+        "location": "Moerdijk-Julianastraat",
+        "year_start": "",
+        "description": {
+            "NL": "Moerdijk-Julianastraat",
+            "EN": "Moerdijk-Julianastraat"
+        }
+    }
+}

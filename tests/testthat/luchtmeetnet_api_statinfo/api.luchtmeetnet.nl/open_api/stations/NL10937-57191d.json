@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.578901,
+                53.217796
+            ]
+        },
+        "municipality": "Groningen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Groningen-Europaweg",
+        "year_start": "",
+        "description": {
+            "NL": "Groningen-Europaweg",
+            "EN": "Groningen-Europaweg"
+        }
+    }
+}

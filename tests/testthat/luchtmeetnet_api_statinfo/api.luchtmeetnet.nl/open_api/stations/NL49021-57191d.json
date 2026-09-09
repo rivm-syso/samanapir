@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "NO",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.988397,
+                52.320692
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam -Kantershof",
+        "year_start": "2007",
+        "description": {
+            "NL": "Amsterdam -Kantershof",
+            "EN": "Amsterdam -Kantershof"
+        }
+    }
+}

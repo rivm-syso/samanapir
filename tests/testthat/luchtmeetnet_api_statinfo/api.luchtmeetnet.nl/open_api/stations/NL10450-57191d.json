@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM2.5",
+            "NOx",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.318551,
+                52.062537
+            ]
+        },
+        "municipality": "'s-Gravenhage",
+        "url": null,
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Den Haag-Neherkade",
+        "year_start": "2022",
+        "description": {
+            "NL": "Den Haag - Neherkade",
+            "EN": "Nieuw RIVM station"
+        }
+    }
+}

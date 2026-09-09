@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "NH3",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.932432,
+                52.875725
+            ]
+        },
+        "municipality": "Borger-Odoorn",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Valthermond-Noorderdiep",
+        "year_start": "",
+        "description": {
+            "NL": "Valthermond-Noorderdiep",
+            "EN": "Valthermond-Noorderdiep"
+        }
+    }
+}

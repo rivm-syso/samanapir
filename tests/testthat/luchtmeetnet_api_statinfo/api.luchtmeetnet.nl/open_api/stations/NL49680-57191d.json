@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "PS",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.239257,
+                52.373572
+            ]
+        },
+        "municipality": "Almere",
+        "url": null,
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Almere-Boomgaardweg",
+        "year_start": "2024",
+        "description": {
+            "NL": "Almere-Boomgaardweg",
+            "EN": "Almere-Boomgaardweg"
+        }
+    }
+}

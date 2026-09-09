@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "SO2",
+            "NO",
+            "NH3",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.276815,
+                53.330425
+            ]
+        },
+        "municipality": "Noardeast-Fryslân",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Kollumerwaard-Hooge Zuidwal",
+        "year_start": "",
+        "description": {
+            "NL": "Kollumerwaard-Hooge Zuidwal",
+            "EN": "Kollumerwaard-Hooge Zuidwal"
+        }
+    }
+}

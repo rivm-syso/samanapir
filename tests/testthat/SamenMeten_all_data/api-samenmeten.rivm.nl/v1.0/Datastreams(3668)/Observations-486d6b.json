@@ -1,0 +1,652 @@
+{
+    "value": [
+        {
+            "@iot.id": 18856750,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18856750)",
+            "phenomenonTime": "2019-09-09T00:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18856750)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18856750)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18860169,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18860169)",
+            "phenomenonTime": "2019-09-09T01:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18860169)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18860169)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18863621,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18863621)",
+            "phenomenonTime": "2019-09-09T02:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18863621)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18863621)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18867060,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18867060)",
+            "phenomenonTime": "2019-09-09T03:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18867060)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18867060)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18870506,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18870506)",
+            "phenomenonTime": "2019-09-09T04:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18870506)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18870506)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18873948,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18873948)",
+            "phenomenonTime": "2019-09-09T05:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18873948)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18873948)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18877406,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18877406)",
+            "phenomenonTime": "2019-09-09T06:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18877406)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18877406)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18880872,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18880872)",
+            "phenomenonTime": "2019-09-09T07:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18880872)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18880872)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18884342,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18884342)",
+            "phenomenonTime": "2019-09-09T08:00:00.000Z",
+            "result": 73.32,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18884342)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18884342)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18887817,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18887817)",
+            "phenomenonTime": "2019-09-09T09:00:00.000Z",
+            "result": 49.24,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18887817)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18887817)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18891285,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18891285)",
+            "phenomenonTime": "2019-09-09T10:00:00.000Z",
+            "result": 58.31,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18891285)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18891285)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18894747,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18894747)",
+            "phenomenonTime": "2019-09-09T11:00:00.000Z",
+            "result": 63.38,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18894747)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18894747)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18898204,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18898204)",
+            "phenomenonTime": "2019-09-09T12:00:00.000Z",
+            "result": 62.44,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18898204)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18898204)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18901686,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18901686)",
+            "phenomenonTime": "2019-09-09T13:00:00.000Z",
+            "result": 58.11,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18901686)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18901686)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18905149,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18905149)",
+            "phenomenonTime": "2019-09-09T14:00:00.000Z",
+            "result": 59.32,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18905149)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18905149)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18908618,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18908618)",
+            "phenomenonTime": "2019-09-09T15:00:00.000Z",
+            "result": 61.52,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18908618)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18908618)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18912097,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18912097)",
+            "phenomenonTime": "2019-09-09T16:00:00.000Z",
+            "result": 67.01,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18912097)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18912097)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18915576,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18915576)",
+            "phenomenonTime": "2019-09-09T17:00:00.000Z",
+            "result": 74.45,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18915576)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18915576)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18919060,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18919060)",
+            "phenomenonTime": "2019-09-09T18:00:00.000Z",
+            "result": 88.8,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18919060)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18919060)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18922543,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18922543)",
+            "phenomenonTime": "2019-09-09T19:00:00.000Z",
+            "result": 99.64,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18922543)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18922543)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18926002,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18926002)",
+            "phenomenonTime": "2019-09-09T20:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18926002)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18926002)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18929482,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18929482)",
+            "phenomenonTime": "2019-09-09T21:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18929482)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18929482)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18932901,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18932901)",
+            "phenomenonTime": "2019-09-09T22:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18932901)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18932901)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 18936301,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18936301)",
+            "phenomenonTime": "2019-09-09T23:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18936301)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(18936301)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17759628,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17759628)",
+            "phenomenonTime": "2019-09-10T00:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17759628)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17759628)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17763042,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17763042)",
+            "phenomenonTime": "2019-09-10T01:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17763042)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17763042)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17766448,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17766448)",
+            "phenomenonTime": "2019-09-10T02:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17766448)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17766448)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17769862,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17769862)",
+            "phenomenonTime": "2019-09-10T03:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17769862)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17769862)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17770094,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17770094)",
+            "phenomenonTime": "2019-09-10T04:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17770094)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17770094)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17776654,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17776654)",
+            "phenomenonTime": "2019-09-10T05:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17776654)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17776654)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17779976,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17779976)",
+            "phenomenonTime": "2019-09-10T06:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17779976)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17779976)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17783308,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17783308)",
+            "phenomenonTime": "2019-09-10T07:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17783308)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17783308)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17786798,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17786798)",
+            "phenomenonTime": "2019-09-10T08:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17786798)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17786798)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17790280,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17790280)",
+            "phenomenonTime": "2019-09-10T09:00:00.000Z",
+            "result": 98.18,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17790280)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17790280)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17793703,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17793703)",
+            "phenomenonTime": "2019-09-10T10:00:00.000Z",
+            "result": 84.57,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17793703)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17793703)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17797151,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17797151)",
+            "phenomenonTime": "2019-09-10T11:00:00.000Z",
+            "result": 74.64,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17797151)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17797151)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17800544,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17800544)",
+            "phenomenonTime": "2019-09-10T12:00:00.000Z",
+            "result": 67.98,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17800544)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17800544)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17804029,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17804029)",
+            "phenomenonTime": "2019-09-10T13:00:00.000Z",
+            "result": 59.34,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17804029)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17804029)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17807502,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17807502)",
+            "phenomenonTime": "2019-09-10T14:00:00.000Z",
+            "result": 57.79,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17807502)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17807502)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17810971,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17810971)",
+            "phenomenonTime": "2019-09-10T15:00:00.000Z",
+            "result": 61.74,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17810971)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17810971)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17814454,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17814454)",
+            "phenomenonTime": "2019-09-10T16:00:00.000Z",
+            "result": 63.78,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17814454)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17814454)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17817950,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17817950)",
+            "phenomenonTime": "2019-09-10T17:00:00.000Z",
+            "result": 69.71,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17817950)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17817950)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17821390,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17821390)",
+            "phenomenonTime": "2019-09-10T18:00:00.000Z",
+            "result": 76.8,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17821390)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17821390)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17824891,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17824891)",
+            "phenomenonTime": "2019-09-10T19:00:00.000Z",
+            "result": 86.05,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17824891)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17824891)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17825044,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17825044)",
+            "phenomenonTime": "2019-09-10T20:00:00.000Z",
+            "result": 93.88,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17825044)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17825044)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17831849,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17831849)",
+            "phenomenonTime": "2019-09-10T21:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17831849)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17831849)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17835109,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17835109)",
+            "phenomenonTime": "2019-09-10T22:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17835109)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17835109)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17838455,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17838455)",
+            "phenomenonTime": "2019-09-10T23:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17838455)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17838455)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17838686,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17838686)",
+            "phenomenonTime": "2019-09-11T00:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17838686)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17838686)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17846768,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17846768)",
+            "phenomenonTime": "2019-09-11T01:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17846768)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17846768)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17850206,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17850206)",
+            "phenomenonTime": "2019-09-11T02:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17850206)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17850206)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17853654,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17853654)",
+            "phenomenonTime": "2019-09-11T03:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17853654)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17853654)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17857110,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17857110)",
+            "phenomenonTime": "2019-09-11T04:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17857110)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17857110)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17860578,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17860578)",
+            "phenomenonTime": "2019-09-11T05:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17860578)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17860578)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17864266,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17864266)",
+            "phenomenonTime": "2019-09-11T06:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17864266)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17864266)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17869116,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17869116)",
+            "phenomenonTime": "2019-09-11T07:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17869116)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17869116)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17872626,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17872626)",
+            "phenomenonTime": "2019-09-11T08:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17872626)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17872626)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17875998,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17875998)",
+            "phenomenonTime": "2019-09-11T09:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17875998)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17875998)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17879463,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17879463)",
+            "phenomenonTime": "2019-09-11T10:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17879463)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17879463)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17882833,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17882833)",
+            "phenomenonTime": "2019-09-11T11:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17882833)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17882833)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17883103,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17883103)",
+            "phenomenonTime": "2019-09-11T12:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17883103)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17883103)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17890230,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17890230)",
+            "phenomenonTime": "2019-09-11T13:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17890230)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17890230)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17893643,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17893643)",
+            "phenomenonTime": "2019-09-11T14:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17893643)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17893643)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17897123,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17897123)",
+            "phenomenonTime": "2019-09-11T15:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17897123)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17897123)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17900584,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17900584)",
+            "phenomenonTime": "2019-09-11T16:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17900584)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17900584)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17904032,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17904032)",
+            "phenomenonTime": "2019-09-11T17:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17904032)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17904032)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17907494,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17907494)",
+            "phenomenonTime": "2019-09-11T18:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17907494)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17907494)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17907602,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17907602)",
+            "phenomenonTime": "2019-09-11T19:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17907602)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17907602)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17914629,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17914629)",
+            "phenomenonTime": "2019-09-11T20:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17914629)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17914629)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17918081,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17918081)",
+            "phenomenonTime": "2019-09-11T21:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17918081)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17918081)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17921516,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17921516)",
+            "phenomenonTime": "2019-09-11T22:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17921516)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17921516)/FeatureOfInterest",
+            "resultTime": null
+        },
+        {
+            "@iot.id": 17921839,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17921839)",
+            "phenomenonTime": "2019-09-11T23:00:00.000Z",
+            "result": 100.0,
+            "Datastream@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17921839)/Datastream",
+            "FeatureOfInterest@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Observations(17921839)/FeatureOfInterest",
+            "resultTime": null
+        }
+    ]
+}

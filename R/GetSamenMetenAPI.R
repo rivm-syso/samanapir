@@ -1,3 +1,110 @@
+#' GetSamenMetenAPI2
+#'
+#' Functie die de sensordata van het samenmeten api ophaalt.
+#'
+#' @param projectnaam : string met projectnaam erin. Van dit project worden alle
+#'                       sensoren opgehaald
+#' @param ymd_vanaf : string met datum van start van de periode Bijv:"20190909"
+#' @param ymd_tot : string met datum van eind van de periode Bijv:"20190912"
+#' @param updateProgress : functie om de progress te tonen in bijv. shiny tool
+#'
+#' @return named list met:
+#'       sensordata: dataframe met de informatie over de sensor
+#'              c("things_id", "kit_id", "project", "lat", "lon", "knmicode",
+#'              "pm10closecode", "pm10regiocode", "pm10stadcode", "pm25closecode",
+#'              "pm25regiocode", "pm25stadcode")
+#'       metingen: dataframe met de meetgegevens
+#'               waarde = meet waarde
+#'               tijd =  tijd van de meting in UTC
+#'               name = naam van de grootheid (bijv. pm10)
+#'               kit_id = naam van de sensor zoals in database samenmeten
+#' LET OP: wanneer er geen complete 'sensordata' is, staat de sensor
+#'  niet in de return
+#'  Let op: als er geen data is door geen connetie dan return NULL
+#'  Let op: als er geen data is door geen data dan return lege df
+#' @export
+#'
+#' @examples
+#' TEST <- GetSamenMetenAPI2("project eq'Amersfoort'","20190909", "20190912")
+GetSamenMetenAPI2 <- function(projectnaam, ymd_vanaf, ymd_tot,
+                              updateProgress=NULL){
+  # Initialisatie ----
+  # Zet uit dat strings als factor worden opgeslagen
+  # Dat is nl heel onhandig bij het doorgeven van strings naar de API
+  options(stringsAsFactors = FALSE)
+
+  logger::log_info(paste0("Data ophalen van: ", projectnaam))
+
+  # EQ,EQUALS is uniek voor elke gemeente en project
+  # URL van de sensoren binnen een project
+  # Get the meta data from the API, sensor info and datastream info
+  things_data <- GetSamenMetenAPIinfo2(projectnaam)
+
+  # Check if succesfull
+  if(is.null(things_data)){
+    logger::log_info(paste0("No data received from: ", projectnaam))
+    return(NULL)
+  }
+
+  # Check if there is any data
+  if(length(things_data) == 0){
+    logger::log_info(paste0("No data received from: ", projectnaam))
+    return(data.frame())
+  }
+
+  # Dataframe om alle metingen van de sensoren op te halen
+  # Dit wordt een longformat
+  metingen_df <- setNames(data.frame(matrix(ncol = 4, nrow = 0)),
+    c("timestamp", "kit_id", "value", "parameter"))
+
+  # get the observations for each datastream
+  for(part in seq(1:length(things_data$datastream_data$url_obs))){
+    # Set kit_id en datastream_id
+    datastream_id <- things_data$datastream_data$datastream_id[[part]]
+    kit_id <- things_data$datastream_data$kit_id[[part]]
+
+    # Get the observations for this datastream
+    datastream_obs <- GetSamenMetenAPIobs2(
+      datastream_id, kit_id, ymd_vanaf, ymd_tot)
+
+    if(is.null(datastream_obs)){
+      logger::log_info(paste0("No connection, No data from datastream: ", datastream_id))
+      next()
+    }
+
+    # Check if there is any data
+    if(length(datastream_obs) == 0){
+      logger::log_info(paste0("No data received from: ", projectnaam))
+      datastream_obs <- setNames(data.frame(matrix(ncol = 4, nrow = 0)),
+                                 c("timestamp", "kit_id", "value", "parameter"))
+      #TODO dit nog netjes leeg dataframe van maken, met wel kit_id erin en parameter
+
+    }
+
+    # Store observations in 1 df
+    metingen_df <- rbind(metingen_df, datastream_obs)
+  }
+
+  # Om het progress aan te geven van de laatste stap
+  # If we were passed a progress update function, call it
+  if (is.function(updateProgress)) {
+    text <- paste0("Verwerken naar Samen Analyseren Tool")
+    updateProgress(value=0.95,detail = text)
+  }
+
+  logger::log_info(paste0("Alle data opgehaald van: ", projectnaam))
+
+  # Rename the columns for the output
+  metingen_df <- setNames(metingen_df,
+                          c("tijd", "kit_id", "waarde", "name"))
+
+  # Maak een list van de sensordata en de metingen, zodat meegegeven
+  # kan worden als output
+  all_data_list <- list('sensordata' = things_data$sensor_data,
+                        'metingen'   = metingen_df)
+  return(all_data_list)
+}
+
 #' GetSamenMetenAPI
 #'
 #' Functie die de sensordata van het samenmetenportaal haalt.
@@ -26,6 +133,7 @@
 #' @examples
 #' TEST <- GetSamenMetenAPI("project eq'Amersfoort'","20190909", "20190912")
 GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list(), updateProgress=NULL, debug=F){
+  .Deprecated("GetSamenMetenAPI2")
   ##################### ----
   # Helperfuncties
   ##################### ----
@@ -276,7 +384,7 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   # haal locatie op voor alle sensors tegelijk met apply
   # Met een trycatch komt er wel data door ookal heeft 1 sensor geen gegevens.
   locaties <- lapply(ind, function(x) tryCatch(GetlocatieAPI(x),
-                                                error=function(e) NULL))
+                                               error=function(e) NULL))
 
   # Zet de list op naar 1 grote dataframe
   locaties <- do.call("rbind", locaties)
@@ -328,7 +436,7 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   # Dit is wat de functie GetmeetgegevensAPI doet
   # Met een trycatch komt er wel data door ookal heeft 1 sensor geen gegevens.
   meetgegevens <- lapply(ind_meet, function(x) tryCatch(GetmeetgegevensAPI(x),
-                                                error=function(e) NULL))
+                                                        error=function(e) NULL))
 
   meetgegevens <- do.call("rbind", meetgegevens)
 
@@ -349,326 +457,3 @@ GetSamenMetenAPI <- function(projectnaam, ymd_vanaf, ymd_tot, data_opslag = list
   return(all_data_list)
 }
 
-#' Extract coordinates from API result
-#'
-#' Helper function (using lapply) of the function: GetSamenMetenAPIinfo
-#'
-#' In the return of the SamenMeten API the coordinates are nested in lists,
-#' this function extract the coordinates and checks if there are coordinates.
-#' If no coordinates are available 0,0 is returned as coordinates.
-#'
-#' @param x
-#'
-#' @return dataframe with lat and lon as columns
-#'
-extract_coord <- function(x){
-  if(is.null(x)){
-    return(data.frame(lat = 0, lon=0)
-    )
-  }
-  coordinates_list <- x |> dplyr::select("location") |> dplyr::pull() |> dplyr::select("coordinates")
-  coordinates_num <- coordinates_list[[1]] |> unlist()
-  return(data.frame(lon = coordinates_num[[1]],
-                    lat = coordinates_num[[2]]))
-}
-
-
-#' Extract datastream from API result
-#'
-#' Helper function (using lapply) of the function: GetSamenMetenAPIinfo
-#'
-#' In the return of the SamenMeten API the information of the dataastreams are
-#' nested in lists, this function extract the url to the observedproperties and
-#' the observations and checks if there is information at all. If no information
-#' is available, then "no data" is set.
-#'
-#' @param x
-#'
-#' @return dataframe with the kit_id_ext, unit, url_properties, url_observations
-#'
-extract_datastream<- function(x){
-  if(is.null(x)){
-    return(data.frame(kit_id_ext = "no data",
-                      unit = "no data",
-                      datastream_id = -999
-    )
-    )
-  }
-  unit <- x |> dplyr::select("unitOfMeasurement") |> dplyr::pull() |> dplyr::select("symbol") |> dplyr::pull()
-  url_properties <- x |> dplyr::select("ObservedProperty@iot.navigationLink") |> dplyr::pull()
-  url_observations <- x |> dplyr::select("Observations@iot.navigationLink") |> dplyr::pull()
-  kit_id_ext <- x |> dplyr::select("name") |> dplyr::pull()
-  datastream_id <- x |> dplyr::select("@iot.id") |> dplyr::pull()
-
-  return(data.frame(kit_id_ext = kit_id_ext,
-                    unit = unit,
-                    datastream_id = datastream_id))
-}
-
-
-#' GetSamenMetenAPIinfo
-#'
-#' This function will obtain the information of each sensor in a particular
-#' municipality or project. The name, location, closest reference stations,
-#' measured components and the urls to the observations of each datastream.
-#'
-#' @param url_part string with the name of the project or municipality where
-#'   you are interested in, in the format as the api can read.
-#'   For project: project eq'Amersfoort'
-#'   For municipality:  codegemeente eq '310'
-#'
-#' @return list with the info for each sensor in the url_part
-#' @export
-#'
-#' @examples
-#' TEST <- GetSamenMetenAPIinfo("project eq'Amersfoort'")
-GetSamenMetenAPIinfo <- function(url_part){
-  url_things <- paste("https://api-samenmeten.rivm.nl/v1.0/Things?$filter=(properties/",url_part,")&$expand=Locations,Datastreams", sep='')
-  url_things <- gsub(' ','%20', url_things)
-
-  # Create an empty dataframe to store sensordata
-  sensor_data <- data.frame()
-
-  # Create an empty dataframe to store the urls
-  datastream_data <- data.frame()
-
-  # The API uses multiple pages, if there are, then get them all
-  multiple_pages_things <- TRUE
-
-  # Get all sensors and there properties and further urls to the datastream properties and observations
-  while(multiple_pages_things){
-
-    logger::log_info(paste0("GetSamenMetenAPIinfo: Get data from url: ", url_things))
-    # Get from API
-    tryCatch({
-      content_things <- GetAPIDataframe(url_things)
-      content_things_df <- content_things$value
-    }, error = function(e){
-      # There could be a overload of the API server
-      # Try again after 30 seconds
-    logger::log_trace("GetSamenMetenAPIinfo: GetAPIDataframe returned error, trying again ...")
-      Sys.sleep(3)
-      # Get from API
-      tryCatch({
-        content_things <- GetAPIDataframe(url_things)
-        content_things_df <- content_things$value
-      }, error = function(e){
-          logger::log_error("GetSamenMetenAPIinfo: GetAPIDataframe returned error")
-        stop("GetSamenMetenAPIinfo ERROR in URL things")
-      })
-    })
-
-
-    logger::log_debug("GetSamenMetenAPIinfo: Data received from {url_things}")
-
-    # Extract the coordinates: The coordinates are listed in the dataframe
-    location_df <- content_things_df$Locations
-    coordinates <-   lapply(location_df, extract_coord) |> dplyr::bind_rows()
-
-    # Store the info about the sensor (meta-data)
-    sensor_data <- rbind(sensor_data, data.frame('things_id' = content_things_df[,'@iot.id'],
-                                                 'kit_id' = content_things_df[,'name'],
-                                                 'project' = content_things_df$properties['project'],
-                                                 'lat' = coordinates$lat,
-                                                 'lon' = coordinates$lon,
-                                                 'knmicode' = content_things_df$properties['knmicode'],
-                                                 'pm10closecode' = content_things_df$properties['pm10closecode'],
-                                                 'pm10regiocode' = content_things_df$properties['pm10regiocode'],
-                                                 'pm10stadcode' = content_things_df$properties['pm10stadcode'],
-                                                 'pm25closecode' = content_things_df$properties['pm25closecode'],
-                                                 'pm25regiocode' = content_things_df$properties['pm25regiocode'],
-                                                 'pm25stadcode' = content_things_df$properties['pm25stadcode']
-    ))
-
-    # Store the info about the parameters measured (datastreams)
-    # Extract the datastream
-    datastream_list <- content_things_df |> dplyr::select(Datastreams) |> dplyr::pull() |> lapply( extract_datastream)
-
-    # Add the kit_id to the datastream
-    kit_id_overview <- content_things_df[,'name']
-    names(datastream_list) <- kit_id_overview
-
-    # Convert to dataframe
-    datastream_df <- datastream_list |> dplyr::bind_rows( .id = "kit_id")
-
-    # Store the info about the datastreams (meta-data)
-    datastream_data <- rbind(datastream_data, datastream_df)
-
-    # Check if there is another page to read
-    if (length(content_things)>1){
-      url_things <- content_things[[1]]
-    logger::log_trace("GetSamenMetenAPIinfo: getting next page ...")
-    } else{
-    logger::log_trace("GetSamenMetenAPIinfo: got final page")
-      multiple_pages_things <- FALSE
-    }
-  }
-
-  all_data_list <- list('sensor_data' = sensor_data, 'datastream_data'= datastream_data)
-  return(all_data_list)
-}
-
-
-
-#' Get data Samen Meten API per Municipality
-#'
-#' This function will obtain the information of each sensor in a particular
-#' municipality from the Samen Meten API. The name, location, closest reference stations,
-#' measured components and the urls to the observations of each datastream.
-#'
-#' @param muni_number string with the code of the municipality, for example '310'
-#'
-#' @return list with the info for each sensor in the municipality
-#' @export
-#'
-#' @examples TEST <- GetSamenMetenAPIinfoMuni("330")
-GetSamenMetenAPIinfoMuni <- function(muni_code){
-  # check if input is character
-  if(!is.character(muni_code)){
-    logger::log_error("Input 'muni_code' should be a character")
-    return(NULL)
-  }
-
-  # Create part for in the url of the API
-  url_part <- paste("codegemeente eq'",muni_code,"'", sep='')
-
-  # Get the data from the API
-  data_out <- GetSamenMetenAPIinfo(url_part)
-
-  return(data_out)
-}
-
-#' Get data Samen Meten API per Project
-#'
-#' This function will obtain the information of each sensor in a particular
-#' project from the Samen Meten API. The name, location, closest reference stations,
-#' measured components and the urls to the observations of each datastream.
-#'
-#' @param project_name string with name of the project for example "HEI"
-#'
-#' @return list with the info for each sensor in the project
-#' @export
-#'
-#' @examples TEST <- GetSamenMetenAPIinfoProject("HEI")
-GetSamenMetenAPIinfoProject <- function(project_name){
-  # check if input is character
-  if(!is.character(project_name)){
-    logger::log_error("Input 'project_name' should be a character")
-    return(NULL)
-  }
-
-  # Create part for in the url of the API
-  url_part <- paste("project eq'",project_name,"'", sep='')
-
-  # Get the data from the API
-  data_out <- GetSamenMetenAPIinfo(url_part)
-
-  return(data_out)
-}
-
-#' Get observations from Samen Meten API
-#'
-#' Get from the Samen Meten API the observations from a given sensor and
-#' measured parameter.
-#'
-#' @param datastream_id string, id from the datastream
-#' @param kit_id string, id/name from the sensor
-#' @param ymd_from string, date from which data will be obtained in format yyyymmdd
-#' @param ymd_to string, date to which data will be obtained in format yyyymmdd
-#'
-#' @return dataframe with the columns: kit_id (string), timestamp(posixct UTC),
-#' parameter (string), value(numeric)
-#'
-#' @export
-#'
-#' @examples TEST <- GetSamenMetenAPIobs("31508","LTD_55101","20220101","20220103")
-GetSamenMetenAPIobs <- function(datastream_id, kit_id, ymd_from, ymd_to){
-  # start from the function
-  start_time <- Sys.time()
-  # Create url for the measuered parameter
-  url_property <- paste("https://api-samenmeten.rivm.nl/v1.0/Datastreams(",
-                        datastream_id,")/ObservedProperty", sep='')
-
-  # Get the name of the datastream measured parameter
-  logger::log_trace("GetSamenMetenAPIobs: requesting property data from url {url_property}")
-  # Get from API
-  tryCatch({
-    content_prop <- GetAPIDataframe(url_property)
-  }, error = function(e){
-    # There could be a overload of the API server
-    # Try again after 30 seconds
-    Sys.sleep(3)
-    # Get from API
-    tryCatch({
-      content_prop <- GetAPIDataframe(url_property)
-    }, error = function(e){
-      logger::log_error("GetSamenMetenAPIobs ERROR: GetAPIDataFrame returned error.")
-      stop("GetSamenMetenAPIobs ERROR in URL")
-    })
-  })
-
-  logger::log_debug(paste0("Data received from: ", url_property))
-
-  # Create a dataframe to store the observations
-  obs_data <- data.frame()
-
-  # Get the observations
-  url_obs <- paste("https://api-samenmeten.rivm.nl/v1.0/Datastreams(",
-                   datastream_id,")/Observations?$filter=phenomenonTime+gt+%27",
-                   ymd_from,"%27+and+phenomenonTime+lt+%27",ymd_to,
-                   "%27&$orderby=phenomenonTime",sep='')
-
-  # The API uses multiple pages, if there are, then get them all
-  multiple_pages_obs <- TRUE
-
-  # Get all sensors and there properties and further urls to the datastream properties and observations
-  while(multiple_pages_obs){
-
-    logger::log_info(paste0("Get data from url: ", url_obs))
-    # Get from API
-    tryCatch({
-      content_obs <- GetAPIDataframe(url_obs)
-      content_obs_df <- content_obs$value
-    }, error = function(e){
-      # There could be a overload of the API server
-      # Try again after 30 seconds
-      Sys.sleep(3)
-      # Get from API
-      tryCatch({
-        content_obs <- GetAPIDataframe(url_obs)
-        content_obs_df <- content_obs$value
-      }, error = function(e){
-        logger::log_error("GetSamenMetenAPIobs ERROR: GetAPIDAtaframe returned error")
-        stop("GetSamenMetenAPIobs ERROR")
-      })
-    })
-
-    logger::log_debug("GetAPIDatframe: data received from: {url_obs}, {nrow(content_obs_df)} records")
-
-    # Store the observations, add kit_id and parameter
-    obs_data <- obs_data |>
-      dplyr::bind_rows(data.frame(
-        kit_id = kit_id,
-        parameter = content_prop$name,
-        timestamp = as.POSIXct(content_obs_df$phenomenonTime, format='%Y-%m-%dT%H:%M:%S', tz='UTC'),
-        value = content_obs_df$result
-      ))
-
-    # Check if there is another page to read
-    if (length(content_obs)>1){
-      url_obs <- content_obs[[1]]
-      logger::log_trace("GetAPIDataframe, get next page")
-    } else{
-      multiple_pages_obs <- FALSE
-      logger::log_trace("GetAPIDataframe, got last page")
-    }
-  }
-
-  # end from the function
-  end_time <- Sys.time()
-  logger::log_info("The download of the data took {end_time - start_time} seconds")
-
-  # return the data
-  return(obs_data)
-
-}

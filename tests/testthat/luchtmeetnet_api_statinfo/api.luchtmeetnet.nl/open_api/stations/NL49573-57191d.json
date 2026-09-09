@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "PM25",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.579343,
+                52.478871
+            ]
+        },
+        "municipality": "Velsen",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Velsen-Reyndersweg",
+        "year_start": "2011",
+        "description": {
+            "NL": "Velsen-Reyndersweg",
+            "EN": "Velsen-Reyndersweg"
+        }
+    }
+}

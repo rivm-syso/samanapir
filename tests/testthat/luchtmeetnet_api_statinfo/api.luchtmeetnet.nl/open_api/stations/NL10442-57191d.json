@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.708239,
+                51.800658
+            ]
+        },
+        "municipality": "Dordrecht",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Dordrecht-Bamendaweg",
+        "year_start": "",
+        "description": {
+            "NL": "Dordrecht-Bamendaweg",
+            "EN": "Dordrecht-Bamendaweg"
+        }
+    }
+}

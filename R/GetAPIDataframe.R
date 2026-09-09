@@ -8,9 +8,11 @@
 #' @param url_api : string met een url van een API
 #'
 #' @return dataframe met de content van de url
-#'
+#' @export
 #' @examples
+#' \dontrun{
 #' TEST <- GetAPIDataframe("https://api-samenmeten.rivm.nl/v1.0/Things?")
+#' }
 GetAPIDataframe <- function(url_api){
   # Parameters voor de check op errors
   nog_eens_opvragen <- TRUE
@@ -52,5 +54,44 @@ GetAPIDataframe <- function(url_api){
       }
       else{return(content)}
     }
+  }
+}
+
+#' GetAPIDataframe2
+#'
+#'Obtain the data from the url (API) using httr2. returns the data in a list.
+#'NB expect body as json
+#'
+#' @param req_url_api httr2::request() element, this element will be get the
+#' data from
+#'
+#' @returns NULL when URL wasn't succesfully reached
+#' empty list when URL was reached, but nof data returned
+#' list with the data from the URL
+#' @export
+#'
+GetAPIDataframe2 <- function(req_url_api){
+  # Create request
+  req <- req_url_api
+
+  # perform request, using retry after some time
+  resp <- httr2::req_retry(req, max_tries = 4) |>
+    httr2::req_perform() |> try()
+
+  # Check if succesful, if not return NULL
+  if(inherits(resp, "try-error")){
+    # logging
+    logger::log_info(paste0("Not succesful: ", req_url_api$url))
+    return(NULL)
+  }
+
+  # unpack results return (if no data available return empty list)
+  resp_json_list <- resp |> httr2::resp_body_json()
+  if(length(resp_json_list)>0){
+    logger::log_info(paste0("Succesful: ", req_url_api$url))
+    return(resp_json_list)
+  }else{
+    logger::log_debug(paste0("No data available: ", req_url_api$url))
+    return(NULL)
   }
 }

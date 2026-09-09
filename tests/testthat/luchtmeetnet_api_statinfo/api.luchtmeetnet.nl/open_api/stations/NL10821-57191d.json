@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.919494,
+                52.234504
+            ]
+        },
+        "municipality": "Enschede",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Enschede-Winkelshorst",
+        "year_start": "",
+        "description": {
+            "NL": "Enschede-Winkelshorst",
+            "EN": "Enschede-Winkelshorst"
+        }
+    }
+}

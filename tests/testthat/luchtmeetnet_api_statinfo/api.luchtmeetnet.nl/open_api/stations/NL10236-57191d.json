@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.47235,
+                51.46866
+            ]
+        },
+        "municipality": "Eindhoven",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Eindhoven-Genovevalaan",
+        "year_start": "",
+        "description": {
+            "NL": "Eindhoven-Genovevalaan",
+            "EN": "Eindhoven-Genovevalaan"
+        }
+    }
+}

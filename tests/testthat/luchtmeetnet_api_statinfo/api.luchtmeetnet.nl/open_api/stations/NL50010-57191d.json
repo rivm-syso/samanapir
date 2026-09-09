@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "PS",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.718977489396707,
+                50.841053234998604
+            ]
+        },
+        "municipality": "Maastricht",
+        "url": "",
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Maastricht-A2-Philipsweg",
+        "year_start": "2020",
+        "description": {
+            "NL": "Maastricht-A2-Philipsweg",
+            "EN": "Maastricht-A2-Philipsweg"
+        }
+    }
+}

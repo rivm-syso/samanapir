@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.986853,
+                50.90032
+            ]
+        },
+        "municipality": "Heerlen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Heerlen-Jamboreepad",
+        "year_start": "",
+        "description": {
+            "NL": "Heerlen-Jamboreepad",
+            "EN": "Heerlen-Jamboreepad"
+        }
+    }
+}

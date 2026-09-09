@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PM25",
+            "FN",
+            "PM10",
+            "BCWB"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.703113,
+                50.78366
+            ]
+        },
+        "municipality": "Eijsden-Margraten",
+        "url": null,
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Eijsden-Trichterweg",
+        "year_start": "2024",
+        "description": {
+            "NL": "Eijsden-Trichterweg",
+            "EN": "Eijsden-Trichterweg"
+        }
+    }
+}

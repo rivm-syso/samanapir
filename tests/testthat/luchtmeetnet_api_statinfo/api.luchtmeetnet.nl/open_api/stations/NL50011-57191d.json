@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PM25",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.771363,
+                51.303331
+            ]
+        },
+        "municipality": "Nederweert",
+        "url": null,
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Nederweert-Kuilstraat",
+        "year_start": "2024",
+        "description": {
+            "NL": "naam",
+            "EN": "naam"
+        }
+    }
+}

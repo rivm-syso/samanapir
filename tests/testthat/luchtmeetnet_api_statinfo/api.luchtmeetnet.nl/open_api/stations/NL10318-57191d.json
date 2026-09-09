@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "SO2",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                3.749484,
+                51.294498
+            ]
+        },
+        "municipality": "Terneuzen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Philippine-Stelleweg",
+        "year_start": "",
+        "description": {
+            "NL": "Philippine-Stelleweg",
+            "EN": "Philippine-Stelleweg"
+        }
+    }
+}

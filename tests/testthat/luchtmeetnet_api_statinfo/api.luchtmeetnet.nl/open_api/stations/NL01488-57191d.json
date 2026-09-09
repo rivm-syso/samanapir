@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.48759,
+                51.89361
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Rotterdam-Zwartewaalstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Rotterdam-Zwartewaalstraat",
+            "EN": "Rotterdam-Zwartewaalstraat"
+        }
+    }
+}

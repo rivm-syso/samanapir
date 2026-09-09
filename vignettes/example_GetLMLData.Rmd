@@ -1,0 +1,56 @@
+---
+title: "example_GetLMLData"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{example_GetLMLData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(samanapir)
+```
+
+# Introduction
+
+The reference data from [Luchtmeetnet][https://www.luchtmeetnet.nl/] can
+be obtained using an API. This package contains functions to use this API.
+
+For more information about the API see: [API Luchtmeetnet][https://api-docs.luchtmeetnet.nl/]
+
+## Information about a specific station
+With the function 'GetLMLstatinfoAPI2', you can obtain the metadata of the station,
+like location and name.
+
+```{r Station information}
+# Get station information
+station_info <- GetLMLstatinfoAPI2("NL01908")
+
+```
+## Information of all stations
+You can also obtain the metadata of all stations in once.
+```{r All stations informtation}
+all_stations <- GetLMLallstatinfoAPI2()
+```
+
+## Data from specific station
+The measurements from a specific station can be gathered for a given time period.
+This will return all the measured components (e.g. PM, NO2)
+```{r data from specific station}
+data_station <- GetLMLstatdataAPI2("NL49012", "20260205", "20260215")
+```
+
+## Data and info for a specific station
+In order to get the data and the info from a specific station, you can use this,
+whixh combines the function above.
+```{r}
+combined_station <- GetLMLAPI2("NL49012", "20260505", "20260510")
+```

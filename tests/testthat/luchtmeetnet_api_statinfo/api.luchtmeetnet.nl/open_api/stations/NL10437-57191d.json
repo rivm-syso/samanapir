@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.450529,
+                51.786579
+            ]
+        },
+        "municipality": "Hoeksche Waard",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Westmaas-Groeneweg",
+        "year_start": "",
+        "description": {
+            "NL": "Westmaas-Groeneweg",
+            "EN": "Westmaas-Groeneweg"
+        }
+    }
+}

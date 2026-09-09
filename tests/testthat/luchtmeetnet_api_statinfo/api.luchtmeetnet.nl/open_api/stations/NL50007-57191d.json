@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.6758,
+                50.85205
+            ]
+        },
+        "municipality": "Maastricht",
+        "url": "",
+        "province": null,
+        "organisation": "ODZL (Limburg)",
+        "location": "Maastricht-Hoge_Fronten",
+        "year_start": "2013",
+        "description": {
+            "NL": "Maastricht-Hoge_Fronten",
+            "EN": "Maastricht-Hoge_Fronten"
+        }
+    }
+}

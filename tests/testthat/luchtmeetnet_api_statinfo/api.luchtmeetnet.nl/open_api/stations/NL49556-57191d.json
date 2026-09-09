@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "FN",
+            "PM10",
+            "BCWB"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.8617,
+                52.56359
+            ]
+        },
+        "municipality": "Alkmaar",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "De Rijp-Oostdijkje",
+        "year_start": "",
+        "description": {
+            "NL": "De Rijp-Oostdijkje",
+            "EN": "De Rijp-Oostdijkje"
+        }
+    }
+}

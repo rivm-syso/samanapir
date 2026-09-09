@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.329431,
+                51.914883
+            ]
+        },
+        "municipality": "Vlaardingen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Vlaardingen-Riouwlaan",
+        "year_start": "2019",
+        "description": {
+            "NL": "Vlaardingen-Riouwlaan",
+            "EN": "Vlaardingen-Riouwlaan"
+        }
+    }
+}

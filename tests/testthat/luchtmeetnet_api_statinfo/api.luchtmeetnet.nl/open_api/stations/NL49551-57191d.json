@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "PM25",
+            "SO2",
+            "NO",
+            "CO",
+            "H2S",
+            "FN",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.6018419999999995,
+                52.463039
+            ]
+        },
+        "municipality": "Velsen",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "IJmuiden-Kanaalstraat",
+        "year_start": "1998",
+        "description": {
+            "NL": "IJmuiden-Kanaalstraat",
+            "EN": "IJmuiden-Kanaalstraat"
+        }
+    }
+}

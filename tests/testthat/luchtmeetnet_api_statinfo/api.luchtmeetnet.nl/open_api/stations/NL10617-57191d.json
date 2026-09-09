@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.59338,
+                52.423214
+            ]
+        },
+        "municipality": "Dronten",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Biddinghuizen-Kuilweg",
+        "year_start": "",
+        "description": {
+            "NL": "Biddinghuizen-Kuilweg",
+            "EN": "Biddinghuizen-Kuilweg"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.987444,
+                52.20153
+            ]
+        },
+        "municipality": "Stichtse Vecht",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Breukelen-A2",
+        "year_start": "",
+        "description": {
+            "NL": "Breukelen-A2",
+            "EN": "Breukelen-A2"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.315872,
+                52.075071
+            ]
+        },
+        "municipality": "'s-Gravenhage",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Den Haag-Amsterdamse Veerkade",
+        "year_start": "",
+        "description": {
+            "NL": "Den Haag-Amsterdamse Veerkade",
+            "EN": "Den Haag-Amsterdamse Veerkade"
+        }
+    }
+}

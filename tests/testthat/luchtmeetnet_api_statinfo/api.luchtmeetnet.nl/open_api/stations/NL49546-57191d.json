@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.83206,
+                52.42023
+            ]
+        },
+        "municipality": "Zaanstad",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Zaanstad-Hemkade",
+        "year_start": "2009",
+        "description": {
+            "NL": "Zaanstad-Hemkade",
+            "EN": "Zaanstad-Hemkade"
+        }
+    }
+}

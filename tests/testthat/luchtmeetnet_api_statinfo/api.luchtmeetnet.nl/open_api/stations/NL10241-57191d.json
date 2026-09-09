@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.781016,
+                51.60308
+            ]
+        },
+        "municipality": "Breda",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Breda-Bastenakenstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Breda-Bastenakenstraat",
+            "EN": "Breda-Bastenakenstraat"
+        }
+    }
+}

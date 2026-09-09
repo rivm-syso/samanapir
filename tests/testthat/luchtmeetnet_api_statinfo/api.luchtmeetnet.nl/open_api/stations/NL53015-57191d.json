@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.541659,
+                51.6689355
+            ]
+        },
+        "municipality": "Moerdijk",
+        "url": "",
+        "province": null,
+        "organisation": "OMWB (Midden en West Brabant)",
+        "location": "Klundert-Kerkweg",
+        "year_start": "",
+        "description": {
+            "NL": "Klundert-Kerkweg",
+            "EN": "Klundert-Kerkweg"
+        }
+    }
+}

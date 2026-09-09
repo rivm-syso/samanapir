@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.71507132053375,
+                52.3274501787129
+            ]
+        },
+        "municipality": "Haarlemmermeer",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Hoofddorp-Hoofdweg",
+        "year_start": "1998",
+        "description": {
+            "NL": "Hoofddorp-Hoofdweg",
+            "EN": "Hoofddorp-Hoofdweg"
+        }
+    }
+}

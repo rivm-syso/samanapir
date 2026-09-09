@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.860319,
+                52.374786
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Jan van Galenstraat",
+        "year_start": "2007",
+        "description": {
+            "NL": "Amsterdam-Jan van Galenstraat",
+            "EN": "Amsterdam-Jan van Galenstraat"
+        }
+    }
+}

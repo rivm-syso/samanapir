@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.594882,
+                51.653205
+            ]
+        },
+        "municipality": "Moerdijk",
+        "url": "",
+        "province": null,
+        "organisation": "OMWB (Midden en West Brabant)",
+        "location": "Zevenbergen-Galgenweg",
+        "year_start": "",
+        "description": {
+            "NL": "Zevenbergen-Galgenweg",
+            "EN": "Zevenbergen-Galgenweg"
+        }
+    }
+}

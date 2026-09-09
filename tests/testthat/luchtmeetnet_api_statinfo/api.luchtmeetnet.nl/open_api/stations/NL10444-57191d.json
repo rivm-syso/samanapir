@@ -1,0 +1,33 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "SO2",
+            "NO",
+            "NH3",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.510817,
+                52.296556
+            ]
+        },
+        "municipality": "Noordwijk",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "De Zilk-Vogelaarsdreef",
+        "year_start": "",
+        "description": {
+            "NL": "De Zilk-Vogelaarsdreef",
+            "EN": "De Zilk-Vogelaarsdreef"
+        }
+    }
+}

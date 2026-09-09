@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.124464,
+                52.105031
+            ]
+        },
+        "municipality": "Utrecht",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Utrecht-Kardinaal de Jongweg",
+        "year_start": "",
+        "description": {
+            "NL": "Utrecht-Kardinaal de Jongweg",
+            "EN": "Utrecht-Kardinaal de Jongweg"
+        }
+    }
+}

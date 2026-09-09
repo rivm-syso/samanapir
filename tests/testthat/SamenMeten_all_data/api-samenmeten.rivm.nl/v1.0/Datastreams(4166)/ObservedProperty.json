@@ -1,0 +1,8 @@
+{
+    "@iot.id": 4,
+    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(4)",
+    "name": "pm25_kal",
+    "description": "fijnstof gekalibreerd < 2.5microm",
+    "definition": "https://www.eea.europa.eu/help/glossary/eea-glossary/pm10?calibration=https://samenmeten.nl/dataportaal/kalibratie-van-fijnstofsensoren",
+    "Datastreams@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(4)/Datastreams"
+}

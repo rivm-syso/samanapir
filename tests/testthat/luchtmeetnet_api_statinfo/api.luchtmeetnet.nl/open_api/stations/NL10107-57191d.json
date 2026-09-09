@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "NO",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                6.042399,
+                51.11919
+            ]
+        },
+        "municipality": "Roerdalen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Posterholt-Vlodropperweg",
+        "year_start": "",
+        "description": {
+            "NL": "Posterholt-Vlodropperweg",
+            "EN": "Posterholt-Vlodropperweg"
+        }
+    }
+}

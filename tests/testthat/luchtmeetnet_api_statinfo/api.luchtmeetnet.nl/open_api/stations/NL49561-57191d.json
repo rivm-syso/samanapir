@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PM25",
+            "NO",
+            "CO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.774006,
+                52.334003
+            ]
+        },
+        "municipality": "Haarlemmermeer",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Badhoevedorp-Sloterweg",
+        "year_start": "1998",
+        "description": {
+            "NL": "Badhoevedorp-Sloterweg",
+            "EN": "Badhoevedorp-Sloterweg"
+        }
+    }
+}

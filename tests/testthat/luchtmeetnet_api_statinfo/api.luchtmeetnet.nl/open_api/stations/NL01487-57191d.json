@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.48066,
+                51.89113
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Rotterdam-Pleinweg",
+        "year_start": "",
+        "description": {
+            "NL": "Rotterdam-Pleinweg",
+            "EN": "Rotterdam-Pleinweg"
+        }
+    }
+}

@@ -1,0 +1,2299 @@
+{
+    "value": [
+        {
+            "@iot.id": 1573,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(1573)",
+            "name": "AMF_pm015",
+            "description": "BA015",
+            "properties": {
+                "codegemeente": "518",
+                "knmicode": "knmi_06330",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL10404",
+                "no2regiocode": "NL01497",
+                "no2stadcode": "NL10445",
+                "owner": "RIVM",
+                "pm10closecode": "NL10404",
+                "pm10regiocode": "NL01497",
+                "pm10stadcode": "NL10445",
+                "pm25closecode": "NL10404",
+                "pm25regiocode": "NL01497",
+                "pm25stadcode": "NL10450",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(1573)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 12620,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(12620)",
+                    "name": "loc-name-AMF_pm015",
+                    "description": "loc-desc-AMF_pm015",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            4.252,
+                            52.066
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(12620)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(12620)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 7210,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7210)",
+                    "name": "AMF_pm015-2-pm10_kal",
+                    "description": "AMF_pm015-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7210)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7210)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7210)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7210)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 7209,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7209)",
+                    "name": "AMF_pm015-2-pm10",
+                    "description": "AMF_pm015-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7209)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7209)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7209)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7209)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 7208,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7208)",
+                    "name": "AMF_pm015-2-pm25_kal",
+                    "description": "AMF_pm015-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7208)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7208)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7208)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7208)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 7207,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7207)",
+                    "name": "AMF_pm015-2-pm25",
+                    "description": "AMF_pm015-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7207)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7207)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7207)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(7207)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 1305,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(1305)",
+            "name": "AMF_pm004",
+            "description": "BA004",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(1305)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 12888,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(12888)",
+                    "name": "loc-name-AMF_pm004",
+                    "description": "loc-desc-AMF_pm004",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.412,
+                            52.153
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(12888)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(12888)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 6329,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6329)",
+                    "name": "AMF_pm004-2-pm10_kal",
+                    "description": "AMF_pm004-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6329)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6329)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6329)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6329)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 6328,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6328)",
+                    "name": "AMF_pm004-2-pm10",
+                    "description": "AMF_pm004-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6328)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6328)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6328)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6328)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 6327,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6327)",
+                    "name": "AMF_pm004-2-pm25_kal",
+                    "description": "AMF_pm004-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6327)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6327)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6327)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6327)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 6326,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6326)",
+                    "name": "AMF_pm004-2-pm25",
+                    "description": "AMF_pm004-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6326)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6326)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6326)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(6326)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 1131,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(1131)",
+            "name": "VW_14014474",
+            "description": "VW14014474",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(1131)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13062,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13062)",
+                    "name": "loc-name-VW_14014474",
+                    "description": "loc-desc-VW_14014474",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.404,
+                            52.19
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13062)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13062)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 5526,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5526)",
+                    "name": "VW_14014474-4-pres",
+                    "description": "VW_14014474-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5526)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5526)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5526)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5526)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 5525,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5525)",
+                    "name": "VW_14014474-4-rh",
+                    "description": "VW_14014474-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5525)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5525)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5525)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5525)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 5524,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5524)",
+                    "name": "VW_14014474-4-temp",
+                    "description": "VW_14014474-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5524)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5524)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5524)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5524)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 5523,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5523)",
+                    "name": "VW_14014474-2-pm10_kal",
+                    "description": "VW_14014474-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5523)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5523)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5523)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5523)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 5522,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5522)",
+                    "name": "VW_14014474-2-pm10",
+                    "description": "VW_14014474-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5522)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5522)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5522)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5522)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 5521,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5521)",
+                    "name": "VW_14014474-2-pm25_kal",
+                    "description": "VW_14014474-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5521)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5521)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5521)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5521)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 5520,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5520)",
+                    "name": "VW_14014474-2-pm25",
+                    "description": "VW_14014474-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5520)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5520)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5520)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(5520)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 855,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(855)",
+            "name": "AMF_pm013",
+            "description": "BA013",
+            "properties": {
+                "codegemeente": "327",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL10643",
+                "no2regiocode": "NL10738",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL10636",
+                "pm10regiocode": "NL10738",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL10643",
+                "pm25regiocode": "NL10738",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(855)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13338,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13338)",
+                    "name": "loc-name-AMF_pm013",
+                    "description": "loc-desc-AMF_pm013",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.405,
+                            52.116
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13338)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13338)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4294,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4294)",
+                    "name": "AMF_pm013-2-pm10_kal",
+                    "description": "AMF_pm013-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4294)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4294)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4294)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4294)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4293,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4293)",
+                    "name": "AMF_pm013-2-pm10",
+                    "description": "AMF_pm013-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4293)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4293)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4293)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4293)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4292,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4292)",
+                    "name": "AMF_pm013-2-pm25_kal",
+                    "description": "AMF_pm013-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4292)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4292)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4292)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4292)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4291,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4291)",
+                    "name": "AMF_pm013-2-pm25",
+                    "description": "AMF_pm013-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4291)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4291)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4291)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4291)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 854,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(854)",
+            "name": "AMF_pm005",
+            "description": "BA005",
+            "properties": {
+                "codegemeente": "327",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL10738",
+                "no2regiocode": "NL10738",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL10738",
+                "pm10regiocode": "NL10738",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL10738",
+                "pm25regiocode": "NL10738",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(854)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13339,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13339)",
+                    "name": "loc-name-AMF_pm005",
+                    "description": "loc-desc-AMF_pm005",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.431,
+                            52.154
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13339)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13339)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4290,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4290)",
+                    "name": "AMF_pm005-2-pm10_kal",
+                    "description": "AMF_pm005-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4290)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4290)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4290)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4290)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4289,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4289)",
+                    "name": "AMF_pm005-2-pm10",
+                    "description": "AMF_pm005-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4289)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4289)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4289)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4289)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4288,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4288)",
+                    "name": "AMF_pm005-2-pm25_kal",
+                    "description": "AMF_pm005-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4288)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4288)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4288)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4288)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4287,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4287)",
+                    "name": "AMF_pm005-2-pm25",
+                    "description": "AMF_pm005-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4287)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4287)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4287)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4287)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 853,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(853)",
+            "name": "VW_4984943",
+            "description": "VW4984943",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(853)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13340,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13340)",
+                    "name": "loc-name-VW_4984943",
+                    "description": "loc-desc-VW_4984943",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.377,
+                            52.163
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13340)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13340)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4286,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4286)",
+                    "name": "VW_4984943-4-pres",
+                    "description": "VW_4984943-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4286)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4286)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4286)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4286)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4285,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4285)",
+                    "name": "VW_4984943-4-rh",
+                    "description": "VW_4984943-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4285)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4285)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4285)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4285)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4284,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4284)",
+                    "name": "VW_4984943-4-temp",
+                    "description": "VW_4984943-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4284)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4284)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4284)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4284)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4283,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4283)",
+                    "name": "VW_4984943-2-pm10_kal",
+                    "description": "VW_4984943-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4283)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4283)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4283)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4283)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4282,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4282)",
+                    "name": "VW_4984943-2-pm10",
+                    "description": "VW_4984943-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4282)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4282)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4282)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4282)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4281,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4281)",
+                    "name": "VW_4984943-2-pm25_kal",
+                    "description": "VW_4984943-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4281)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4281)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4281)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4281)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4280,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4280)",
+                    "name": "VW_4984943-2-pm25",
+                    "description": "VW_4984943-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4280)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4280)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4280)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4280)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 852,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(852)",
+            "name": "VW_4893182",
+            "description": "VW4893182",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(852)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13341,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13341)",
+                    "name": "loc-name-VW_4893182",
+                    "description": "loc-desc-VW_4893182",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.382,
+                            52.172
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13341)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13341)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4279,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4279)",
+                    "name": "VW_4893182-4-pres",
+                    "description": "VW_4893182-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4279)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4279)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4279)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4279)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4278,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4278)",
+                    "name": "VW_4893182-4-rh",
+                    "description": "VW_4893182-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4278)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4278)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4278)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4278)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4277,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4277)",
+                    "name": "VW_4893182-4-temp",
+                    "description": "VW_4893182-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4277)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4277)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4277)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4277)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4276,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4276)",
+                    "name": "VW_4893182-2-pm10_kal",
+                    "description": "VW_4893182-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4276)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4276)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4276)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4276)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4275,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4275)",
+                    "name": "VW_4893182-2-pm10",
+                    "description": "VW_4893182-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4275)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4275)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4275)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4275)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4274,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4274)",
+                    "name": "VW_4893182-2-pm25_kal",
+                    "description": "VW_4893182-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4274)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4274)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4274)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4274)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4273,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4273)",
+                    "name": "VW_4893182-2-pm25",
+                    "description": "VW_4893182-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4273)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4273)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4273)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4273)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 851,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(851)",
+            "name": "VW_4892843",
+            "description": "VW4892843",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(851)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13342,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13342)",
+                    "name": "loc-name-VW_4892843",
+                    "description": "loc-desc-VW_4892843",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.373,
+                            52.176
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13342)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13342)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4272,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4272)",
+                    "name": "VW_4892843-4-pres",
+                    "description": "VW_4892843-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4272)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4272)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4272)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4272)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4271,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4271)",
+                    "name": "VW_4892843-4-rh",
+                    "description": "VW_4892843-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4271)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4271)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4271)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4271)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4270,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4270)",
+                    "name": "VW_4892843-4-temp",
+                    "description": "VW_4892843-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4270)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4270)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4270)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4270)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4269,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4269)",
+                    "name": "VW_4892843-2-pm10_kal",
+                    "description": "VW_4892843-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4269)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4269)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4269)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4269)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4268,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4268)",
+                    "name": "VW_4892843-2-pm10",
+                    "description": "VW_4892843-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4268)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4268)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4268)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4268)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4267,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4267)",
+                    "name": "VW_4892843-2-pm25_kal",
+                    "description": "VW_4892843-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4267)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4267)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4267)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4267)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4266,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4266)",
+                    "name": "VW_4892843-2-pm25",
+                    "description": "VW_4892843-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4266)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4266)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4266)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4266)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 850,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(850)",
+            "name": "VW_4894841",
+            "description": "VW4894841",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(850)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13343,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13343)",
+                    "name": "loc-name-VW_4894841",
+                    "description": "loc-desc-VW_4894841",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.374,
+                            52.178
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13343)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13343)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4265,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4265)",
+                    "name": "VW_4894841-4-pres",
+                    "description": "VW_4894841-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4265)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4265)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4265)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4265)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4264,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4264)",
+                    "name": "VW_4894841-4-rh",
+                    "description": "VW_4894841-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4264)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4264)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4264)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4264)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4263,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4263)",
+                    "name": "VW_4894841-4-temp",
+                    "description": "VW_4894841-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4263)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4263)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4263)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4263)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4262,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4262)",
+                    "name": "VW_4894841-2-pm10_kal",
+                    "description": "VW_4894841-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4262)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4262)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4262)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4262)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4261,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4261)",
+                    "name": "VW_4894841-2-pm10",
+                    "description": "VW_4894841-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4261)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4261)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4261)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4261)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4260,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4260)",
+                    "name": "VW_4894841-2-pm25_kal",
+                    "description": "VW_4894841-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4260)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4260)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4260)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4260)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4259,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4259)",
+                    "name": "VW_4894841-2-pm25",
+                    "description": "VW_4894841-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4259)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4259)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4259)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4259)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 830,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(830)",
+            "name": "AMF_pm001",
+            "description": "BA001",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(830)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13363,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13363)",
+                    "name": "loc-name-AMF_pm001",
+                    "description": "loc-desc-AMF_pm001",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.375,
+                            52.204
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13363)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13363)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 4168,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4168)",
+                    "name": "AMF_pm001-2-pm10_kal",
+                    "description": "AMF_pm001-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4168)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4168)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4168)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4168)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4167,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4167)",
+                    "name": "AMF_pm001-2-pm10",
+                    "description": "AMF_pm001-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4167)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4167)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4167)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4167)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4166,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4166)",
+                    "name": "AMF_pm001-2-pm25_kal",
+                    "description": "AMF_pm001-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4166)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4166)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4166)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4166)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 4165,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4165)",
+                    "name": "AMF_pm001-2-pm25",
+                    "description": "AMF_pm001-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4165)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4165)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4165)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(4165)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 796,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(796)",
+            "name": "AMF_pm011",
+            "description": "BA011",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(796)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13397,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13397)",
+                    "name": "loc-name-AMF_pm011",
+                    "description": "loc-desc-AMF_pm011",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.384,
+                            52.157
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13397)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13397)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 3961,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3961)",
+                    "name": "AMF_pm011-2-pm10_kal",
+                    "description": "AMF_pm011-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3961)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3961)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3961)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3961)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3960,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3960)",
+                    "name": "AMF_pm011-2-pm10",
+                    "description": "AMF_pm011-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3960)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3960)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3960)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3960)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3959,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3959)",
+                    "name": "AMF_pm011-2-pm25_kal",
+                    "description": "AMF_pm011-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3959)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3959)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3959)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3959)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3958,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3958)",
+                    "name": "AMF_pm011-2-pm25",
+                    "description": "AMF_pm011-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3958)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3958)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3958)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3958)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 789,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(789)",
+            "name": "AMF_pm006",
+            "description": "BA006",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(789)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13404,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13404)",
+                    "name": "loc-name-AMF_pm006",
+                    "description": "loc-desc-AMF_pm006",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.404,
+                            52.178
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13404)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13404)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 3930,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3930)",
+                    "name": "AMF_pm006-2-pm10_kal",
+                    "description": "AMF_pm006-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3930)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3930)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3930)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3930)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3929,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3929)",
+                    "name": "AMF_pm006-2-pm10",
+                    "description": "AMF_pm006-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3929)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3929)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3929)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3929)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3928,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3928)",
+                    "name": "AMF_pm006-2-pm25_kal",
+                    "description": "AMF_pm006-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3928)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3928)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3928)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3928)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3927,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3927)",
+                    "name": "AMF_pm006-2-pm25",
+                    "description": "AMF_pm006-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3927)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3927)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3927)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3927)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 745,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(745)",
+            "name": "VW_1757009",
+            "description": "VW1757009",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(745)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13448,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13448)",
+                    "name": "loc-name-VW_1757009",
+                    "description": "loc-desc-VW_1757009",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.412,
+                            52.153
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13448)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13448)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 3669,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3669)",
+                    "name": "VW_1757009-4-pres",
+                    "description": "VW_1757009-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3669)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3669)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3669)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3669)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3668,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3668)",
+                    "name": "VW_1757009-4-rh",
+                    "description": "VW_1757009-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3668)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3668)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3668)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3668)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3667,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3667)",
+                    "name": "VW_1757009-4-temp",
+                    "description": "VW_1757009-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3667)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3667)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3667)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3667)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3666,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3666)",
+                    "name": "VW_1757009-2-pm10_kal",
+                    "description": "VW_1757009-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3666)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3666)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3666)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3666)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3665,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3665)",
+                    "name": "VW_1757009-2-pm10",
+                    "description": "VW_1757009-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3665)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3665)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3665)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3665)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3664,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3664)",
+                    "name": "VW_1757009-2-pm25_kal",
+                    "description": "VW_1757009-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3664)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3664)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3664)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3664)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3663,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3663)",
+                    "name": "VW_1757009-2-pm25",
+                    "description": "VW_1757009-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3663)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3663)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3663)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3663)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 652,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(652)",
+            "name": "VW_4984456",
+            "description": "VW4984456",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(652)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13541,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13541)",
+                    "name": "loc-name-VW_4984456",
+                    "description": "loc-desc-VW_4984456",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.377,
+                            52.204
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13541)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13541)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 3184,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3184)",
+                    "name": "VW_4984456-4-pres",
+                    "description": "VW_4984456-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3184)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3184)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3184)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3184)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3183,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3183)",
+                    "name": "VW_4984456-4-rh",
+                    "description": "VW_4984456-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3183)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3183)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3183)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3183)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3182,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3182)",
+                    "name": "VW_4984456-4-temp",
+                    "description": "VW_4984456-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3182)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3182)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3182)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3182)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3181,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3181)",
+                    "name": "VW_4984456-2-pm10_kal",
+                    "description": "VW_4984456-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3181)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3181)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3181)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3181)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3180,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3180)",
+                    "name": "VW_4984456-2-pm10",
+                    "description": "VW_4984456-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3180)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3180)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3180)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3180)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3179,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3179)",
+                    "name": "VW_4984456-2-pm25_kal",
+                    "description": "VW_4984456-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3179)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3179)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3179)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3179)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 3178,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3178)",
+                    "name": "VW_4984456-2-pm25",
+                    "description": "VW_4984456-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3178)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3178)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3178)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(3178)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 590,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(590)",
+            "name": "AMF_pm010",
+            "description": "BA010",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(590)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13603,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13603)",
+                    "name": "loc-name-AMF_pm010",
+                    "description": "loc-desc-AMF_pm010",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.381,
+                            52.17
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13603)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13603)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 2822,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2822)",
+                    "name": "AMF_pm010-2-pm10_kal",
+                    "description": "AMF_pm010-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2822)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2822)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2822)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2822)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2821,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2821)",
+                    "name": "AMF_pm010-2-pm10",
+                    "description": "AMF_pm010-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2821)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2821)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2821)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2821)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2820,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2820)",
+                    "name": "AMF_pm010-2-pm25_kal",
+                    "description": "AMF_pm010-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2820)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2820)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2820)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2820)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2819,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2819)",
+                    "name": "AMF_pm010-2-pm25",
+                    "description": "AMF_pm010-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2819)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2819)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2819)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2819)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 540,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(540)",
+            "name": "VW_4985048",
+            "description": "VW4985048",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL10643",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL10643",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(540)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13653,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13653)",
+                    "name": "loc-name-VW_4985048",
+                    "description": "loc-desc-VW_4985048",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.389,
+                            52.151
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13653)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13653)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 2521,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2521)",
+                    "name": "VW_4985048-4-pres",
+                    "description": "VW_4985048-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2521)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2521)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2521)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2521)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2520,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2520)",
+                    "name": "VW_4985048-4-rh",
+                    "description": "VW_4985048-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2520)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2520)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2520)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2520)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2519,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2519)",
+                    "name": "VW_4985048-4-temp",
+                    "description": "VW_4985048-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2519)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2519)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2519)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2519)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2518,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2518)",
+                    "name": "VW_4985048-2-pm10_kal",
+                    "description": "VW_4985048-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2518)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2518)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2518)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2518)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2517,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2517)",
+                    "name": "VW_4985048-2-pm10",
+                    "description": "VW_4985048-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2517)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2517)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2517)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2517)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2516,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2516)",
+                    "name": "VW_4985048-2-pm25_kal",
+                    "description": "VW_4985048-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2516)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2516)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2516)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2516)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2515,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2515)",
+                    "name": "VW_4985048-2-pm25",
+                    "description": "VW_4985048-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2515)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2515)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2515)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2515)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 519,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(519)",
+            "name": "VW_4891301",
+            "description": "VW4891301",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(519)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 13674,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13674)",
+                    "name": "loc-name-VW_4891301",
+                    "description": "loc-desc-VW_4891301",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.395,
+                            52.16
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13674)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(13674)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 2392,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2392)",
+                    "name": "VW_4891301-4-pres",
+                    "description": "VW_4891301-4-pres",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/HectoPA",
+                        "symbol": "hPa"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2392)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2392)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2392)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2392)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2391,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2391)",
+                    "name": "VW_4891301-4-rh",
+                    "description": "VW_4891301-4-rh",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/PERCENT",
+                        "symbol": "%"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2391)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2391)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2391)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2391)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2390,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2390)",
+                    "name": "VW_4891301-4-temp",
+                    "description": "VW_4891301-4-temp",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/DEG_C",
+                        "symbol": "C"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2390)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2390)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2390)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2390)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2389,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2389)",
+                    "name": "VW_4891301-2-pm10_kal",
+                    "description": "VW_4891301-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2389)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2389)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2389)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2389)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2388,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2388)",
+                    "name": "VW_4891301-2-pm10",
+                    "description": "VW_4891301-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2388)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2388)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2388)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2388)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2387,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2387)",
+                    "name": "VW_4891301-2-pm25_kal",
+                    "description": "VW_4891301-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2387)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2387)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2387)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2387)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 2386,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2386)",
+                    "name": "VW_4891301-2-pm25",
+                    "description": "VW_4891301-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2386)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2386)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2386)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(2386)/ObservedProperty"
+                }
+            ]
+        },
+        {
+            "@iot.id": 53,
+            "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Things(53)",
+            "name": "AMF_pm008",
+            "description": "BA008",
+            "properties": {
+                "codegemeente": "307",
+                "knmicode": "knmi_06260",
+                "nh3closecode": null,
+                "nh3regiocode": null,
+                "nh3stadcode": null,
+                "no2closecode": "NL49680",
+                "no2regiocode": "NL49680",
+                "no2stadcode": "NL10636",
+                "owner": "RIVM",
+                "pm10closecode": "NL49680",
+                "pm10regiocode": "NL49680",
+                "pm10stadcode": "NL10636",
+                "pm25closecode": "NL49680",
+                "pm25regiocode": "NL49680",
+                "pm25stadcode": "NL10636",
+                "project": "Amersfoort"
+            },
+            "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Things(53)/HistoricalLocations",
+            "Locations": [
+                {
+                    "@iot.id": 35082,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(35082)",
+                    "name": "loc-name-AMF_pm008",
+                    "description": "loc-desc-AMF_pm008",
+                    "encodingType": "application/vnd.geo+json",
+                    "location": {
+                        "coordinates": [
+                            5.399,
+                            52.182
+                        ],
+                        "type": "Point"
+                    },
+                    "Things@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(35082)/Things",
+                    "HistoricalLocations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Locations(35082)/HistoricalLocations"
+                }
+            ],
+            "Datastreams": [
+                {
+                    "@iot.id": 286,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(286)",
+                    "name": "AMF_pm008-2-pm10_kal",
+                    "description": "AMF_pm008-2-pm10_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(286)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(286)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(286)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(286)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 285,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(285)",
+                    "name": "AMF_pm008-2-pm10",
+                    "description": "AMF_pm008-2-pm10",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(285)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(285)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(285)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(285)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 284,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(284)",
+                    "name": "AMF_pm008-2-pm25_kal",
+                    "description": "AMF_pm008-2-pm25_kal",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(284)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(284)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(284)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(284)/ObservedProperty"
+                },
+                {
+                    "@iot.id": 283,
+                    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(283)",
+                    "name": "AMF_pm008-2-pm25",
+                    "description": "AMF_pm008-2-pm25",
+                    "unitOfMeasurement": {
+                        "definition": "https://qudt.org/vocab/unit/MicroGM-PER-M3",
+                        "symbol": "ug/m3"
+                    },
+                    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                    "Thing@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(283)/Thing",
+                    "Sensor@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(283)/Sensor",
+                    "Observations@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(283)/Observations",
+                    "ObservedProperty@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/Datastreams(283)/ObservedProperty"
+                }
+            ]
+        }
+    ]
+}

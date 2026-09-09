@@ -1,0 +1,30 @@
+{
+    "data": {
+        "type": "Industrial",
+        "components": [
+            "C6H6",
+            "C7H8",
+            "C8H10",
+            "PM25",
+            "PM10",
+            "C10H8"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.599313,
+                52.490052
+            ]
+        },
+        "municipality": "Beverwijk",
+        "url": null,
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Wijk aan Zee-Bosweg",
+        "year_start": "2020",
+        "description": {
+            "NL": "Wijk aan Zee-Bosweg",
+            "EN": "Wijk aan Zee-Bosweg"
+        }
+    }
+}

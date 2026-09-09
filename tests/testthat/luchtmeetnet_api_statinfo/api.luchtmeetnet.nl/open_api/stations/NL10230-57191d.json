@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.14845,
+                51.51844
+            ]
+        },
+        "municipality": "Hilvarenbeek",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Biest Houtakker-Biestsestraat",
+        "year_start": "",
+        "description": {
+            "NL": "Biest Houtakker-Biestsestraat",
+            "EN": "Biest Houtakker-Biestsestraat"
+        }
+    }
+}

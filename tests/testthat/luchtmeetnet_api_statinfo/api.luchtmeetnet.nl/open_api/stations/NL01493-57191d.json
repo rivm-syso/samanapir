@@ -1,0 +1,31 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.46136,
+                51.92711
+            ]
+        },
+        "municipality": "Rotterdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Rotterdam-Statenweg",
+        "year_start": "",
+        "description": {
+            "NL": "Rotterdam-Statenweg",
+            "EN": "Rotterdam-Statenweg"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "@iot.id": 8,
+    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(8)",
+    "name": "rh",
+    "description": "relatieve vochtigheid",
+    "definition": "http://vocabs.lter-europe.net/EnvThes/21579",
+    "Datastreams@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(8)/Datastreams"
+}

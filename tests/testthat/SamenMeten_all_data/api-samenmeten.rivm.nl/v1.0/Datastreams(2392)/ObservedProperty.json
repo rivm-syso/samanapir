@@ -1,0 +1,8 @@
+{
+    "@iot.id": 9,
+    "@iot.selfLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(9)",
+    "name": "pres",
+    "description": "atmosferische druk",
+    "definition": "https://qudt.org/vocab/quantitykind/Pressure",
+    "Datastreams@iot.navigationLink": "https://api-samenmeten.rivm.nl/v1.0/ObservedProperties(9)/Datastreams"
+}

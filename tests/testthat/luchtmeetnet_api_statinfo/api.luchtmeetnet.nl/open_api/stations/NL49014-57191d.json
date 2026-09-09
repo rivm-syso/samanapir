@@ -1,0 +1,32 @@
+{
+    "data": {
+        "type": "Municipal",
+        "components": [
+            "PM25",
+            "NO",
+            "CO",
+            "FN",
+            "PM10",
+            "O3",
+            "BCWB",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.866208,
+                52.359714
+            ]
+        },
+        "municipality": "Amsterdam",
+        "url": "",
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Amsterdam-Vondelpark",
+        "year_start": "1998",
+        "description": {
+            "NL": "Amsterdam-Vondelpark",
+            "EN": "Amsterdam-Vondelpark"
+        }
+    }
+}

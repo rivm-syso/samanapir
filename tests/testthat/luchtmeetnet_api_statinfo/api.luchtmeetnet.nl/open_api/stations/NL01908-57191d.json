@@ -1,0 +1,27 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.66012,
+                51.8579
+            ]
+        },
+        "municipality": "Alblasserdam",
+        "url": "",
+        "province": null,
+        "organisation": "DCMR (Rijnmond)",
+        "location": "Alblasserdam-Ruigenhil",
+        "year_start": "2013",
+        "description": {
+            "NL": "Alblasserdam-Ruigenhil",
+            "EN": "Alblasserdam-Ruigenhil"
+        }
+    }
+}

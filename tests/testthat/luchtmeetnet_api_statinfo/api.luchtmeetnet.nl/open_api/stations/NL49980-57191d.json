@@ -1,0 +1,26 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "PM25",
+            "PM10"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                7.038925,
+                53.290343
+            ]
+        },
+        "municipality": "Delfzijl",
+        "url": null,
+        "province": null,
+        "organisation": "GGD Amsterdam",
+        "location": "Baamsum - Oude Ae",
+        "year_start": "2025",
+        "description": {
+            "NL": "Nieuw station",
+            "EN": "New station"
+        }
+    }
+}

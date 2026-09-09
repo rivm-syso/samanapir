@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Regional",
+        "components": [
+            "SO2",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.881748,
+                50.90228
+            ]
+        },
+        "municipality": "Beekdaelen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Wijnandsrade-Opfergeltstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Wijnandsrade-Opfergeltstraat",
+            "EN": "Wijnandsrade-Opfergeltstraat"
+        }
+    }
+}

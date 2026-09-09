@@ -1,0 +1,29 @@
+{
+    "data": {
+        "type": "Other",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "O3",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                4.651789,
+                52.37029
+            ]
+        },
+        "municipality": "Haarlem",
+        "url": null,
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Haarlem-Freddie Oversteegenstraat ",
+        "year_start": "",
+        "description": {
+            "NL": "Haarlem-Freddie Oversteegenstraat ",
+            "EN": "Haarlem-Freddie Oversteegenstraat "
+        }
+    }
+}

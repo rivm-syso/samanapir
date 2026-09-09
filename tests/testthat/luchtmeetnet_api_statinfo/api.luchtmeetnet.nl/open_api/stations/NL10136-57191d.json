@@ -1,0 +1,28 @@
+{
+    "data": {
+        "type": "Traffic",
+        "components": [
+            "PM25",
+            "NO",
+            "PM10",
+            "NO2"
+        ],
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                5.970496,
+                50.88796
+            ]
+        },
+        "municipality": "Heerlen",
+        "url": "",
+        "province": null,
+        "organisation": "RIVM",
+        "location": "Heerlen-Looierstraat",
+        "year_start": "",
+        "description": {
+            "NL": "Heerlen-Looierstraat",
+            "EN": "Heerlen-Looierstraat"
+        }
+    }
+}
